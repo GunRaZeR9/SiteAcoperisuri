@@ -28,7 +28,7 @@ export class ServicesOverviewComponent {
       icon: '🏠',
       titleKey: 'services.roofing.title',
       descriptionKey: 'services.roofing.short_desc',
-      image: '/images/services/roofing-installation.jpg'
+      image: 'images/services/roofing-installation.jpg'
     },
     {
       id: 'repairs',
@@ -36,7 +36,7 @@ export class ServicesOverviewComponent {
       icon: '🔧',
       titleKey: 'services.repairs.title',
       descriptionKey: 'services.repairs.short_desc',
-      image: '/images/services/roof-repair.jpg'
+      image: 'images/services/roof-repair.jpg'
     },
     {
       id: 'renovation',
@@ -44,7 +44,7 @@ export class ServicesOverviewComponent {
       icon: '🔄',
       titleKey: 'services.renovation.title',
       descriptionKey: 'services.renovation.short_desc',
-      image: '/images/services/roof-renovation.jpg'
+      image: 'images/services/roof-renovation.jpg'
     },
     {
       id: 'waterproofing',
@@ -52,7 +52,7 @@ export class ServicesOverviewComponent {
       icon: '💧',
       titleKey: 'services.waterproofing.title',
       descriptionKey: 'services.waterproofing.short_desc',
-      image: '/images/services/waterproofing.jpg'
+      image: 'images/services/waterproofing.jpg'
     },
     {
       id: 'carpentry',
@@ -60,7 +60,7 @@ export class ServicesOverviewComponent {
       icon: '🪵',
       titleKey: 'services.carpentry.title',
       descriptionKey: 'services.carpentry.short_desc',
-      image: '/images/services/carpentry.jpg'
+      image: 'images/services/carpentry.jpg'
     },
     {
       id: 'attic',
@@ -68,7 +68,7 @@ export class ServicesOverviewComponent {
       icon: '📐',
       titleKey: 'services.attic.title',
       descriptionKey: 'services.attic.short_desc',
-      image: '/images/services/attic-conversion.jpg'
+      image: 'images/services/attic-conversion.jpg'
     }
   ];
 }
