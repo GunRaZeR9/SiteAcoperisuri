@@ -218,8 +218,6 @@
     "title": "Hai să Discutăm Despre Proiectul Tău",
     "subtitle": "Intră în Legătură",
     "description": "Suntem aici să răspundem la toate întrebările tale și să oferim soluții personalizate.",
-    "address_label": "Adresă",
-    "address": "Str. Exemplu Nr. 123, București",
     "phone_label": "Telefon",
     "phone": "+40 758 644 107",
     "email_label": "Email",
@@ -256,7 +254,6 @@
     "terms": "Termeni și Condiții",
     "cookies": "Politica de Cookie-uri",
     "contact_title": "Contact",
-    "address": "Str. Exemplu Nr. 123, București",
     "cta_text": "Pregătit să începem proiectul tău?",
     "made_in": "Făcut cu ❤️ în România",
     "rights": "Toate drepturile rezervate."

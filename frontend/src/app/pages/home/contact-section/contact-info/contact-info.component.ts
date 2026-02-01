@@ -15,7 +15,7 @@ export class ContactInfoComponent {
       icon: '📞',
       labelKey: 'contact.phone_label',
       value: '+40 758 644 107',
-      href: 'tel:+40700000000',
+      href: 'tel:+40758644107',
       type: 'link'
     },
     {
