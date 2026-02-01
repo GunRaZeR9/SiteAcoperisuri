@@ -22,7 +22,8 @@
     "cta_services": "View Services",
     "feature_1": "10 Year Warranty",
     "feature_2": "Premium Materials",
-    "feature_3": "Expert Team"
+    "feature_3": "Expert Team",
+    "scroll": "Scroll Down"
   },
   "services": {
     "badge": "What We Offer",
@@ -217,6 +218,7 @@
   "contact_section": {
     "badge": "Contact Us",
     "title": "Let's Discuss Your Project",
+    "subtitle": "Get in Touch",
     "description": "We're here to answer all your questions and provide personalized solutions.",
     "address_label": "Address",
     "address": "123 Example Street, Bucharest",
@@ -226,6 +228,9 @@
     "email": "contact@acoperisuri.ro",
     "hours_label": "Hours",
     "hours": "Monday - Friday: 08:00 - 18:00",
+    "social_label": "Follow Us",
+    "name_label": "Name",
+    "message_label": "Message",
     "form_title": "Send Us a Message",
     "name": "Full Name",
     "name_placeholder": "Enter your name",
@@ -468,6 +473,7 @@
   "contact": {
     "badge": "Contact",
     "title": "Contact Us",
+    "subtitle": "Get in Touch",
     "description": "We're here to answer all your questions. Send us a message or call us directly.",
     "info_title": "Contact Information",
     "info_description": "You can contact us through any of the methods below or by filling out the form.",
@@ -478,8 +484,10 @@
     "hours_label": "Hours",
     "hours_value": "Monday - Friday: 08:00 - 18:00",
     "social_title": "Social Media",
+    "social_label": "Follow Us",
     "form_title": "Send a Message",
     "name": "Full Name",
+    "name_label": "Name",
     "name_placeholder": "John Smith",
     "email": "Email Address",
     "email_placeholder": "john.smith@email.com",
@@ -488,6 +496,7 @@
     "subject": "Subject",
     "subject_placeholder": "What is your message about?",
     "message": "Message",
+    "message_label": "Message",
     "message_placeholder": "Write your message here...",
     "send": "Send Message",
     "sending": "Sending...",

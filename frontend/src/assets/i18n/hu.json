@@ -22,7 +22,8 @@
     "cta_services": "Szolgáltatások",
     "feature_1": "10 Év Garancia",
     "feature_2": "Prémium Anyagok",
-    "feature_3": "Szakértő Csapat"
+    "feature_3": "Szakértő Csapat",
+    "scroll": "Görgessen Le"
   },
   "services": {
     "badge": "Amit Kínálunk",
@@ -217,6 +218,7 @@
   "contact_section": {
     "badge": "Kapcsolat",
     "title": "Beszéljük Meg Projektjét",
+    "subtitle": "Lépjen Kapcsolatba",
     "description": "Itt vagyunk, hogy megválaszoljunk minden kérdését és személyre szabott megoldásokat kínáljunk.",
     "address_label": "Cím",
     "address": "Példa utca 123, Bukarest",
@@ -226,6 +228,9 @@
     "email": "contact@acoperisuri.ro",
     "hours_label": "Nyitvatartás",
     "hours": "Hétfő - Péntek: 08:00 - 18:00",
+    "social_label": "Kövessen Minket",
+    "name_label": "Név",
+    "message_label": "Üzenet",
     "form_title": "Küldjön Üzenetet",
     "name": "Teljes Név",
     "name_placeholder": "Adja meg nevét",
@@ -494,7 +499,11 @@
     "success_title": "Üzenet Elküldve!",
     "success_text": "Köszönjük! A lehető leghamarabb felvesszük Önnel a kapcsolatot.",
     "send_another": "Másik Üzenet Küldése",
-    "map_placeholder": "Itt fog megjelenni a helyszínünket mutató térkép"
+    "map_placeholder": "Itt fog megjelenni a helyszínünket mutató térkép",
+    "subtitle": "Lépjen Kapcsolatba",
+    "social_label": "Kövessen Minket",
+    "name_label": "Név",
+    "message_label": "Üzenet"
   },
   "cookies": {
     "title": "Cookie Szabályzat",

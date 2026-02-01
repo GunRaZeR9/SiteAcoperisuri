@@ -22,7 +22,8 @@
     "cta_services": "Vezi Serviciile",
     "feature_1": "Garanție 10 Ani",
     "feature_2": "Materiale Premium",
-    "feature_3": "Echipă Expertă"
+    "feature_3": "Echipă Expertă",
+    "scroll": "Derulează În Jos"
   },
   "services": {
     "badge": "Ce Oferim",
@@ -215,6 +216,7 @@
   "contact_section": {
     "badge": "Contactează-ne",
     "title": "Hai să Discutăm Despre Proiectul Tău",
+    "subtitle": "Intră în Legătură",
     "description": "Suntem aici să răspundem la toate întrebările tale și să oferim soluții personalizate.",
     "address_label": "Adresă",
     "address": "Str. Exemplu Nr. 123, București",
@@ -224,6 +226,9 @@
     "email": "contact@acoperisuri.ro",
     "hours_label": "Program",
     "hours": "Luni - Vineri: 08:00 - 18:00",
+    "social_label": "Urmărește-ne",
+    "name_label": "Nume",
+    "message_label": "Mesaj",
     "form_title": "Trimite-ne un Mesaj",
     "name": "Nume Complet",
     "name_placeholder": "Introdu numele tău",
@@ -492,7 +497,11 @@
     "success_title": "Mesaj Trimis!",
     "success_text": "Mulțumim! Te vom contacta în cel mai scurt timp posibil.",
     "send_another": "Trimite Alt Mesaj",
-    "map_placeholder": "Aici va fi afișată harta cu locația noastră"
+    "map_placeholder": "Aici va fi afișată harta cu locația noastră",
+    "subtitle": "Intră în Legătură",
+    "social_label": "Urmărește-ne",
+    "name_label": "Nume",
+    "message_label": "Mesaj"
   },
   "cookies": {
     "title": "Politica de Cookie-uri",
