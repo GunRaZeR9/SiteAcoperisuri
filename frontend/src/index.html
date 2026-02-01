@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Acoperișuri Profesionale | Servicii Complete de Acoperiș în România</title>
-  <base href="/">
+  <base href="/SiteAcoperisuri/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <!-- SEO Meta Tags -->
@@ -90,6 +90,17 @@
   
   <!-- Google Tag Manager Placeholder -->
   <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  
+  <!-- GitHub Pages SPA redirect handler -->
+  <script>
+    (function() {
+      var redirect = sessionStorage.getItem('redirect');
+      if (redirect) {
+        sessionStorage.removeItem('redirect');
+        history.replaceState(null, '', redirect);
+      }
+    })();
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) Placeholder -->
