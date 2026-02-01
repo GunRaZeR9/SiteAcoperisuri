@@ -71,17 +71,35 @@ export class EstimateComponent {
 
     this.isSubmitting.set(true);
 
-    // Log form data to console
-    console.log('Estimate Form Submission:', {
-      timestamp: new Date().toISOString(),
-      ...this.formData
-    });
+    // Format message for WhatsApp
+    const message = `
+🏠 *Estimare Preț - Cerere Nouă*
 
-    // Simulate API delay
+*Date Contact:*
+• Nume: ${this.formData.name}
+• Email: ${this.formData.email}
+• Telefon: ${this.formData.phone}
+• Locație: ${this.formData.location}
+
+*Detalii Proiect:*
+• Tip serviciu: ${this.formData.serviceType}
+• Tip acoperiș: ${this.formData.roofType}
+• Suprafață: ${this.formData.roofArea} mp
+• Urgență: ${this.formData.urgency}
+• Contact preferat: ${this.formData.preferredContact}
+
+*Descriere:*
+${this.formData.description || 'N/A'}
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/40758644107?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
     setTimeout(() => {
       this.isSubmitting.set(false);
       this.isSubmitted.set(true);
-    }, 1000);
+    }, 500);
   }
 
   resetForm(): void {

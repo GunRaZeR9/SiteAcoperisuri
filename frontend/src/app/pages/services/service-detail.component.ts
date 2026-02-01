@@ -2,13 +2,12 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { ImagePlaceholderComponent } from '../../shared/image-placeholder/image-placeholder.component';
 import { getServiceBySlug, ServiceData, SERVICES_DATA } from './services.data';
 
 @Component({
   selector: 'app-service-detail',
   standalone: true,
-  imports: [CommonModule, RouterLink, TranslateModule, ImagePlaceholderComponent],
+  imports: [CommonModule, RouterLink, TranslateModule],
   templateUrl: './service-detail.component.html',
   styleUrl: './service-detail.component.scss'
 })

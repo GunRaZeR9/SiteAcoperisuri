@@ -41,17 +41,28 @@ export class ContactComponent {
 
     this.isSubmitting.set(true);
 
-    // Log form data to console
-    console.log('Contact Form Submission:', {
-      timestamp: new Date().toISOString(),
-      ...this.formData
-    });
+    // Format message for WhatsApp
+    const message = `
+🏠 *Contact Form Submission*
 
-    // Simulate API delay
+*Nume:* ${this.formData.name}
+*Email:* ${this.formData.email}
+*Telefon:* ${this.formData.phone}
+*Subiect:* ${this.formData.subject}
+
+*Mesaj:*
+${this.formData.message}
+    `.trim();
+
+    const whatsappUrl = `https://wa.me/40758644107?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
     setTimeout(() => {
       this.isSubmitting.set(false);
       this.isSubmitted.set(true);
-    }, 1000);
+    }, 500);
   }
 
   resetForm(): void {

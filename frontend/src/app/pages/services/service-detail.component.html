@@ -34,23 +34,6 @@
               <p class="block-text">{{ service()!.fullDescKey | translate }}</p>
             </div>
 
-            <!-- Image Gallery -->
-            <div class="content-block">
-              <h2 class="block-title">{{ 'services.gallery' | translate }}</h2>
-              <div class="gallery-grid">
-                @for (i of [1, 2, 3, 4]; track i) {
-                  <div class="gallery-item">
-                    <app-image-placeholder 
-                      aspectRatio="4:3" 
-                      type="portfolio"
-                      [alt]="'Gallery image ' + i"
-                      [src]="service()?.image" 
-                    />
-                  </div>
-                }
-              </div>
-            </div>
-
             <!-- Benefits -->
             <div class="content-block">
               <h2 class="block-title">{{ 'services.benefits_title' | translate }}</h2>

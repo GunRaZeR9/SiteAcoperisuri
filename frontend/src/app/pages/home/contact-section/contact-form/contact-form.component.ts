@@ -41,14 +41,26 @@ export class ContactFormComponent {
     this.hasError.set(false);
 
     try {
-      // Log to console as requested
-      console.log('Contact Form Submission:', this.formData());
+      const data = this.formData();
       
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Format message for WhatsApp
+      const message = `
+🏠 *Contact Form - Site Web*
+
+*Nume:* ${data.name}
+*Email:* ${data.email}
+*Telefon:* ${data.phone}
+
+*Mesaj:*
+${data.message}
+      `.trim();
+
+      const whatsappUrl = `https://wa.me/40758644107?text=${encodeURIComponent(message)}`;
       
-      // In production, this would call the backend API:
-      // await this.http.post('/api/contact', this.formData()).toPromise();
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
+      
+      await new Promise(resolve => setTimeout(resolve, 500));
       
       this.isSubmitted.set(true);
       this.resetForm();

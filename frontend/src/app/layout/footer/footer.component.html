@@ -24,6 +24,21 @@
               <span>contact&#64;acoperisuri.ro</span>
             </a>
           </div>
+          
+          <div class="social-media">
+            @for (social of socialLinks; track social.name) {
+              <a 
+                [href]="social.url" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="social-link"
+                [attr.aria-label]="social.ariaLabel">
+                <svg viewBox="0 0 24 24" [attr.fill]="social.color">
+                  <path [attr.d]="social.icon"></path>
+                </svg>
+              </a>
+            }
+          </div>
         </div>
 
         <!-- Services -->
