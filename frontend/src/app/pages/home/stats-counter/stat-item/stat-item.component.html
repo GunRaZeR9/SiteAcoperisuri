@@ -1,0 +1,12 @@
+<div class="stat-item" [class.animated]="animate">
+  <div class="stat-icon">
+    <span>{{ stat.icon }}</span>
+  </div>
+  
+  <div class="stat-value">
+    <span class="stat-number">{{ displayValue() }}</span>
+    <span class="stat-suffix">{{ stat.suffix }}</span>
+  </div>
+  
+  <div class="stat-label">{{ stat.labelKey | translate }}</div>
+</div>

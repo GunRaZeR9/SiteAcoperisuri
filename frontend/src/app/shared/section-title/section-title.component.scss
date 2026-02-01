@@ -1,0 +1,91 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-12;
+
+  @include max-md {
+    margin-bottom: $spacing-8;
+  }
+
+  &.align-left {
+    text-align: left;
+
+    .divider {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .section-description {
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+  &.align-right {
+    text-align: right;
+
+    .divider {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .section-description {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &.light {
+    .section-subtitle {
+      background-color: rgba($white, 0.15);
+      color: $white;
+    }
+
+    .section-title {
+      color: $white;
+    }
+
+    .divider {
+      background-color: $primary-400;
+    }
+
+    .section-description {
+      color: $secondary-300;
+    }
+  }
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: $spacing-2 $spacing-4;
+  background-color: $primary-100;
+  color: $primary-700;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wider;
+  border-radius: $border-radius-full;
+  margin-bottom: $spacing-4;
+}
+
+.section-title {
+  @include heading-2;
+  margin-bottom: $spacing-4;
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: $primary-500;
+  border-radius: $border-radius-full;
+  margin: 0 auto $spacing-4;
+}
+
+.section-description {
+  @include body-text;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,14 @@
+<article class="reason-card">
+  <div class="reason-icon">
+    <span>{{ reason.icon }}</span>
+  </div>
+  
+  <div class="reason-content">
+    <h3 class="reason-title">{{ reason.titleKey | translate }}</h3>
+    <p class="reason-description">{{ reason.descriptionKey | translate }}</p>
+  </div>
+  
+  <div class="reason-number">
+    {{ (index + 1).toString().padStart(2, '0') }}
+  </div>
+</article>

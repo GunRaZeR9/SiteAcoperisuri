@@ -1,0 +1,79 @@
+<main class="portfolio-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">{{ 'portfolio.badge' | translate }}</span>
+        <h1 class="hero-title">{{ 'portfolio.title' | translate }}</h1>
+        <p class="hero-description">{{ 'portfolio.description' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="portfolio-section section">
+    <div class="container">
+      <!-- Filter Buttons -->
+      <div class="portfolio-filters">
+        @for (category of categories; track category.id) {
+          <button 
+            type="button"
+            class="filter-btn"
+            [class.active]="activeFilter() === category.id"
+            (click)="setFilter(category.id)">
+            {{ category.labelKey | translate }}
+          </button>
+        }
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="portfolio-grid">
+        @for (project of filteredProjects(); track project.id) {
+          <article class="portfolio-item">
+            <div class="item-image">
+              <app-image-placeholder 
+                aspectRatio="4:3" 
+                type="portfolio"
+                [alt]="project.titleKey | translate"
+                [src]="project.image" 
+              />
+              <div class="item-overlay">
+                <span class="item-category">{{ project.categoryKey | translate }}</span>
+              </div>
+            </div>
+            
+            <div class="item-content">
+              <h3 class="item-title">{{ project.titleKey | translate }}</h3>
+              <p class="item-description">{{ project.descriptionKey | translate }}</p>
+            </div>
+          </article>
+        }
+      </div>
+
+      @if (filteredProjects().length === 0) {
+        <div class="no-results">
+          <p>{{ 'portfolio.no_results' | translate }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section section section-dark">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">{{ 'portfolio.cta_title' | translate }}</h2>
+        <p class="cta-description">{{ 'portfolio.cta_description' | translate }}</p>
+        <div class="cta-actions">
+          <a routerLink="/estimare-pret" class="btn btn-accent btn-lg">
+            {{ 'portfolio.cta_estimate' | translate }}
+          </a>
+          <a routerLink="/contact" class="btn btn-outline btn-lg cta-btn-outline">
+            {{ 'portfolio.cta_contact' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,350 @@
+// ==========================================================================
+// MAIN STYLES - Import all partials
+// ==========================================================================
+
+// Core
+@use 'styles/variables' as *;
+@use 'styles/mixins' as *;
+
+// Base styles
+@use 'styles/base';
+@use 'styles/typography';
+@use 'styles/animations';
+
+// ==========================================================================
+// CUSTOM GLOBAL STYLES
+// ==========================================================================
+
+// --------------------------------------------------------------------------
+// Page Transition
+// --------------------------------------------------------------------------
+
+.page-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+// --------------------------------------------------------------------------
+// Main Layout
+// --------------------------------------------------------------------------
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+// --------------------------------------------------------------------------
+// Custom Scrollbar
+// --------------------------------------------------------------------------
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $gray-400;
+  border-radius: $border-radius-full;
+  border: 2px solid $gray-100;
+
+  &:hover {
+    background: $gray-500;
+  }
+}
+
+// Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-400 $gray-100;
+}
+
+// --------------------------------------------------------------------------
+// Image Placeholder Styles
+// --------------------------------------------------------------------------
+
+.image-placeholder {
+  background: linear-gradient(135deg, $gray-200 0%, $gray-300 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $gray-500;
+  font-size: $font-size-sm;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wider;
+
+  &::before {
+    content: '📷';
+    font-size: 2rem;
+    opacity: 0.5;
+  }
+
+  &.placeholder-logo {
+    &::before {
+      content: '🏠';
+      font-size: 3rem;
+    }
+  }
+
+  &.placeholder-service {
+    &::before {
+      content: '🔧';
+    }
+  }
+
+  &.placeholder-portfolio {
+    &::before {
+      content: '🏗️';
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// Button Global Styles
+// --------------------------------------------------------------------------
+
+.btn {
+  @include button-base;
+}
+
+.btn-primary {
+  @include button-primary;
+}
+
+.btn-secondary {
+  @include button-secondary;
+}
+
+.btn-accent {
+  @include button-accent;
+}
+
+.btn-outline {
+  @include button-outline;
+}
+
+.btn-ghost {
+  @include button-ghost;
+}
+
+.btn-lg {
+  @include button-large;
+}
+
+.btn-sm {
+  @include button-small;
+}
+
+.btn-full {
+  @include button-full-width;
+}
+
+// --------------------------------------------------------------------------
+// Form Global Styles
+// --------------------------------------------------------------------------
+
+.form-group {
+  margin-bottom: $spacing-4;
+}
+
+.form-label {
+  @include form-label;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  @include form-input;
+}
+
+.form-textarea {
+  min-height: 120px;
+}
+
+.form-error-message {
+  @include form-error;
+}
+
+// --------------------------------------------------------------------------
+// Card Global Styles
+// --------------------------------------------------------------------------
+
+.card {
+  @include card;
+}
+
+.card-hover {
+  @include card-hover;
+}
+
+// --------------------------------------------------------------------------
+// Section Title Styles
+// --------------------------------------------------------------------------
+
+.section-header {
+  text-align: center;
+  margin-bottom: $spacing-12;
+
+  @include max-md {
+    margin-bottom: $spacing-8;
+  }
+}
+
+.section-subtitle {
+  display: inline-block;
+  padding: $spacing-2 $spacing-4;
+  background-color: $primary-100;
+  color: $primary-700;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wider;
+  border-radius: $border-radius-full;
+  margin-bottom: $spacing-4;
+}
+
+.section-title {
+  @include heading-2;
+  margin-bottom: $spacing-4;
+}
+
+.section-description {
+  @include body-text;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// --------------------------------------------------------------------------
+// Grid Layouts
+// --------------------------------------------------------------------------
+
+.grid-2 {
+  @include grid-responsive(1, 2, 2);
+}
+
+.grid-3 {
+  @include grid-responsive(1, 2, 3);
+}
+
+.grid-4 {
+  @include grid-responsive(1, 2, 4);
+}
+
+.grid-6 {
+  @include grid-responsive(2, 3, 6);
+}
+
+// --------------------------------------------------------------------------
+// Overlay Styles
+// --------------------------------------------------------------------------
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba($black, 0.5);
+  z-index: $z-index-modal-backdrop;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $transition-base $transition-timing,
+              visibility $transition-base $transition-timing;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// --------------------------------------------------------------------------
+// Badge Styles
+// --------------------------------------------------------------------------
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacing-1 $spacing-3;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  border-radius: $border-radius-full;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wide;
+}
+
+.badge-primary {
+  background-color: $primary-100;
+  color: $primary-700;
+}
+
+.badge-accent {
+  background-color: $accent-100;
+  color: $accent-700;
+}
+
+.badge-success {
+  background-color: $success-100;
+  color: $success-700;
+}
+
+// --------------------------------------------------------------------------
+// Icon Styles
+// --------------------------------------------------------------------------
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.icon-sm {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-lg {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-xl {
+  width: 48px;
+  height: 48px;
+}
+
+// --------------------------------------------------------------------------
+// Divider
+// --------------------------------------------------------------------------
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: $primary-500;
+  border-radius: $border-radius-full;
+  margin: $spacing-4 auto;
+}
+
+.divider-left {
+  margin-left: 0;
+  margin-right: auto;
+}

@@ -1,0 +1,18 @@
+<section class="why-choose-section section section-alt">
+  <div class="container">
+    <app-section-title
+      [subtitle]="'reasons.subtitle' | translate"
+      [title]="'reasons.title' | translate"
+      [description]="'reasons.description' | translate"
+    />
+
+    <div class="reasons-grid">
+      @for (reason of reasons; track reason.id; let i = $index) {
+        <app-reason-card
+          [reason]="reason"
+          [index]="i"
+        />
+      }
+    </div>
+  </div>
+</section>

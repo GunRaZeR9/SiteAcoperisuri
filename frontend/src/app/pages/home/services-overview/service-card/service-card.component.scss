@@ -1,0 +1,94 @@
+@use '../../../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: $border-radius-lg $border-radius-lg 0 0;
+
+  app-image-placeholder {
+    display: block;
+    transition: transform $transition-slow $transition-timing;
+  }
+
+  .service-card:hover & {
+    app-image-placeholder {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.card-icon {
+  position: absolute;
+  bottom: -24px;
+  left: $spacing-6;
+  width: 48px;
+  height: 48px;
+  background-color: $primary-600;
+  border-radius: $border-radius-xl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: $shadow-lg;
+  z-index: 1;
+  transition: all $transition-base $transition-timing;
+
+  .service-card:hover & {
+    transform: scale(1.1);
+    background-color: $primary-700;
+  }
+}
+
+.card-content {
+  padding: $spacing-8 $spacing-6 $spacing-6;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin-bottom: $spacing-3;
+}
+
+.card-description {
+  font-size: $font-size-base;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-4;
+  flex: 1;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $primary-600;
+  text-decoration: none;
+  transition: all $transition-fast $transition-timing;
+
+  &:hover {
+    color: $primary-700;
+    gap: $spacing-3;
+    text-decoration: none;
+  }
+
+  .link-arrow {
+    transition: transform $transition-fast $transition-timing;
+  }
+
+  &:hover .link-arrow {
+    transform: translateX(4px);
+  }
+}

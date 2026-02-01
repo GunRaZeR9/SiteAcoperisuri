@@ -1,0 +1,106 @@
+<main class="about-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">{{ 'about.badge' | translate }}</span>
+        <h1 class="hero-title">{{ 'about.title' | translate }}</h1>
+        <p class="hero-description">{{ 'about.description' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section section">
+    <div class="container">
+      <div class="story-content">
+        <span class="section-badge">{{ 'about.story_badge' | translate }}</span>
+        <h2 class="section-title">{{ 'about.story_title' | translate }}</h2>
+        <p class="story-text">{{ 'about.story_text_1' | translate }}</p>
+        <p class="story-text">{{ 'about.story_text_2' | translate }}</p>
+        <p class="story-text">{{ 'about.story_text_3' | translate }}</p>
+        
+        <div class="story-stats">
+          <div class="stat-item">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">{{ 'about.years_experience' | translate }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">{{ 'about.completed_projects' | translate }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">{{ 'about.team_members' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="values-section section section-alt">
+    <div class="container">
+      <app-section-title
+        [subtitle]="'about.values_subtitle' | translate"
+        [title]="'about.values_title' | translate"
+        [description]="'about.values_description' | translate"
+        alignment="center"
+      />
+
+      <div class="values-grid">
+        @for (value of values; track value.icon) {
+          <div class="value-card">
+            <div class="value-icon">{{ value.icon }}</div>
+            <h3 class="value-title">{{ value.titleKey | translate }}</h3>
+            <p class="value-description">{{ value.descriptionKey | translate }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline-section section">
+    <div class="container">
+      <app-section-title
+        [subtitle]="'about.timeline_subtitle' | translate"
+        [title]="'about.timeline_title' | translate"
+        alignment="center"
+      />
+
+      <div class="timeline">
+        @for (milestone of milestones; track milestone.year; let i = $index) {
+          <div class="timeline-item" [class.right]="i % 2 !== 0">
+            <div class="timeline-marker">
+              <span class="year">{{ milestone.year }}</span>
+            </div>
+            <div class="timeline-content">
+              <h3 class="milestone-title">{{ milestone.titleKey | translate }}</h3>
+              <p class="milestone-description">{{ milestone.descriptionKey | translate }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section section section-dark">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">{{ 'about.cta_title' | translate }}</h2>
+        <p class="cta-description">{{ 'about.cta_description' | translate }}</p>
+        <div class="cta-actions">
+          <a routerLink="/contact" class="btn btn-accent btn-lg">
+            {{ 'about.cta_contact' | translate }}
+          </a>
+          <a routerLink="/portofoliu" class="btn btn-outline btn-lg cta-btn-outline">
+            {{ 'about.cta_portfolio' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

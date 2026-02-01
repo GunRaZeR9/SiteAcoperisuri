@@ -1,0 +1,553 @@
+{
+  "app": {
+    "hello": "Salut",
+    "title": "Acoperișuri Profesionale"
+  },
+  "header": {
+    "tagline": "Profesionale"
+  },
+  "nav": {
+    "home": "Acasă",
+    "services": "Servicii",
+    "portfolio": "Portofoliu",
+    "about": "Despre Noi",
+    "contact": "Contact",
+    "estimate": "Estimare Preț"
+  },
+  "hero": {
+    "badge": "Experți în Acoperișuri",
+    "title": "Acoperișuri de Calitate pentru Casa Ta",
+    "subtitle": "Protejăm casa ta cu soluții durabile și profesionale de acoperiș. Peste 15 ani de experiență în construcții și reparații acoperișuri.",
+    "cta_estimate": "Solicită Estimare",
+    "cta_services": "Vezi Serviciile",
+    "feature_1": "Garanție 10 Ani",
+    "feature_2": "Materiale Premium",
+    "feature_3": "Echipă Expertă"
+  },
+  "services": {
+    "badge": "Ce Oferim",
+    "subtitle": "Ce Oferim",
+    "title": "Serviciile Noastre",
+    "description": "Oferim o gamă completă de servicii pentru acoperișul tău, de la construcții noi până la reparații și întreținere.",
+    "view_all": "Vezi Toate Serviciile",    "view_service": "Vezi Serviciul",    "learn_more": "Află Mai Multe",
+    "roofing": {
+      "title": "Montaj Acoperișuri",
+      "short_description": "Instalăm acoperișuri noi cu cele mai bune materiale și tehnici moderne pentru durabilitate maximă.",
+      "short_desc": "Instalăm acoperișuri noi cu cele mai bune materiale și tehnici moderne pentru durabilitate maximă.",
+      "description": "Servicii complete de montaj acoperișuri noi pentru construcții rezidențiale și comerciale. Folosim materiale de cea mai înaltă calitate și tehnici moderne de instalare.",
+      "full_desc": "Servicii complete de montaj acoperișuri noi pentru construcții rezidențiale și comerciale. Folosim materiale de cea mai înaltă calitate și tehnici moderne de instalare.",
+      "benefit_1": "Materiale premium certificate",
+      "benefit_2": "Garanție extinsă 10 ani",
+      "benefit_3": "Instalare profesională",
+      "benefit_4": "Izolație termică inclusă",
+      "feature_1": "Țiglă ceramică premium",
+      "feature_2": "Sistem de ventilație",
+      "feature_3": "Hidroizolație completă",
+      "feature_4": "Jgheaburi integrate"
+    },
+    "repairs": {
+      "title": "Reparații Acoperișuri",
+      "short_description": "Remediem rapid orice problemă - de la infiltrații minore până la daune majore cauzate de vreme.",
+      "short_desc": "Remediem rapid orice problemă - de la infiltrații minore până la daune majore cauzate de vreme.",
+      "description": "Servicii rapide și eficiente de reparații pentru orice tip de acoperiș. Intervenim prompt pentru a preveni daunele suplimentare.",
+      "full_desc": "Servicii rapide și eficiente de reparații pentru orice tip de acoperiș. Intervenim prompt pentru a preveni daunele suplimentare.",
+      "benefit_1": "Intervenție rapidă",
+      "benefit_2": "Diagnostic gratuit",
+      "benefit_3": "Soluții durabile",
+      "benefit_4": "Prețuri competitive",
+      "feature_1": "Reparații infiltrații",
+      "feature_2": "Înlocuire țigle",
+      "feature_3": "Reparații structurale",
+      "feature_4": "Întreținere periodică"
+    },
+    "renovation": {
+      "title": "Renovare Acoperișuri",
+      "short_description": "Transformăm complet acoperișul vechi într-unul nou, modern și eficient energetic.",
+      "short_desc": "Transformăm complet acoperișul vechi într-unul nou, modern și eficient energetic.",
+      "description": "Renovare completă a acoperișurilor vechi sau deteriorate. Modernizăm și îmbunătățim performanța termică și estetică.",
+      "full_desc": "Renovare completă a acoperișurilor vechi sau deteriorate. Modernizăm și îmbunătățim performanța termică și estetică.",
+      "benefit_1": "Eficiență energetică",
+      "benefit_2": "Design modern",
+      "benefit_3": "Valoare adăugată",
+      "benefit_4": "Durabilitate crescută",
+      "feature_1": "Demontare acoperiș vechi",
+      "feature_2": "Consolidare structură",
+      "feature_3": "Izolație modernă",
+      "feature_4": "Finisaje premium"
+    },
+    "waterproofing": {
+      "title": "Hidroizolații",
+      "short_description": "Protejăm casa ta împotriva apei cu sisteme profesionale de hidroizolație.",
+      "short_desc": "Protejăm casa ta împotriva apei cu sisteme profesionale de hidroizolație.",
+      "description": "Sisteme complete de hidroizolație pentru protecție maximă împotriva infiltrațiilor de apă și umidității.",
+      "full_desc": "Sisteme complete de hidroizolație pentru protecție maximă împotriva infiltrațiilor de apă și umidității.",
+      "benefit_1": "Protecție completă",
+      "benefit_2": "Materiale certificate",
+      "benefit_3": "Garanție extinsă",
+      "benefit_4": "Aplicare profesională",
+      "feature_1": "Membrane bituminoase",
+      "feature_2": "Hidroizolații lichide",
+      "feature_3": "Bariere de vapori",
+      "feature_4": "Drenaj perimetral"
+    },
+    "carpentry": {
+      "title": "Structuri din Lemn",
+      "short_description": "Construim și reparăm șarpante și structuri din lemn pentru orice tip de acoperiș.",
+      "short_desc": "Construim și reparăm șarpante și structuri din lemn pentru orice tip de acoperiș.",
+      "description": "Servicii complete de dulgherie pentru construcția și repararea structurilor de lemn ale acoperișului.",
+      "full_desc": "Servicii complete de dulgherie pentru construcția și repararea structurilor de lemn ale acoperișului.",
+      "benefit_1": "Lemn tratat",
+      "benefit_2": "Calcule structurale",
+      "benefit_3": "Montaj precis",
+      "benefit_4": "Rezistență maximă",
+      "feature_1": "Șarpante complete",
+      "feature_2": "Consolidări",
+      "feature_3": "Grinzi și căpriori",
+      "feature_4": "Tratament antiinsecte"
+    },
+    "attic": {
+      "title": "Mansardări",
+      "short_description": "Transformăm podul casei în spațiu locuit cu toate facilitățile moderne.",
+      "short_desc": "Transformăm podul casei în spațiu locuit cu toate facilitățile moderne.",
+      "description": "Servicii complete de mansardare pentru a transforma spațiul nefolosit în camere moderne și confortabile.",
+      "full_desc": "Servicii complete de mansardare pentru a transforma spațiul nefolosit în camere moderne și confortabile.",
+      "benefit_1": "Spațiu suplimentar",
+      "benefit_2": "Design personalizat",
+      "benefit_3": "Izolație perfectă",
+      "benefit_4": "Lumină naturală",
+      "feature_1": "Ferestre Velux",
+      "feature_2": "Izolație premium",
+      "feature_3": "Instalații complete",
+      "feature_4": "Finisaje interioare"
+    },
+    "page_badge": "Servicii Complete",
+    "page_title": "Serviciile Noastre",
+    "page_description": "Oferim o gamă completă de servicii profesionale pentru acoperișul tău. Cu experiență de peste 15 ani, garantăm calitate și satisfacție.",
+    "benefits_title": "Beneficii",
+    "features_title": "Ce Include",
+    "gallery_title": "Galerie",
+    "other_services": "Alte Servicii",
+    "cta_title": "Ai Nevoie de Ajutor?",
+    "cta_text": "Contactează-ne pentru o consultație gratuită și o estimare personalizată.",
+    "cta_phone": "Sună Acum",
+    "cta_estimate": "Solicită Estimare",
+    "not_found_title": "Serviciu Negăsit",
+    "not_found_text": "Ne pare rău, serviciul căutat nu există.",
+    "back_to_services": "Înapoi la Servicii",
+    "list_cta_title": "Pregătit să Începem?",
+    "list_cta_description": "Contactează-ne astăzi pentru o consultație gratuită și află cum putem ajuta cu proiectul tău de acoperiș.",
+    "list_cta_estimate": "Solicită Estimare Gratuită",
+    "list_cta_contact": "Contactează-ne",
+    "cta_contact": "Contactează-ne"
+  },
+  "why_us": {
+    "badge": "De Ce Noi",
+    "title": "De Ce Să Ne Alegi",
+    "description": "Cu peste 15 ani de experiență, suntem alegerea de încredere pentru acoperișul tău.",
+    "reason_1": {
+      "title": "Experiență de 15+ Ani",
+      "description": "Expertiză dovedită în sute de proiecte finalizate cu succes."
+    },
+    "reason_2": {
+      "title": "Garanție 10 Ani",
+      "description": "Oferim garanție extinsă pentru toate lucrările noastre."
+    },
+    "reason_3": {
+      "title": "Materiale Premium",
+      "description": "Folosim doar materiale certificate de la furnizori de top."
+    },
+    "reason_4": {
+      "title": "Echipă Certificată",
+      "description": "Meșteri calificați cu certificări profesionale."
+    },
+    "reason_5": {
+      "title": "Prețuri Corecte",
+      "description": "Oferim cel mai bun raport calitate-preț din piață."
+    },
+    "reason_6": {
+      "title": "Suport Complet",
+      "description": "Asistență înainte, în timpul și după finalizarea proiectului."
+    }
+  },
+  "stats": {
+    "projects": "Proiecte Finalizate",
+    "experience": "Ani de Experiență",
+    "clients": "Clienți Mulțumiți",
+    "warranty": "Ani Garanție"
+  },
+  "reasons": {
+    "subtitle": "De Ce Noi",
+    "title": "De Ce Să Ne Alegi",
+    "description": "Cu peste 15 ani de experiență, suntem alegerea de încredere pentru acoperișul tău.",
+    "experience": {
+      "title": "Experiență de 15+ Ani",
+      "description": "Expertiză dovedită în sute de proiecte finalizate cu succes."
+    },
+    "warranty": {
+      "title": "Garanție 10 Ani",
+      "description": "Oferim garanție extinsă pentru toate lucrările noastre."
+    },
+    "quality": {
+      "title": "Materiale Premium",
+      "description": "Folosim doar materiale certificate de la furnizori de top."
+    },
+    "team": {
+      "title": "Echipă Certificată",
+      "description": "Meșteri calificați cu certificări profesionale."
+    },
+    "pricing": {
+      "title": "Prețuri Corecte",
+      "description": "Oferim cel mai bun raport calitate-preț din piață."
+    },
+    "support": {
+      "title": "Suport Complet",
+      "description": "Asistență înainte, în timpul și după finalizarea proiectului."
+    }
+  },
+  "about_preview": {
+    "badge": "Despre Noi",
+    "title": "Construim Acoperișuri de Încredere",
+    "text_1": "Cu peste 15 ani de experiență în industria construcțiilor de acoperișuri, am devenit un partener de încredere pentru sute de familii din România.",
+    "text_2": "Echipa noastră de profesioniști certificați utilizează cele mai moderne tehnologii și materiale premium pentru a asigura durabilitatea și frumusețea acoperișului tău.",
+    "years_badge": "15+ Ani Experiență",
+    "cta": "Află Mai Multe"
+  },
+  "contact_section": {
+    "badge": "Contactează-ne",
+    "title": "Hai să Discutăm Despre Proiectul Tău",
+    "description": "Suntem aici să răspundem la toate întrebările tale și să oferim soluții personalizate.",
+    "address_label": "Adresă",
+    "address": "Str. Exemplu Nr. 123, București",
+    "phone_label": "Telefon",
+    "phone": "+40 700 000 000",
+    "email_label": "Email",
+    "email": "contact@acoperisuri.ro",
+    "hours_label": "Program",
+    "hours": "Luni - Vineri: 08:00 - 18:00",
+    "form_title": "Trimite-ne un Mesaj",
+    "name": "Nume Complet",
+    "name_placeholder": "Introdu numele tău",
+    "email_input": "Adresă Email",
+    "email_placeholder": "Introdu adresa de email",
+    "phone_input": "Telefon",
+    "phone_placeholder": "Introdu numărul de telefon",
+    "message": "Mesaj",
+    "message_placeholder": "Descrie pe scurt proiectul tău...",
+    "submit": "Trimite Mesajul",
+    "sending": "Se trimite...",
+    "success_title": "Mesaj Trimis!",
+    "success_text": "Mulțumim pentru mesaj! Te vom contacta în cel mai scurt timp posibil."
+  },
+  "footer": {
+    "description": "Experți în acoperișuri cu peste 15 ani de experiență. Oferim servicii complete de montaj, reparații și întreținere acoperișuri.",
+    "company_description": "Experți în acoperișuri cu peste 15 ani de experiență. Oferim servicii complete de montaj, reparații și întreținere acoperișuri.",
+    "services_title": "Servicii",
+    "company_title": "Companie",
+    "useful_links": "Link-uri Utile",
+    "privacy_title": "Legal & Confidențialitate",
+    "about": "Despre Noi",
+    "portfolio": "Portofoliu",
+    "contact": "Contact",
+    "terms": "Termeni și Condiții",
+    "cookies": "Politica de Cookie-uri",
+    "contact_title": "Contact",
+    "address": "Str. Exemplu Nr. 123, București",
+    "cta_text": "Pregătit să începem proiectul tău?",
+    "made_in": "Făcut cu ❤️ în România",
+    "rights": "Toate drepturile rezervate."
+  },
+  "cookie_consent": {
+    "title": "Utilizăm Cookie-uri",
+    "text": "Acest site folosește cookie-uri esențiale pentru funcționarea corectă. Nu colectăm date personale fără consimțământul tău explicit.",
+    "accept": "Accept",
+    "decline": "Refuz",
+    "learn_more": "Află Mai Multe"
+  },
+  "portfolio": {
+    "badge": "Lucrările Noastre",
+    "title": "Portofoliu",
+    "description": "Descoperă proiectele noastre finalizate și vezi calitatea lucrărilor realizate pentru clienții noștri.",
+    "categories": {
+      "all": "Toate",
+      "roofing": "Acoperișuri Noi",
+      "renovation": "Renovări",
+      "repairs": "Reparații",
+      "waterproofing": "Hidroizolații",
+      "carpentry": "Structuri Lemn",
+      "attic": "Mansardări"
+    },
+    "project_1": {
+      "title": "Vilă Modernă",
+      "description": "Acoperiș nou cu țiglă ceramică pentru vilă de 300mp."
+    },
+    "project_2": {
+      "title": "Renovare Casă Veche",
+      "description": "Renovare completă acoperiș pentru casă tradițională."
+    },
+    "project_3": {
+      "title": "Reparații După Furtună",
+      "description": "Intervenție rapidă pentru reparații daune cauzate de furtună."
+    },
+    "project_4": {
+      "title": "Hidroizolație Bloc",
+      "description": "Sistem complet de hidroizolație pentru acoperiș bloc de locuințe."
+    },
+    "project_5": {
+      "title": "Casă Familie",
+      "description": "Acoperiș nou pentru casă unifamilială cu mansardă."
+    },
+    "project_6": {
+      "title": "Mansardare Pod",
+      "description": "Transformare pod în spațiu locuit cu ferestre Velux."
+    },
+    "project_7": {
+      "title": "Șarpantă Complexă",
+      "description": "Construcție șarpantă din lemn pentru casă cu arhitectură specială."
+    },
+    "project_8": {
+      "title": "Renovare Hotel",
+      "description": "Renovare completă acoperiș pentru hotel de pe litoral."
+    },
+    "project_9": {
+      "title": "Acoperiș Industrial",
+      "description": "Acoperiș metalic pentru hală industrială de mari dimensiuni."
+    },
+    "no_results": "Nu există proiecte în această categorie.",
+    "cta_title": "Vrei un Acoperiș Similar?",
+    "cta_description": "Contactează-ne pentru o consultație gratuită și o estimare personalizată pentru proiectul tău.",
+    "cta_estimate": "Solicită Estimare",
+    "cta_contact": "Contactează-ne"
+  },
+  "estimate": {
+    "badge": "Estimare Gratuită",
+    "title": "Solicită Estimare de Preț",
+    "description": "Completează formularul de mai jos și îți vom oferi o estimare personalizată în cel mai scurt timp.",
+    "section_contact": "Informații de Contact",
+    "section_project": "Detalii Proiect",
+    "section_preferences": "Preferințe Contact",
+    "name": "Nume Complet",
+    "name_placeholder": "Ion Popescu",
+    "email": "Adresă Email",
+    "email_placeholder": "ion.popescu@email.com",
+    "phone": "Telefon",
+    "phone_placeholder": "0700 000 000",
+    "location": "Locație Proiect",
+    "location_placeholder": "Oraș, Județ",
+    "service_type": "Tip Serviciu",
+    "select_service": "Selectează tipul de serviciu",
+    "roof_type": "Tip Acoperiș",
+    "select_roof_type": "Selectează tipul de acoperiș",
+    "roof_area": "Suprafață Estimată (mp)",
+    "roof_area_placeholder": "ex: 150",
+    "urgency_label": "Urgență",
+    "select_urgency": "Selectează nivelul de urgență",
+    "description_label": "Descriere Proiect",
+    "description_placeholder": "Descrie proiectul tău în detaliu...",
+    "contact_phone": "Telefon",
+    "contact_email": "Email",
+    "contact_whatsapp": "WhatsApp",
+    "submit": "Trimite Cererea",
+    "submitting": "Se trimite...",
+    "success_title": "Cerere Trimisă cu Succes!",
+    "success_text": "Mulțumim pentru cererea ta! Echipa noastră te va contacta în maxim 24 de ore cu o estimare personalizată.",
+    "new_request": "Trimite Altă Cerere",
+    "need_help": "Ai Nevoie de Ajutor?",
+    "help_text": "Echipa noastră este disponibilă pentru întrebări.",
+    "response_time": "Timp de Răspuns",
+    "response_text": "Răspundem în maxim 24 de ore în zilele lucrătoare.",
+    "free_estimate": "100% Gratuit",
+    "free_text": "Estimarea este gratuită și fără obligații.",
+    "service_types": {
+      "roofing": "Montaj Acoperiș Nou",
+      "repairs": "Reparații Acoperiș",
+      "renovation": "Renovare Acoperiș",
+      "waterproofing": "Hidroizolație",
+      "carpentry": "Structuri din Lemn",
+      "attic": "Mansardare",
+      "other": "Altele"
+    },
+    "roof_types": {
+      "tiles": "Țiglă Ceramică",
+      "metal": "Tablă/Metal",
+      "shingles": "Șindrilă Bituminoasă",
+      "bitumen": "Membrană Bituminoasă",
+      "slate": "Ardezie",
+      "unknown": "Nu știu"
+    },
+    "urgency": {
+      "low": "Scăzută - În următoarele luni",
+      "medium": "Medie - În următoarele săptămâni",
+      "high": "Ridicată - Cât mai curând",
+      "emergency": "Urgență - Problemă actuală"
+    }
+  },
+  "about": {
+    "badge": "Despre Noi",
+    "subtitle": "Despre Noi",
+    "title": "Cine Suntem",
+    "description": "Descoperă povestea noastră și echipa de profesioniști care transformă visele în realitate.",
+    "preview_text_1": "Cu peste 15 ani de experiență în industria construcțiilor de acoperișuri, am devenit un partener de încredere pentru sute de familii din România.",
+    "preview_text_2": "Echipa noastră de profesioniști certificați utilizează cele mai moderne tehnologii și materiale premium pentru a asigura durabilitatea și frumusețea acoperișului tău.",
+    "feature_1": "Expertiză de peste 15 ani",
+    "feature_2": "Materiale premium certificate",
+    "feature_3": "Echipă de profesioniști certificați",
+    "feature_4": "Garanție extinsă și suport dedicat",
+    "years_badge": "Ani Experiență",
+    "cta_button": "Află Mai Multe",
+    "image_alt": "Acoperișuri Profesionale",
+    "story_badge": "Povestea Noastră",
+    "story_title": "15+ Ani de Excelență în Acoperișuri",
+    "story_text_1": "Compania noastră a fost fondată în 2010 cu o viziune clară: să oferim servicii de acoperișuri de cea mai înaltă calitate pentru familiile din România.",
+    "story_text_2": "De-a lungul anilor, am crescut de la o mică echipă de meșteri dedicați la o companie cu peste 25 de profesioniști certificați, servind clienți din întreaga țară.",
+    "story_text_3": "Astăzi, suntem mândri să fim unul dintre liderii pieței de acoperișuri din România, cu peste 1000 de proiecte finalizate cu succes.",
+    "years_experience": "Ani Experiență",
+    "completed_projects": "Proiecte Finalizate",
+    "team_members": "Membri Echipă",
+    "years_text": "Ani de Experiență",
+    "values_subtitle": "Valorile Noastre",
+    "values_title": "Principiile Care Ne Ghidează",
+    "values_description": "Fiecare proiect pe care îl realizăm este ghidat de principii solide și angajamentul nostru pentru excelență.",
+    "values": {
+      "quality": {
+        "title": "Calitate",
+        "description": "Folosim doar materiale premium și tehnici moderne pentru rezultate durabile."
+      },
+      "trust": {
+        "title": "Încredere",
+        "description": "Construim relații pe termen lung bazate pe onestitate și transparență."
+      },
+      "efficiency": {
+        "title": "Eficiență",
+        "description": "Respectăm termenele și optimizăm procesele pentru rezultate rapide."
+      },
+      "sustainability": {
+        "title": "Sustenabilitate",
+        "description": "Ne pasă de mediu și folosim materiale ecologice când este posibil."
+      }
+    },
+    "timeline_subtitle": "Istoria Noastră",
+    "timeline_title": "Momente Cheie",
+    "milestones": {
+      "founding": {
+        "title": "Înființare",
+        "description": "Am început ca o mică echipă de 5 meșteri pasionați."
+      },
+      "growth": {
+        "title": "Expansiune",
+        "description": "Am ajuns la 500 de proiecte finalizate și 15 angajați."
+      },
+      "expansion": {
+        "title": "Recunoaștere",
+        "description": "Am devenit partener certificat pentru branduri internaționale."
+      },
+      "present": {
+        "title": "Prezent",
+        "description": "Peste 1000 proiecte și 25+ profesioniști în echipă."
+      }
+    },
+    "team_subtitle": "Echipa Noastră",
+    "team_title": "Oamenii din Spatele Succesului",
+    "team_description": "O echipă dedicată de profesioniști gata să transforme orice provocare într-un succes.",
+    "team": {
+      "ceo": "Director General",
+      "ceo_name": "Alexandru Popescu",
+      "manager": "Manager Proiecte",
+      "manager_name": "Maria Ionescu",
+      "lead": "Șef Echipă",
+      "lead_name": "Andrei Dumitrescu",
+      "specialist": "Specialist Tehnic",
+      "specialist_name": "Elena Vasile"
+    },
+    "cta_title": "Pregătit să Colaborăm?",
+    "cta_description": "Contactează-ne astăzi și hai să discutăm despre cum putem ajuta cu proiectul tău.",
+    "cta_contact": "Contactează-ne",
+    "cta_portfolio": "Vezi Portofoliu"
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Contactează-ne",
+    "description": "Suntem aici să răspundem la toate întrebările tale. Trimite-ne un mesaj sau sună-ne direct.",
+    "info_title": "Informații Contact",
+    "info_description": "Poți să ne contactezi prin oricare dintre metodele de mai jos sau completând formularul.",
+    "address_label": "Adresă",
+    "address_value": "Str. Exemplu Nr. 123, Sector 1, București",
+    "phone_label": "Telefon",
+    "email_label": "Email",
+    "hours_label": "Program",
+    "hours_value": "Luni - Vineri: 08:00 - 18:00",
+    "social_title": "Social Media",
+    "form_title": "Trimite un Mesaj",
+    "name": "Nume Complet",
+    "name_placeholder": "Ion Popescu",
+    "email": "Adresă Email",
+    "email_placeholder": "ion.popescu@email.com",
+    "phone": "Telefon",
+    "phone_placeholder": "0700 000 000",
+    "subject": "Subiect",
+    "subject_placeholder": "Despre ce este mesajul?",
+    "message": "Mesaj",
+    "message_placeholder": "Scrie mesajul tău aici...",
+    "send": "Trimite Mesajul",
+    "sending": "Se trimite...",
+    "success_title": "Mesaj Trimis!",
+    "success_text": "Mulțumim! Te vom contacta în cel mai scurt timp posibil.",
+    "send_another": "Trimite Alt Mesaj",
+    "map_placeholder": "Aici va fi afișată harta cu locația noastră"
+  },
+  "cookies": {
+    "title": "Politica de Cookie-uri",
+    "last_updated": "Ultima actualizare",
+    "section_1_title": "Ce sunt cookie-urile?",
+    "section_1_text": "Cookie-urile sunt fișiere text de mici dimensiuni care sunt stocate pe dispozitivul tău atunci când vizitezi un site web. Acestea permit site-ului să memoreze acțiunile și preferințele tale.",
+    "section_2_title": "Ce cookie-uri folosim?",
+    "section_2_text": "Folosim exclusiv cookie-uri esențiale necesare pentru funcționarea corectă a site-ului:",
+    "essential_title": "Cookie-uri Esențiale",
+    "essential_text": "Aceste cookie-uri sunt necesare pentru funcționarea de bază a site-ului și nu pot fi dezactivate.",
+    "essential_cookie_1": "Memorează preferința ta privind cookie-urile",
+    "essential_cookie_2": "Memorează limba selectată",
+    "section_3_title": "Cookie-uri de la terți",
+    "section_3_text": "Nu folosim cookie-uri de tracking sau de la terți. Nu colectăm date pentru publicitate sau analiză fără consimțământul tău explicit.",
+    "section_4_title": "Conformitate GDPR",
+    "section_4_text": "Respectăm prevederile Regulamentului General privind Protecția Datelor (GDPR). Nu procesăm date personale fără consimțământul tău explicit și îți respectăm dreptul la intimitate digitală.",
+    "section_5_title": "Cum poți gestiona cookie-urile?",
+    "section_5_text_1": "Poți controla și șterge cookie-urile prin setările browserului tău:",
+    "browser_chrome": "Setări > Confidențialitate și securitate > Cookie-uri",
+    "browser_firefox": "Opțiuni > Confidențialitate și securitate",
+    "browser_safari": "Preferințe > Confidențialitate",
+    "browser_edge": "Setări > Cookie-uri și permisiuni site",
+    "section_5_text_2": "Ștergerea cookie-urilor poate afecta funcționarea site-ului.",
+    "section_6_title": "Modificări ale politicii",
+    "section_6_text": "Ne rezervăm dreptul de a actualiza această politică. Orice modificare va fi publicată pe această pagină cu data actualizării.",
+    "section_7_title": "Contact",
+    "section_7_text": "Pentru întrebări despre politica noastră de cookie-uri, ne poți contacta la:",
+    "phone": "Telefon",
+    "back_home": "Înapoi la Pagina Principală"
+  },
+  "terms": {
+    "title": "Termeni și Condiții",
+    "last_updated": "Ultima actualizare",
+    "section_1_title": "Acceptarea termenilor",
+    "section_1_text": "Prin accesarea și utilizarea acestui site web, acceptați să fiți obligați de acești termeni și condiții de utilizare. Dacă nu sunteți de acord cu oricare dintre acești termeni, vă rugăm să nu utilizați site-ul.",
+    "section_2_title": "Utilizarea site-ului",
+    "section_2_text": "Vă angajați să utilizați acest site doar în scopuri legale și într-un mod care nu încalcă drepturile altora:",
+    "section_2_item_1": "Nu veți utiliza site-ul pentru activități ilegale sau frauduloase",
+    "section_2_item_2": "Nu veți încerca să accesați zone restricționate ale site-ului",
+    "section_2_item_3": "Nu veți transmite conținut dăunător sau malițios",
+    "section_3_title": "Proprietate intelectuală",
+    "section_3_text": "Tot conținutul acestui site, inclusiv texte, grafice, logo-uri și imagini, este proprietatea noastră sau a licențiatorilor noștri și este protejat de legile drepturilor de autor.",
+    "section_4_title": "Limitarea răspunderii",
+    "section_4_text": "Informațiile de pe acest site sunt furnizate 'ca atare', fără garanții de niciun fel. Nu ne asumăm răspunderea pentru eventualele erori sau omisiuni din conținutul site-ului.",
+    "section_5_title": "Servicii și prețuri",
+    "section_5_text": "Prețurile și disponibilitatea serviciilor prezentate pe site sunt orientative și pot fi modificate fără notificare prealabilă. Pentru prețuri exacte, vă rugăm să solicitați o estimare personalizată.",
+    "section_6_title": "Confidențialitate",
+    "section_6_text": "Colectarea și procesarea datelor personale se face în conformitate cu politica noastră de confidențialitate și legislația GDPR în vigoare.",
+    "section_7_title": "Modificări ale termenilor",
+    "section_7_text": "Ne rezervăm dreptul de a modifica acești termeni în orice moment. Continuarea utilizării site-ului după publicarea modificărilor constituie acceptarea noilor termeni.",
+    "section_8_title": "Contact",
+    "section_8_text": "Pentru întrebări referitoare la acești termeni, ne puteți contacta la:",
+    "phone": "Telefon",
+    "address": "Adresă",
+    "address_value": "Str. Exemplu Nr. 123, București",
+    "back_home": "Înapoi la Pagina Principală"
+  }
+}

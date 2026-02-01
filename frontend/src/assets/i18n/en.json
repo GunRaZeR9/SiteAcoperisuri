@@ -1,0 +1,555 @@
+{
+  "app": {
+    "hello": "Hello",
+    "title": "Professional Roofing"
+  },
+  "header": {
+    "tagline": "Professional"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About Us",
+    "contact": "Contact",
+    "estimate": "Get Estimate"
+  },
+  "hero": {
+    "badge": "Roofing Experts",
+    "title": "Quality Roofing for Your Home",
+    "subtitle": "We protect your home with durable and professional roofing solutions. Over 15 years of experience in roof construction and repairs.",
+    "cta_estimate": "Request Estimate",
+    "cta_services": "View Services",
+    "feature_1": "10 Year Warranty",
+    "feature_2": "Premium Materials",
+    "feature_3": "Expert Team"
+  },
+  "services": {
+    "badge": "What We Offer",
+    "subtitle": "What We Offer",
+    "title": "Our Services",
+    "description": "We offer a complete range of services for your roof, from new construction to repairs and maintenance.",
+    "view_all": "View All Services",
+    "view_service": "View Service",
+    "learn_more": "Learn More",
+    "roofing": {
+      "title": "Roof Installation",
+      "short_description": "We install new roofs with the best materials and modern techniques for maximum durability.",
+      "short_desc": "We install new roofs with the best materials and modern techniques for maximum durability.",
+      "description": "Complete new roof installation services for residential and commercial buildings. We use the highest quality materials and modern installation techniques.",
+      "full_desc": "Complete new roof installation services for residential and commercial buildings. We use the highest quality materials and modern installation techniques.",
+      "benefit_1": "Premium certified materials",
+      "benefit_2": "Extended 10-year warranty",
+      "benefit_3": "Professional installation",
+      "benefit_4": "Thermal insulation included",
+      "feature_1": "Premium ceramic tiles",
+      "feature_2": "Ventilation system",
+      "feature_3": "Complete waterproofing",
+      "feature_4": "Integrated gutters"
+    },
+    "repairs": {
+      "title": "Roof Repairs",
+      "short_description": "We quickly fix any problem - from minor leaks to major weather damage.",
+      "short_desc": "We quickly fix any problem - from minor leaks to major weather damage.",
+      "description": "Fast and efficient repair services for any type of roof. We respond promptly to prevent additional damage.",
+      "full_desc": "Fast and efficient repair services for any type of roof. We respond promptly to prevent additional damage.",
+      "benefit_1": "Rapid intervention",
+      "benefit_2": "Free diagnosis",
+      "benefit_3": "Durable solutions",
+      "benefit_4": "Competitive prices",
+      "feature_1": "Leak repairs",
+      "feature_2": "Tile replacement",
+      "feature_3": "Structural repairs",
+      "feature_4": "Periodic maintenance"
+    },
+    "renovation": {
+      "title": "Roof Renovation",
+      "short_description": "We completely transform your old roof into a new, modern and energy efficient one.",
+      "short_desc": "We completely transform your old roof into a new, modern and energy efficient one.",
+      "description": "Complete renovation of old or damaged roofs. We modernize and improve thermal and aesthetic performance.",
+      "full_desc": "Complete renovation of old or damaged roofs. We modernize and improve thermal and aesthetic performance.",
+      "benefit_1": "Energy efficiency",
+      "benefit_2": "Modern design",
+      "benefit_3": "Added value",
+      "benefit_4": "Increased durability",
+      "feature_1": "Old roof removal",
+      "feature_2": "Structure reinforcement",
+      "feature_3": "Modern insulation",
+      "feature_4": "Premium finishes"
+    },
+    "waterproofing": {
+      "title": "Waterproofing",
+      "short_description": "We protect your home against water with professional waterproofing systems.",
+      "short_desc": "We protect your home against water with professional waterproofing systems.",
+      "description": "Complete waterproofing systems for maximum protection against water infiltration and humidity.",
+      "full_desc": "Complete waterproofing systems for maximum protection against water infiltration and humidity.",
+      "benefit_1": "Complete protection",
+      "benefit_2": "Certified materials",
+      "benefit_3": "Extended warranty",
+      "benefit_4": "Professional application",
+      "feature_1": "Bituminous membranes",
+      "feature_2": "Liquid waterproofing",
+      "feature_3": "Vapor barriers",
+      "feature_4": "Perimeter drainage"
+    },
+    "carpentry": {
+      "title": "Wood Structures",
+      "short_description": "We build and repair rafters and wood structures for any type of roof.",
+      "short_desc": "We build and repair rafters and wood structures for any type of roof.",
+      "description": "Complete carpentry services for building and repairing wood roof structures.",
+      "full_desc": "Complete carpentry services for building and repairing wood roof structures.",
+      "benefit_1": "Treated wood",
+      "benefit_2": "Structural calculations",
+      "benefit_3": "Precise assembly",
+      "benefit_4": "Maximum resistance",
+      "feature_1": "Complete rafters",
+      "feature_2": "Reinforcements",
+      "feature_3": "Beams and rafters",
+      "feature_4": "Anti-insect treatment"
+    },
+    "attic": {
+      "title": "Attic Conversions",
+      "short_description": "We transform your attic into living space with all modern amenities.",
+      "short_desc": "We transform your attic into living space with all modern amenities.",
+      "description": "Complete attic conversion services to transform unused space into modern, comfortable rooms.",
+      "full_desc": "Complete attic conversion services to transform unused space into modern, comfortable rooms.",
+      "benefit_1": "Additional space",
+      "benefit_2": "Custom design",
+      "benefit_3": "Perfect insulation",
+      "benefit_4": "Natural light",
+      "feature_1": "Velux windows",
+      "feature_2": "Premium insulation",
+      "feature_3": "Complete installations",
+      "feature_4": "Interior finishes"
+    },
+    "page_badge": "Complete Services",
+    "page_title": "Our Services",
+    "page_description": "We offer a full range of professional roofing services. With over 15 years of experience, we guarantee quality and satisfaction.",
+    "benefits_title": "Benefits",
+    "features_title": "What's Included",
+    "gallery_title": "Gallery",
+    "other_services": "Other Services",
+    "cta_title": "Need Help?",
+    "cta_text": "Contact us for a free consultation and personalized estimate.",
+    "cta_phone": "Call Now",
+    "cta_estimate": "Request Estimate",
+    "not_found_title": "Service Not Found",
+    "not_found_text": "Sorry, the requested service does not exist.",
+    "back_to_services": "Back to Services",
+    "list_cta_title": "Ready to Start?",
+    "list_cta_description": "Contact us today for a free consultation and find out how we can help with your roofing project.",
+    "list_cta_estimate": "Request Free Estimate",
+    "list_cta_contact": "Contact Us",
+    "cta_contact": "Contact Us"
+  },
+  "why_us": {
+    "badge": "Why Us",
+    "title": "Why Choose Us",
+    "description": "With over 15 years of experience, we are the trusted choice for your roof.",
+    "reason_1": {
+      "title": "15+ Years Experience",
+      "description": "Proven expertise in hundreds of successfully completed projects."
+    },
+    "reason_2": {
+      "title": "10 Year Warranty",
+      "description": "We offer extended warranty for all our work."
+    },
+    "reason_3": {
+      "title": "Premium Materials",
+      "description": "We only use certified materials from top suppliers."
+    },
+    "reason_4": {
+      "title": "Certified Team",
+      "description": "Qualified craftsmen with professional certifications."
+    },
+    "reason_5": {
+      "title": "Fair Prices",
+      "description": "We offer the best value for money on the market."
+    },
+    "reason_6": {
+      "title": "Complete Support",
+      "description": "Assistance before, during and after project completion."
+    }
+  },
+  "stats": {
+    "projects": "Completed Projects",
+    "experience": "Years of Experience",
+    "clients": "Satisfied Clients",
+    "warranty": "Years Warranty"
+  },
+  "reasons": {
+    "subtitle": "Why Us",
+    "title": "Why Choose Us",
+    "description": "With over 15 years of experience, we are the trusted choice for your roof.",
+    "experience": {
+      "title": "15+ Years Experience",
+      "description": "Proven expertise in hundreds of successfully completed projects."
+    },
+    "warranty": {
+      "title": "10 Year Warranty",
+      "description": "We offer extended warranty for all our work."
+    },
+    "quality": {
+      "title": "Premium Materials",
+      "description": "We only use certified materials from top suppliers."
+    },
+    "team": {
+      "title": "Certified Team",
+      "description": "Qualified craftsmen with professional certifications."
+    },
+    "pricing": {
+      "title": "Fair Prices",
+      "description": "We offer the best value for money on the market."
+    },
+    "support": {
+      "title": "Complete Support",
+      "description": "Assistance before, during and after project completion."
+    }
+  },
+  "about_preview": {
+    "badge": "About Us",
+    "title": "Building Trustworthy Roofs",
+    "text_1": "With over 15 years of experience in the roofing industry, we have become a trusted partner for hundreds of families in Romania.",
+    "text_2": "Our team of certified professionals uses the most modern technologies and premium materials to ensure the durability and beauty of your roof.",
+    "years_badge": "15+ Years Experience",
+    "cta": "Learn More"
+  },
+  "contact_section": {
+    "badge": "Contact Us",
+    "title": "Let's Discuss Your Project",
+    "description": "We're here to answer all your questions and provide personalized solutions.",
+    "address_label": "Address",
+    "address": "123 Example Street, Bucharest",
+    "phone_label": "Phone",
+    "phone": "+40 700 000 000",
+    "email_label": "Email",
+    "email": "contact@acoperisuri.ro",
+    "hours_label": "Hours",
+    "hours": "Monday - Friday: 08:00 - 18:00",
+    "form_title": "Send Us a Message",
+    "name": "Full Name",
+    "name_placeholder": "Enter your name",
+    "email_input": "Email Address",
+    "email_placeholder": "Enter your email address",
+    "phone_input": "Phone",
+    "phone_placeholder": "Enter your phone number",
+    "message": "Message",
+    "message_placeholder": "Briefly describe your project...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_text": "Thank you for your message! We will contact you as soon as possible."
+  },
+  "footer": {
+    "description": "Roofing experts with over 15 years of experience. We offer complete roof installation, repair and maintenance services.",
+    "company_description": "Roofing experts with over 15 years of experience. We offer complete roof installation, repair and maintenance services.",
+    "services_title": "Services",
+    "company_title": "Company",
+    "useful_links": "Useful Links",
+    "privacy_title": "Legal & Privacy",
+    "about": "About Us",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "terms": "Terms & Conditions",
+    "cookies": "Cookie Policy",
+    "contact_title": "Contact",
+    "address": "123 Example Street, Bucharest",
+    "cta_text": "Ready to start your project?",
+    "made_in": "Made with ❤️ in Romania",
+    "rights": "All rights reserved."
+  },
+  "cookie_consent": {
+    "title": "We Use Cookies",
+    "text": "This site uses essential cookies for proper functioning. We do not collect personal data without your explicit consent.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learn_more": "Learn More"
+  },
+  "portfolio": {
+    "badge": "Our Work",
+    "title": "Portfolio",
+    "description": "Discover our completed projects and see the quality of work we deliver for our clients.",
+    "categories": {
+      "all": "All",
+      "roofing": "New Roofs",
+      "renovation": "Renovations",
+      "repairs": "Repairs",
+      "waterproofing": "Waterproofing",
+      "carpentry": "Wood Structures",
+      "attic": "Attic Conversions"
+    },
+    "project_1": {
+      "title": "Modern Villa",
+      "description": "New ceramic tile roof for a 300sqm villa."
+    },
+    "project_2": {
+      "title": "Old House Renovation",
+      "description": "Complete roof renovation for a traditional house."
+    },
+    "project_3": {
+      "title": "Storm Damage Repairs",
+      "description": "Rapid intervention for storm damage repairs."
+    },
+    "project_4": {
+      "title": "Apartment Building Waterproofing",
+      "description": "Complete waterproofing system for residential building roof."
+    },
+    "project_5": {
+      "title": "Family House",
+      "description": "New roof for single-family house with attic."
+    },
+    "project_6": {
+      "title": "Attic Conversion",
+      "description": "Attic transformation into living space with Velux windows."
+    },
+    "project_7": {
+      "title": "Complex Rafter Structure",
+      "description": "Wood rafter construction for house with special architecture."
+    },
+    "project_8": {
+      "title": "Hotel Renovation",
+      "description": "Complete roof renovation for coastal hotel."
+    },
+    "project_9": {
+      "title": "Industrial Roof",
+      "description": "Metal roof for large industrial warehouse."
+    },
+    "no_results": "No projects in this category.",
+    "cta_title": "Want a Similar Roof?",
+    "cta_description": "Contact us for a free consultation and personalized estimate for your project.",
+    "cta_estimate": "Request Estimate",
+    "cta_contact": "Contact Us"
+  },
+  "estimate": {
+    "badge": "Free Estimate",
+    "title": "Request Price Estimate",
+    "description": "Fill out the form below and we will provide you with a personalized estimate as soon as possible.",
+    "section_contact": "Contact Information",
+    "section_project": "Project Details",
+    "section_preferences": "Contact Preferences",
+    "name": "Full Name",
+    "name_placeholder": "John Smith",
+    "email": "Email Address",
+    "email_placeholder": "john.smith@email.com",
+    "phone": "Phone",
+    "phone_placeholder": "+40 700 000 000",
+    "location": "Project Location",
+    "location_placeholder": "City, County",
+    "service_type": "Service Type",
+    "select_service": "Select service type",
+    "roof_type": "Roof Type",
+    "select_roof_type": "Select roof type",
+    "roof_area": "Estimated Area (sqm)",
+    "roof_area_placeholder": "e.g. 150",
+    "urgency_label": "Urgency",
+    "select_urgency": "Select urgency level",
+    "description_label": "Project Description",
+    "description_placeholder": "Describe your project in detail...",
+    "contact_phone": "Phone",
+    "contact_email": "Email",
+    "contact_whatsapp": "WhatsApp",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "success_title": "Request Sent Successfully!",
+    "success_text": "Thank you for your request! Our team will contact you within 24 hours with a personalized estimate.",
+    "new_request": "Submit Another Request",
+    "need_help": "Need Help?",
+    "help_text": "Our team is available for questions.",
+    "response_time": "Response Time",
+    "response_text": "We respond within 24 hours on business days.",
+    "free_estimate": "100% Free",
+    "free_text": "The estimate is free and without obligation.",
+    "service_types": {
+      "roofing": "New Roof Installation",
+      "repairs": "Roof Repairs",
+      "renovation": "Roof Renovation",
+      "waterproofing": "Waterproofing",
+      "carpentry": "Wood Structures",
+      "attic": "Attic Conversion",
+      "other": "Other"
+    },
+    "roof_types": {
+      "tiles": "Ceramic Tiles",
+      "metal": "Metal/Sheet",
+      "shingles": "Bitumen Shingles",
+      "bitumen": "Bitumen Membrane",
+      "slate": "Slate",
+      "unknown": "Don't know"
+    },
+    "urgency": {
+      "low": "Low - In the coming months",
+      "medium": "Medium - In the coming weeks",
+      "high": "High - As soon as possible",
+      "emergency": "Emergency - Current problem"
+    }
+  },
+  "about": {
+    "badge": "About Us",
+    "subtitle": "About Us",
+    "title": "Who We Are",
+    "description": "Discover our story and the team of professionals who turn dreams into reality.",
+    "preview_text_1": "With over 15 years of experience in the roofing construction industry, we have become a trusted partner for hundreds of families in Romania.",
+    "preview_text_2": "Our team of certified professionals uses the latest technologies and premium materials to ensure the durability and beauty of your roof.",
+    "feature_1": "Over 15 years of expertise",
+    "feature_2": "Certified premium materials",
+    "feature_3": "Team of certified professionals",
+    "feature_4": "Extended warranty and dedicated support",
+    "years_badge": "Years Experience",
+    "cta_button": "Learn More",
+    "image_alt": "Professional Roofing",
+    "story_badge": "Our Story",
+    "story_title": "15+ Years of Roofing Excellence",
+    "story_text_1": "Our company was founded in 2010 with a clear vision: to provide the highest quality roofing services for families in Romania.",
+    "story_text_2": "Over the years, we have grown from a small team of dedicated craftsmen to a company with over 25 certified professionals, serving clients across the country.",
+    "story_text_3": "Today, we are proud to be one of the leading roofing companies in Romania, with over 1000 successfully completed projects.",
+    "years_experience": "Years Experience",
+    "completed_projects": "Completed Projects",
+    "team_members": "Team Members",
+    "years_text": "Years of Experience",
+    "values_subtitle": "Our Values",
+    "values_title": "Principles That Guide Us",
+    "values_description": "Every project we undertake is guided by solid principles and our commitment to excellence.",
+    "values": {
+      "quality": {
+        "title": "Quality",
+        "description": "We use only premium materials and modern techniques for lasting results."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "We build long-term relationships based on honesty and transparency."
+      },
+      "efficiency": {
+        "title": "Efficiency",
+        "description": "We meet deadlines and optimize processes for fast results."
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "description": "We care about the environment and use eco-friendly materials when possible."
+      }
+    },
+    "timeline_subtitle": "Our History",
+    "timeline_title": "Key Milestones",
+    "milestones": {
+      "founding": {
+        "title": "Foundation",
+        "description": "We started as a small team of 5 passionate craftsmen."
+      },
+      "growth": {
+        "title": "Expansion",
+        "description": "We reached 500 completed projects and 15 employees."
+      },
+      "expansion": {
+        "title": "Recognition",
+        "description": "We became a certified partner for international brands."
+      },
+      "present": {
+        "title": "Present",
+        "description": "Over 1000 projects and 25+ professionals on the team."
+      }
+    },
+    "team_subtitle": "Our Team",
+    "team_title": "The People Behind Success",
+    "team_description": "A dedicated team of professionals ready to turn any challenge into success.",
+    "team": {
+      "ceo": "CEO",
+      "ceo_name": "Alexandru Popescu",
+      "manager": "Project Manager",
+      "manager_name": "Maria Ionescu",
+      "lead": "Team Lead",
+      "lead_name": "Andrei Dumitrescu",
+      "specialist": "Technical Specialist",
+      "specialist_name": "Elena Vasile"
+    },
+    "cta_title": "Ready to Collaborate?",
+    "cta_description": "Contact us today and let's discuss how we can help with your project.",
+    "cta_contact": "Contact Us",
+    "cta_portfolio": "View Portfolio"
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Contact Us",
+    "description": "We're here to answer all your questions. Send us a message or call us directly.",
+    "info_title": "Contact Information",
+    "info_description": "You can contact us through any of the methods below or by filling out the form.",
+    "address_label": "Address",
+    "address_value": "123 Example Street, Sector 1, Bucharest",
+    "phone_label": "Phone",
+    "email_label": "Email",
+    "hours_label": "Hours",
+    "hours_value": "Monday - Friday: 08:00 - 18:00",
+    "social_title": "Social Media",
+    "form_title": "Send a Message",
+    "name": "Full Name",
+    "name_placeholder": "John Smith",
+    "email": "Email Address",
+    "email_placeholder": "john.smith@email.com",
+    "phone": "Phone",
+    "phone_placeholder": "+40 700 000 000",
+    "subject": "Subject",
+    "subject_placeholder": "What is your message about?",
+    "message": "Message",
+    "message_placeholder": "Write your message here...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success_title": "Message Sent!",
+    "success_text": "Thank you! We will contact you as soon as possible.",
+    "send_another": "Send Another Message",
+    "map_placeholder": "Map with our location will be displayed here"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "last_updated": "Last updated",
+    "section_1_title": "What are cookies?",
+    "section_1_text": "Cookies are small text files that are stored on your device when you visit a website. They allow the site to remember your actions and preferences.",
+    "section_2_title": "What cookies do we use?",
+    "section_2_text": "We use only essential cookies necessary for the proper functioning of the site:",
+    "essential_title": "Essential Cookies",
+    "essential_text": "These cookies are necessary for the basic functioning of the site and cannot be disabled.",
+    "essential_cookie_1": "Remembers your cookie preference",
+    "essential_cookie_2": "Remembers the selected language",
+    "section_3_title": "Third-party cookies",
+    "section_3_text": "We do not use tracking or third-party cookies. We do not collect data for advertising or analytics without your explicit consent.",
+    "section_4_title": "GDPR Compliance",
+    "section_4_text": "We comply with the General Data Protection Regulation (GDPR). We do not process personal data without your explicit consent and respect your right to digital privacy.",
+    "section_5_title": "How can you manage cookies?",
+    "section_5_text_1": "You can control and delete cookies through your browser settings:",
+    "browser_chrome": "Settings > Privacy and security > Cookies",
+    "browser_firefox": "Options > Privacy and security",
+    "browser_safari": "Preferences > Privacy",
+    "browser_edge": "Settings > Cookies and site permissions",
+    "section_5_text_2": "Deleting cookies may affect site functionality.",
+    "section_6_title": "Policy changes",
+    "section_6_text": "We reserve the right to update this policy. Any changes will be posted on this page with the update date.",
+    "section_7_title": "Contact",
+    "section_7_text": "For questions about our cookie policy, you can contact us at:",
+    "phone": "Phone",
+    "back_home": "Back to Home"
+  },
+  "terms": {
+    "title": "Terms and Conditions",
+    "last_updated": "Last updated",
+    "section_1_title": "Acceptance of terms",
+    "section_1_text": "By accessing and using this website, you agree to be bound by these terms and conditions of use. If you do not agree to any of these terms, please do not use the site.",
+    "section_2_title": "Use of the site",
+    "section_2_text": "You agree to use this site only for lawful purposes and in a manner that does not infringe the rights of others:",
+    "section_2_item_1": "You will not use the site for illegal or fraudulent activities",
+    "section_2_item_2": "You will not attempt to access restricted areas of the site",
+    "section_2_item_3": "You will not transmit harmful or malicious content",
+    "section_3_title": "Intellectual property",
+    "section_3_text": "All content on this site, including text, graphics, logos and images, is our property or that of our licensors and is protected by copyright laws.",
+    "section_4_title": "Limitation of liability",
+    "section_4_text": "The information on this site is provided 'as is', without warranties of any kind. We assume no responsibility for any errors or omissions in the site content.",
+    "section_5_title": "Services and prices",
+    "section_5_text": "The prices and availability of services presented on the site are indicative and may be changed without prior notice. For exact prices, please request a personalized estimate.",
+    "section_6_title": "Privacy",
+    "section_6_text": "The collection and processing of personal data is done in accordance with our privacy policy and current GDPR legislation.",
+    "section_7_title": "Changes to terms",
+    "section_7_text": "We reserve the right to modify these terms at any time. Continued use of the site after publication of changes constitutes acceptance of the new terms.",
+    "section_8_title": "Contact",
+    "section_8_text": "For questions regarding these terms, you can contact us at:",
+    "phone": "Phone",
+    "address": "Address",
+    "address_value": "123 Example Street, Bucharest",
+    "back_home": "Back to Home"
+  }
+}

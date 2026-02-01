@@ -1,0 +1,21 @@
+<section class="contact-section section section-alt" id="contact">
+  <div class="container">
+    <app-section-title
+      [subtitle]="'contact.subtitle' | translate"
+      [title]="'contact.title' | translate"
+      [description]="'contact.description' | translate"
+    />
+
+    <div class="contact-grid">
+      <!-- Contact Information -->
+      <div class="contact-info-wrapper">
+        <app-contact-info />
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-wrapper">
+        <app-contact-form />
+      </div>
+    </div>
+  </div>
+</section>

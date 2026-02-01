@@ -1,0 +1,72 @@
+<main class="services-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">{{ 'services.page_badge' | translate }}</span>
+        <h1 class="hero-title">{{ 'services.page_title' | translate }}</h1>
+        <p class="hero-description">{{ 'services.page_description' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services List -->
+  <section class="services-list-section section">
+    <div class="container">
+      <div class="services-grid">
+        @for (service of services; track service.id; let i = $index) {
+          <article class="service-item" [class.reverse]="i % 2 !== 0">
+            <div class="service-image">
+              <app-image-placeholder 
+                aspectRatio="4:3" 
+                type="service"
+                [alt]="service.titleKey | translate"
+                [src]="service.image" 
+              />
+            </div>
+            
+            <div class="service-content">
+              <div class="service-icon">
+                <span>{{ service.icon }}</span>
+              </div>
+              <h2 class="service-title">{{ service.titleKey | translate }}</h2>
+              <p class="service-description">{{ service.shortDescKey | translate }}</p>
+              
+              <ul class="service-benefits">
+                @for (benefit of service.benefits.slice(0, 3); track benefit) {
+                  <li>
+                    <span class="benefit-icon">✓</span>
+                    {{ benefit | translate }}
+                  </li>
+                }
+              </ul>
+
+              <a [routerLink]="['/servicii', service.slug]" class="btn btn-primary">
+                {{ 'services.learn_more' | translate }}
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section section section-dark">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">{{ 'services.cta_title' | translate }}</h2>
+        <p class="cta-description">{{ 'services.cta_description' | translate }}</p>
+        <div class="cta-actions">
+          <a routerLink="/estimare-pret" class="btn btn-accent btn-lg">
+            {{ 'services.cta_estimate' | translate }}
+          </a>
+          <a routerLink="/contact" class="btn btn-outline btn-lg">
+            {{ 'services.cta_contact' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

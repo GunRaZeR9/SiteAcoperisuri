@@ -1,0 +1,11 @@
+<div 
+  class="image-placeholder"
+  [class]="aspectClass"
+  [attr.aria-label]="alt"
+  role="img">
+  @if (src) {
+    <img [src]="src" [alt]="alt" class="actual-image" />
+  } @else {
+    <span class="placeholder-icon">{{ icon }}</span>
+  }
+</div>

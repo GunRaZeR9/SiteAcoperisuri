@@ -1,0 +1,232 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.services-page {
+  width: 100%;
+}
+
+// Page Hero
+.page-hero {
+  position: relative;
+  padding: $spacing-24 0 $spacing-16;
+  background: linear-gradient(135deg, $primary-800 0%, $secondary-900 100%);
+  margin-top: -80px;
+  padding-top: calc(80px + #{$spacing-16});
+
+  @include max-md {
+    margin-top: -70px;
+    padding-top: calc(70px + #{$spacing-12});
+    padding-bottom: $spacing-12;
+  }
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: $spacing-2 $spacing-4;
+  background-color: rgba($white, 0.15);
+  color: $white;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wider;
+  border-radius: $border-radius-full;
+  margin-bottom: $spacing-4;
+}
+
+.hero-title {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $white;
+  margin-bottom: $spacing-4;
+
+  @include md {
+    font-size: $font-size-5xl;
+  }
+}
+
+.hero-description {
+  font-size: $font-size-lg;
+  color: rgba($white, 0.9);
+  line-height: $line-height-relaxed;
+  margin: 0;
+}
+
+// Services List Section
+.services-list-section {
+  background-color: $bg-light;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-16;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include max-md {
+    gap: $spacing-8;
+  }
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-8;
+  align-items: center;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-12;
+  }
+
+  &.reverse {
+    @include lg {
+      .service-image {
+        order: 2;
+      }
+      .service-content {
+        order: 1;
+      }
+    }
+  }
+}
+
+.service-image {
+  border-radius: $border-radius-2xl;
+  overflow: hidden;
+  box-shadow: $shadow-xl;
+}
+
+.service-content {
+  @include max-lg {
+    text-align: center;
+  }
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  background-color: $primary-100;
+  border-radius: $border-radius-xl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: $spacing-4;
+
+  @include max-lg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.service-title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $text-primary;
+  margin-bottom: $spacing-4;
+}
+
+.service-description {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-6;
+}
+
+.service-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 $spacing-6;
+
+  @include max-lg {
+    display: inline-block;
+    text-align: left;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: $spacing-3;
+    font-size: $font-size-base;
+    color: $text-primary;
+    margin-bottom: $spacing-3;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: $success-100;
+    color: $success-600;
+    border-radius: $border-radius-full;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    flex-shrink: 0;
+  }
+}
+
+// CTA Section
+.cta-section {
+  background: linear-gradient(135deg, $primary-700 0%, $primary-900 100%);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $white;
+  margin-bottom: $spacing-4;
+
+  @include md {
+    font-size: $font-size-4xl;
+  }
+}
+
+.cta-description {
+  font-size: $font-size-lg;
+  color: rgba($white, 0.9);
+  margin-bottom: $spacing-8;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-4;
+
+  .btn-outline {
+    border-color: rgba($white, 0.5);
+    color: $white;
+
+    &:hover {
+      background-color: rgba($white, 0.1);
+      border-color: $white;
+    }
+  }
+}

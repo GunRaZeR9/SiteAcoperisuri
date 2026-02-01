@@ -1,0 +1,25 @@
+<article class="service-card card card-hover">
+  <div class="card-image">
+    <app-image-placeholder 
+      aspectRatio="4:3" 
+      type="service"
+      [alt]="service.titleKey | translate"
+      [src]="service.image" 
+    />
+    <div class="card-icon">
+      <span>{{ service.icon }}</span>
+    </div>
+  </div>
+  
+  <div class="card-content">
+    <h3 class="card-title">{{ service.titleKey | translate }}</h3>
+    <p class="card-description">{{ service.descriptionKey | translate }}</p>
+    
+    <a 
+      [routerLink]="['/servicii', service.slug]" 
+      class="card-link">
+      {{ 'services.view_service' | translate }}
+      <span class="link-arrow">→</span>
+    </a>
+  </div>
+</article>

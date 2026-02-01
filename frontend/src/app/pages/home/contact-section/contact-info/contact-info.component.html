@@ -1,0 +1,39 @@
+<div class="contact-info">
+  <h3 class="info-title">{{ 'contact.info_title' | translate }}</h3>
+  <p class="info-description">{{ 'contact.info_description' | translate }}</p>
+
+  <div class="info-list">
+    @for (item of contactDetails; track item.icon) {
+      <div class="info-item">
+        <div class="info-icon">
+          <span>{{ item.icon }}</span>
+        </div>
+        <div class="info-content">
+          <span class="info-label">{{ item.labelKey | translate }}</span>
+          @if (item.type === 'link' && item.href) {
+            <a [href]="item.href" class="info-value info-link">{{ item.value }}</a>
+          } @else if (item.valueKey) {
+            <span class="info-value">{{ item.valueKey | translate }}</span>
+          } @else {
+            <span class="info-value">{{ item.value }}</span>
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="social-links">
+    <span class="social-label">{{ 'contact.social_label' | translate }}</span>
+    <div class="social-icons">
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <span>📘</span>
+      </a>
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <span>📷</span>
+      </a>
+      <a href="#" class="social-icon" aria-label="WhatsApp">
+        <span>💬</span>
+      </a>
+    </div>
+  </div>
+</div>

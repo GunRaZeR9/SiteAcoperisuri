@@ -1,0 +1,265 @@
+<main class="estimate-page">
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-background"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">{{ 'estimate.badge' | translate }}</span>
+        <h1 class="hero-title">{{ 'estimate.title' | translate }}</h1>
+        <p class="hero-description">{{ 'estimate.description' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="estimate-section section">
+    <div class="container">
+      <div class="estimate-wrapper">
+        @if (isSubmitted()) {
+          <!-- Success Message -->
+          <div class="success-message">
+            <div class="success-icon">✓</div>
+            <h2 class="success-title">{{ 'estimate.success_title' | translate }}</h2>
+            <p class="success-text">{{ 'estimate.success_text' | translate }}</p>
+            <button type="button" class="btn btn-primary" (click)="resetForm()">
+              {{ 'estimate.new_request' | translate }}
+            </button>
+          </div>
+        } @else {
+          <!-- Estimate Form -->
+          <form class="estimate-form" (ngSubmit)="onSubmit()" #estimateForm="ngForm">
+            <!-- Contact Information -->
+            <div class="form-section">
+              <h3 class="form-section-title">{{ 'estimate.section_contact' | translate }}</h3>
+              
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="name">
+                    {{ 'estimate.name' | translate }} <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    class="form-input"
+                    [(ngModel)]="formData.name"
+                    name="name"
+                    required
+                    [placeholder]="'estimate.name_placeholder' | translate"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="email">
+                    {{ 'estimate.email' | translate }} <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    class="form-input"
+                    [(ngModel)]="formData.email"
+                    name="email"
+                    required
+                    [placeholder]="'estimate.email_placeholder' | translate"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="phone">
+                    {{ 'estimate.phone' | translate }} <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    class="form-input"
+                    [(ngModel)]="formData.phone"
+                    name="phone"
+                    required
+                    [placeholder]="'estimate.phone_placeholder' | translate"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="location">
+                    {{ 'estimate.location' | translate }} <span class="required">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="location" 
+                    class="form-input"
+                    [(ngModel)]="formData.location"
+                    name="location"
+                    required
+                    [placeholder]="'estimate.location_placeholder' | translate"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Details -->
+            <div class="form-section">
+              <h3 class="form-section-title">{{ 'estimate.section_project' | translate }}</h3>
+              
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="serviceType">
+                    {{ 'estimate.service_type' | translate }} <span class="required">*</span>
+                  </label>
+                  <select 
+                    id="serviceType" 
+                    class="form-input"
+                    [(ngModel)]="formData.serviceType"
+                    name="serviceType"
+                    required
+                  >
+                    <option value="">{{ 'estimate.select_service' | translate }}</option>
+                    @for (service of serviceTypes; track service.value) {
+                      <option [value]="service.value">{{ service.labelKey | translate }}</option>
+                    }
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="roofType">
+                    {{ 'estimate.roof_type' | translate }}
+                  </label>
+                  <select 
+                    id="roofType" 
+                    class="form-input"
+                    [(ngModel)]="formData.roofType"
+                    name="roofType"
+                  >
+                    <option value="">{{ 'estimate.select_roof_type' | translate }}</option>
+                    @for (roof of roofTypes; track roof.value) {
+                      <option [value]="roof.value">{{ roof.labelKey | translate }}</option>
+                    }
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="roofArea">
+                    {{ 'estimate.roof_area' | translate }}
+                  </label>
+                  <input 
+                    type="text" 
+                    id="roofArea" 
+                    class="form-input"
+                    [(ngModel)]="formData.roofArea"
+                    name="roofArea"
+                    [placeholder]="'estimate.roof_area_placeholder' | translate"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="urgency">
+                    {{ 'estimate.urgency_label' | translate }}
+                  </label>
+                  <select 
+                    id="urgency" 
+                    class="form-input"
+                    [(ngModel)]="formData.urgency"
+                    name="urgency"
+                  >
+                    <option value="">{{ 'estimate.select_urgency' | translate }}</option>
+                    @for (level of urgencyLevels; track level.value) {
+                      <option [value]="level.value">{{ level.labelKey | translate }}</option>
+                    }
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="description">
+                  {{ 'estimate.description_label' | translate }}
+                </label>
+                <textarea 
+                  id="description" 
+                  class="form-input form-textarea"
+                  [(ngModel)]="formData.description"
+                  name="description"
+                  rows="4"
+                  [placeholder]="'estimate.description_placeholder' | translate"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Preferred Contact -->
+            <div class="form-section">
+              <h3 class="form-section-title">{{ 'estimate.section_preferences' | translate }}</h3>
+              
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input 
+                    type="radio" 
+                    name="preferredContact" 
+                    value="phone"
+                    [(ngModel)]="formData.preferredContact"
+                  />
+                  <span class="radio-custom"></span>
+                  {{ 'estimate.contact_phone' | translate }}
+                </label>
+                <label class="radio-label">
+                  <input 
+                    type="radio" 
+                    name="preferredContact" 
+                    value="email"
+                    [(ngModel)]="formData.preferredContact"
+                  />
+                  <span class="radio-custom"></span>
+                  {{ 'estimate.contact_email' | translate }}
+                </label>
+                <label class="radio-label">
+                  <input 
+                    type="radio" 
+                    name="preferredContact" 
+                    value="whatsapp"
+                    [(ngModel)]="formData.preferredContact"
+                  />
+                  <span class="radio-custom"></span>
+                  {{ 'estimate.contact_whatsapp' | translate }}
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-actions">
+              <button 
+                type="submit" 
+                class="btn btn-primary btn-lg btn-submit"
+                [disabled]="isSubmitting() || !estimateForm.valid"
+              >
+                @if (isSubmitting()) {
+                  <span class="spinner"></span>
+                  {{ 'estimate.submitting' | translate }}
+                } @else {
+                  {{ 'estimate.submit' | translate }}
+                }
+              </button>
+            </div>
+          </form>
+        }
+
+        <!-- Sidebar Info -->
+        <aside class="estimate-sidebar">
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <h4 class="info-title">{{ 'estimate.need_help' | translate }}</h4>
+            <p class="info-text">{{ 'estimate.help_text' | translate }}</p>
+            <a href="tel:+40700000000" class="info-phone">+40 700 000 000</a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <h4 class="info-title">{{ 'estimate.response_time' | translate }}</h4>
+            <p class="info-text">{{ 'estimate.response_text' | translate }}</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">✓</div>
+            <h4 class="info-title">{{ 'estimate.free_estimate' | translate }}</h4>
+            <p class="info-text">{{ 'estimate.free_text' | translate }}</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>

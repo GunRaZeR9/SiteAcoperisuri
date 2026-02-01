@@ -1,0 +1,17 @@
+<section class="services-section section">
+  <div class="container">
+    <app-section-title
+      [subtitle]="'services.subtitle' | translate"
+      [title]="'services.title' | translate"
+      [description]="'services.description' | translate"
+    />
+
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <app-service-card
+          [service]="service"
+        />
+      }
+    </div>
+  </div>
+</section>

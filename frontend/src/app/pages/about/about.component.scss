@@ -1,0 +1,440 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.about-page {
+  width: 100%;
+}
+
+// Page Hero
+.page-hero {
+  position: relative;
+  padding: $spacing-24 0 $spacing-16;
+  background: linear-gradient(135deg, $primary-800 0%, $secondary-900 100%);
+  margin-top: -80px;
+  padding-top: calc(80px + #{$spacing-16});
+
+  @include max-md {
+    margin-top: -70px;
+    padding-top: calc(70px + #{$spacing-12});
+    padding-bottom: $spacing-12;
+  }
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: $spacing-2 $spacing-4;
+  background-color: rgba($white, 0.15);
+  color: $white;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-wider;
+  border-radius: $border-radius-full;
+  margin-bottom: $spacing-4;
+}
+
+.hero-title {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $white;
+  margin-bottom: $spacing-4;
+
+  @include md {
+    font-size: $font-size-5xl;
+  }
+}
+
+.hero-description {
+  font-size: $font-size-lg;
+  color: rgba($white, 0.9);
+  line-height: $line-height-relaxed;
+  margin: 0;
+}
+
+// Story Section
+.story-section {
+  background-color: $white;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-12;
+  align-items: center;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.story-content {
+  .section-badge {
+    display: inline-block;
+    padding: $spacing-1 $spacing-3;
+    background-color: $primary-100;
+    color: $primary-700;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing-wide;
+    border-radius: $border-radius-full;
+    margin-bottom: $spacing-4;
+  }
+
+  .section-title {
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    color: $text-primary;
+    margin-bottom: $spacing-6;
+
+    @include md {
+      font-size: $font-size-4xl;
+    }
+  }
+}
+
+.story-text {
+  font-size: $font-size-lg;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacing-4;
+
+  &:last-of-type {
+    margin-bottom: $spacing-8;
+  }
+}
+
+.story-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-6;
+  padding-top: $spacing-6;
+  border-top: 1px solid $border-color;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $primary-600;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: $font-size-sm;
+  color: $text-muted;
+  margin-top: $spacing-1;
+}
+
+.story-image {
+  position: relative;
+  border-radius: $border-radius-xl;
+  overflow: hidden;
+  box-shadow: $shadow-xl;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: $spacing-6;
+  right: $spacing-6;
+  background-color: $primary-600;
+  color: $white;
+  padding: $spacing-4 $spacing-6;
+  border-radius: $border-radius-xl;
+  text-align: center;
+
+  .badge-number {
+    display: block;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-bold;
+    line-height: 1;
+  }
+
+  .badge-text {
+    display: block;
+    font-size: $font-size-sm;
+    margin-top: $spacing-1;
+  }
+}
+
+// Values Section
+.values-section {
+  background-color: $bg-light;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-6;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.value-card {
+  background-color: $white;
+  padding: $spacing-8;
+  border-radius: $border-radius-xl;
+  text-align: center;
+  box-shadow: $shadow-md;
+  transition: all $transition-base $transition-timing;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: $spacing-4;
+}
+
+.value-title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin-bottom: $spacing-3;
+}
+
+.value-description {
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  margin: 0;
+}
+
+// Timeline Section
+.timeline-section {
+  background-color: $white;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-8 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: $primary-200;
+
+    @include max-md {
+      left: 20px;
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $spacing-8;
+
+  @include max-md {
+    padding-left: $spacing-12;
+  }
+
+  @include md {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .timeline-content {
+        text-align: right;
+        padding-left: 0;
+        padding-right: $spacing-8;
+      }
+    }
+
+    &:nth-child(odd) {
+      .timeline-content {
+        padding-left: $spacing-8;
+      }
+    }
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: $primary-600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  @include max-md {
+    left: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .year {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $white;
+
+    @include max-md {
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+.timeline-content {
+  width: calc(50% - 30px);
+  background-color: $bg-light;
+  padding: $spacing-6;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-md;
+
+  @include max-md {
+    width: 100%;
+    padding-left: $spacing-6;
+  }
+}
+
+.milestone-title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin-bottom: $spacing-2;
+}
+
+.milestone-description {
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  line-height: $line-height-relaxed;
+  margin: 0;
+}
+
+// Team Section
+.team-section {
+  background-color: $bg-light;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: $spacing-6;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.team-card {
+  background-color: $white;
+  border-radius: $border-radius-xl;
+  overflow: hidden;
+  box-shadow: $shadow-md;
+  transition: all $transition-base $transition-timing;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.member-image {
+  overflow: hidden;
+}
+
+.member-info {
+  padding: $spacing-6;
+  text-align: center;
+}
+
+.member-name {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin-bottom: $spacing-1;
+}
+
+.member-role {
+  font-size: $font-size-sm;
+  color: $text-muted;
+  margin: 0;
+}
+
+// CTA Section
+.cta-section {
+  background: linear-gradient(135deg, $primary-700 0%, $primary-900 100%);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  color: $white;
+  margin-bottom: $spacing-4;
+
+  @include md {
+    font-size: $font-size-4xl;
+  }
+}
+
+.cta-description {
+  font-size: $font-size-lg;
+  color: rgba($white, 0.9);
+  margin-bottom: $spacing-8;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $spacing-4;
+}
+
+.cta-btn-outline {
+  border-color: rgba($white, 0.5);
+  color: $white;
+
+  &:hover {
+    background-color: rgba($white, 0.1);
+    border-color: $white;
+  }
+}

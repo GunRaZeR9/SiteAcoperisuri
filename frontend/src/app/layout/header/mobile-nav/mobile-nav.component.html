@@ -1,0 +1,59 @@
+<aside 
+  class="mobile-nav" 
+  [class.open]="isOpen"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Mobile navigation">
+  
+  <div class="mobile-nav-header">
+    <div class="logo">
+      <div class="logo-icon">🏠</div>
+      <span class="logo-name">Acoperișuri</span>
+    </div>
+    <button 
+      class="close-btn"
+      (click)="onNavClick()"
+      aria-label="Close menu">
+      <span class="close-icon">✕</span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav-content">
+    <ul class="mobile-nav-list">
+      @for (item of navItems; track item.path) {
+        <li class="mobile-nav-item">
+          <a 
+            [routerLink]="item.path" 
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: item.exact }"
+            class="mobile-nav-link"
+            (click)="onNavClick()">
+            {{ item.label | translate }}
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <div class="mobile-nav-footer">
+    <app-language-switcher [showLabels]="true" />
+    
+    <a 
+      routerLink="/estimare-pret" 
+      class="btn btn-primary btn-full"
+      (click)="onNavClick()">
+      {{ 'nav.estimate' | translate }}
+    </a>
+
+    <div class="contact-info">
+      <a href="tel:+40700000000" class="contact-link">
+        <span class="contact-icon">📞</span>
+        <span>+40 700 000 000</span>
+      </a>
+      <a href="mailto:contact@acoperisuri.ro" class="contact-link">
+        <span class="contact-icon">✉️</span>
+        <span>contact@acoperisuri.ro</span>
+      </a>
+    </div>
+  </div>
+</aside>

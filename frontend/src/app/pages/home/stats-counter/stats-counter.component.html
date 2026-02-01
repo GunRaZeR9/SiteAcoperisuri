@@ -1,0 +1,15 @@
+<section 
+  class="stats-section section section-dark"
+  #statsSection
+  (intersectionObserver)="onSectionRef(statsSection)">
+  <div class="container">
+    <div class="stats-grid">
+      @for (stat of stats; track stat.id) {
+        <app-stat-item
+          [stat]="stat"
+          [animate]="isVisible()"
+        />
+      }
+    </div>
+  </div>
+</section>

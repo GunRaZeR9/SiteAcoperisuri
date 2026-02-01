@@ -1,0 +1,15 @@
+<nav class="main-nav" role="navigation" aria-label="Main navigation">
+  <ul class="nav-list">
+    @for (item of navItems; track item.path) {
+      <li class="nav-item">
+        <a 
+          [routerLink]="item.path" 
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: item.exact }"
+          class="nav-link">
+          {{ item.label | translate }}
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

@@ -1,0 +1,29 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.contact-section {
+  background-color: $bg-section-alt;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-8;
+
+  @include lg {
+    grid-template-columns: 1fr 1.5fr;
+    gap: $spacing-12;
+  }
+}
+
+.contact-info-wrapper {
+  @include max-lg {
+    order: 2;
+  }
+}
+
+.contact-form-wrapper {
+  @include max-lg {
+    order: 1;
+  }
+}

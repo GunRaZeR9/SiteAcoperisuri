@@ -1,0 +1,555 @@
+{
+  "app": {
+    "hello": "Helló",
+    "title": "Professzionális Tetőfedés"
+  },
+  "header": {
+    "tagline": "Professzionális"
+  },
+  "nav": {
+    "home": "Főoldal",
+    "services": "Szolgáltatások",
+    "portfolio": "Portfólió",
+    "about": "Rólunk",
+    "contact": "Kapcsolat",
+    "estimate": "Árajánlat"
+  },
+  "hero": {
+    "badge": "Tetőfedő Szakértők",
+    "title": "Minőségi Tetőfedés Otthonának",
+    "subtitle": "Védjük otthonát tartós és professzionális tetőfedési megoldásokkal. Több mint 15 év tapasztalat tetőépítésben és javításban.",
+    "cta_estimate": "Árajánlat Kérése",
+    "cta_services": "Szolgáltatások",
+    "feature_1": "10 Év Garancia",
+    "feature_2": "Prémium Anyagok",
+    "feature_3": "Szakértő Csapat"
+  },
+  "services": {
+    "badge": "Amit Kínálunk",
+    "subtitle": "Amit Kínálunk",
+    "title": "Szolgáltatásaink",
+    "description": "Tetőfedési szolgáltatások teljes skáláját kínáljuk, az új építéstől a javításig és karbantartásig.",
+    "view_all": "Összes Szolgáltatás",
+    "view_service": "Szolgáltatás Megtekintése",
+    "learn_more": "Tudjon Meg Többet",
+    "roofing": {
+      "title": "Tetőfedés",
+      "short_description": "Új tetőket szerelünk fel a legjobb anyagokkal és modern technikákkal a maximális tartósság érdekében.",
+      "short_desc": "Új tetőket szerelünk fel a legjobb anyagokkal és modern technikákkal a maximális tartósság érdekében.",
+      "description": "Teljes körű új tetőfedési szolgáltatások lakó- és kereskedelmi épületekhez. A legmagasabb minőségű anyagokat és modern szerelési technikákat használjuk.",
+      "full_desc": "Teljes körű új tetőfedési szolgáltatások lakó- és kereskedelmi épületekhez. A legmagasabb minőségű anyagokat és modern szerelési technikákat használjuk.",
+      "benefit_1": "Prémium minősített anyagok",
+      "benefit_2": "10 éves kiterjesztett garancia",
+      "benefit_3": "Professzionális telepítés",
+      "benefit_4": "Hőszigetelés mellékelve",
+      "feature_1": "Prémium kerámia cserép",
+      "feature_2": "Szellőztetési rendszer",
+      "feature_3": "Teljes vízszigetelés",
+      "feature_4": "Integrált ereszcsatornák"
+    },
+    "repairs": {
+      "title": "Tetőjavítás",
+      "short_description": "Gyorsan megoldunk minden problémát - a kisebb szivárgásoktól a nagy időjárási károkig.",
+      "short_desc": "Gyorsan megoldunk minden problémát - a kisebb szivárgásoktól a nagy időjárási károkig.",
+      "description": "Gyors és hatékony javítási szolgáltatások bármilyen típusú tetőhöz. Azonnal beavatkozunk a további károk megelőzése érdekében.",
+      "full_desc": "Gyors és hatékony javítási szolgáltatások bármilyen típusú tetőhöz. Azonnal beavatkozunk a további károk megelőzése érdekében.",
+      "benefit_1": "Gyors beavatkozás",
+      "benefit_2": "Ingyenes diagnózis",
+      "benefit_3": "Tartós megoldások",
+      "benefit_4": "Versenyképes árak",
+      "feature_1": "Szivárgás javítás",
+      "feature_2": "Cserép csere",
+      "feature_3": "Szerkezeti javítások",
+      "feature_4": "Időszakos karbantartás"
+    },
+    "renovation": {
+      "title": "Tetőfelújítás",
+      "short_description": "Régi tetejét teljesen átalakítjuk újjá, modernné és energiahatékonnyá.",
+      "short_desc": "Régi tetejét teljesen átalakítjuk újjá, modernné és energiahatékonnyá.",
+      "description": "Régi vagy sérült tetők teljes felújítása. Modernizáljuk és javítjuk a hő- és esztétikai teljesítményt.",
+      "full_desc": "Régi vagy sérült tetők teljes felújítása. Modernizáljuk és javítjuk a hő- és esztétikai teljesítményt.",
+      "benefit_1": "Energiahatékonyság",
+      "benefit_2": "Modern dizájn",
+      "benefit_3": "Hozzáadott érték",
+      "benefit_4": "Megnövelt tartósság",
+      "feature_1": "Régi tető eltávolítása",
+      "feature_2": "Szerkezet megerősítés",
+      "feature_3": "Modern szigetelés",
+      "feature_4": "Prémium burkolatok"
+    },
+    "waterproofing": {
+      "title": "Vízszigetelés",
+      "short_description": "Professzionális vízszigetelési rendszerekkel védjük otthonát a víz ellen.",
+      "short_desc": "Professzionális vízszigetelési rendszerekkel védjük otthonát a víz ellen.",
+      "description": "Teljes vízszigetelési rendszerek a maximális védelem érdekében a vízszivárgás és páratartalom ellen.",
+      "full_desc": "Teljes vízszigetelési rendszerek a maximális védelem érdekében a vízszivárgás és páratartalom ellen.",
+      "benefit_1": "Teljes védelem",
+      "benefit_2": "Minősített anyagok",
+      "benefit_3": "Kiterjesztett garancia",
+      "benefit_4": "Professzionális alkalmazás",
+      "feature_1": "Bitumenes membránok",
+      "feature_2": "Folyékony vízszigetelés",
+      "feature_3": "Párazáró rétegek",
+      "feature_4": "Kerületi vízelvezetés"
+    },
+    "carpentry": {
+      "title": "Faszerkezetek",
+      "short_description": "Szarufákat és faszerkezeteket építünk és javítunk bármilyen típusú tetőhöz.",
+      "short_desc": "Szarufákat és faszerkezeteket építünk és javítunk bármilyen típusú tetőhöz.",
+      "description": "Teljes körű ácsmunkák a tetőszerkezetek építéséhez és javításához.",
+      "full_desc": "Teljes körű ácsmunkák a tetőszerkezetek építéséhez és javításához.",
+      "benefit_1": "Kezelt fa",
+      "benefit_2": "Szerkezeti számítások",
+      "benefit_3": "Precíz összeszerelés",
+      "benefit_4": "Maximális ellenállás",
+      "feature_1": "Teljes szarufák",
+      "feature_2": "Megerősítések",
+      "feature_3": "Gerendák és szarufák",
+      "feature_4": "Rovarirtó kezelés"
+    },
+    "attic": {
+      "title": "Tetőtér Beépítés",
+      "short_description": "Padlásterét lakótérré alakítjuk minden modern kényelemmel.",
+      "short_desc": "Padlásterét lakótérré alakítjuk minden modern kényelemmel.",
+      "description": "Teljes tetőtér-beépítési szolgáltatások a kihasználatlan tér modern, kényelmes szobákká alakításához.",
+      "full_desc": "Teljes tetőtér-beépítési szolgáltatások a kihasználatlan tér modern, kényelmes szobákká alakításához.",
+      "benefit_1": "További hely",
+      "benefit_2": "Egyedi dizájn",
+      "benefit_3": "Tökéletes szigetelés",
+      "benefit_4": "Természetes fény",
+      "feature_1": "Velux ablakok",
+      "feature_2": "Prémium szigetelés",
+      "feature_3": "Teljes gépészet",
+      "feature_4": "Belső burkolatok"
+    },
+    "page_badge": "Teljes Körű Szolgáltatások",
+    "page_title": "Szolgáltatásaink",
+    "page_description": "Professzionális tetőfedési szolgáltatások teljes skáláját kínáljuk. Több mint 15 év tapasztalattal garantáljuk a minőséget és az elégedettséget.",
+    "benefits_title": "Előnyök",
+    "features_title": "Mit Tartalmaz",
+    "gallery_title": "Galéria",
+    "other_services": "Egyéb Szolgáltatások",
+    "cta_title": "Segítségre Van Szüksége?",
+    "cta_text": "Lépjen kapcsolatba velünk ingyenes konzultációért és személyre szabott árajánlatért.",
+    "cta_phone": "Hívjon Most",
+    "cta_estimate": "Árajánlat Kérése",
+    "not_found_title": "Szolgáltatás Nem Található",
+    "not_found_text": "Sajnáljuk, a keresett szolgáltatás nem létezik.",
+    "back_to_services": "Vissza a Szolgáltatásokhoz",
+    "list_cta_title": "Készen Áll a Kezdésre?",
+    "list_cta_description": "Lépjen kapcsolatba velünk még ma ingyenes konzultációért, és tudja meg, hogyan segíthetünk tetőprojektjével.",
+    "list_cta_estimate": "Ingyenes Árajánlat Kérése",
+    "list_cta_contact": "Kapcsolat",
+    "cta_contact": "Kapcsolat"
+  },
+  "why_us": {
+    "badge": "Miért Mi",
+    "title": "Miért Válasszon Minket",
+    "description": "Több mint 15 év tapasztalattal mi vagyunk a megbízható választás tetejéhez.",
+    "reason_1": {
+      "title": "15+ Év Tapasztalat",
+      "description": "Bizonyított szakértelem több száz sikeresen befejezett projektben."
+    },
+    "reason_2": {
+      "title": "10 Év Garancia",
+      "description": "Kiterjesztett garanciát nyújtunk minden munkánkra."
+    },
+    "reason_3": {
+      "title": "Prémium Anyagok",
+      "description": "Csak minősített anyagokat használunk vezető beszállítóktól."
+    },
+    "reason_4": {
+      "title": "Minősített Csapat",
+      "description": "Szakképzett mesteremberek szakmai minősítésekkel."
+    },
+    "reason_5": {
+      "title": "Tisztességes Árak",
+      "description": "A legjobb ár-érték arányt kínáljuk a piacon."
+    },
+    "reason_6": {
+      "title": "Teljes Támogatás",
+      "description": "Segítség a projekt előtt, alatt és után."
+    }
+  },
+  "stats": {
+    "projects": "Befejezett Projektek",
+    "experience": "Év Tapasztalat",
+    "clients": "Elégedett Ügyfél",
+    "warranty": "Év Garancia"
+  },
+  "reasons": {
+    "subtitle": "Miért Mi",
+    "title": "Miért Válasszon Minket",
+    "description": "Több mint 15 év tapasztalattal mi vagyunk a megbízható választás tetejéhez.",
+    "experience": {
+      "title": "15+ Év Tapasztalat",
+      "description": "Bizonyított szakértelem több száz sikeresen befejezett projektben."
+    },
+    "warranty": {
+      "title": "10 Év Garancia",
+      "description": "Kiterjesztett garanciát nyújtunk minden munkánkra."
+    },
+    "quality": {
+      "title": "Prémium Anyagok",
+      "description": "Csak minősített anyagokat használunk vezető beszállítóktól."
+    },
+    "team": {
+      "title": "Minősített Csapat",
+      "description": "Szakképzett mesteremberek szakmai minősítésekkel."
+    },
+    "pricing": {
+      "title": "Tisztességes Árak",
+      "description": "A legjobb ár-érték arányt kínáljuk a piacon."
+    },
+    "support": {
+      "title": "Teljes Támogatás",
+      "description": "Segítség a projekt előtt, alatt és után."
+    }
+  },
+  "about_preview": {
+    "badge": "Rólunk",
+    "title": "Megbízható Tetőket Építünk",
+    "text_1": "Több mint 15 év tapasztalattal a tetőfedési iparágban megbízható partnerré váltunk több száz román család számára.",
+    "text_2": "Minősített szakembereink csapata a legmodernebb technológiákat és prémium anyagokat használja teteje tartósságának és szépségének biztosítása érdekében.",
+    "years_badge": "15+ Év Tapasztalat",
+    "cta": "Tudjon Meg Többet"
+  },
+  "contact_section": {
+    "badge": "Kapcsolat",
+    "title": "Beszéljük Meg Projektjét",
+    "description": "Itt vagyunk, hogy megválaszoljunk minden kérdését és személyre szabott megoldásokat kínáljunk.",
+    "address_label": "Cím",
+    "address": "Példa utca 123, Bukarest",
+    "phone_label": "Telefon",
+    "phone": "+40 700 000 000",
+    "email_label": "Email",
+    "email": "contact@acoperisuri.ro",
+    "hours_label": "Nyitvatartás",
+    "hours": "Hétfő - Péntek: 08:00 - 18:00",
+    "form_title": "Küldjön Üzenetet",
+    "name": "Teljes Név",
+    "name_placeholder": "Adja meg nevét",
+    "email_input": "Email Cím",
+    "email_placeholder": "Adja meg email címét",
+    "phone_input": "Telefon",
+    "phone_placeholder": "Adja meg telefonszámát",
+    "message": "Üzenet",
+    "message_placeholder": "Írja le röviden projektjét...",
+    "submit": "Üzenet Küldése",
+    "sending": "Küldés...",
+    "success_title": "Üzenet Elküldve!",
+    "success_text": "Köszönjük üzenetét! A lehető leghamarabb felvesszük Önnel a kapcsolatot."
+  },
+  "footer": {
+    "description": "Tetőfedő szakértők több mint 15 év tapasztalattal. Teljes körű tetőszerelési, javítási és karbantartási szolgáltatásokat kínálunk.",
+    "company_description": "Tetőfedő szakértők több mint 15 év tapasztalattal. Teljes körű tetőszerelési, javítási és karbantartási szolgáltatásokat kínálunk.",
+    "services_title": "Szolgáltatások",
+    "company_title": "Cég",
+    "useful_links": "Hasznos Linkek",
+    "privacy_title": "Jogi & Adatvédelem",
+    "about": "Rólunk",
+    "portfolio": "Portfólió",
+    "contact": "Kapcsolat",
+    "terms": "Felhasználási Feltételek",
+    "cookies": "Cookie Szabályzat",
+    "contact_title": "Kapcsolat",
+    "address": "Példa utca 123, Bukarest",
+    "cta_text": "Készen áll projektje elindítására?",
+    "made_in": "Készült ❤️-tel Romániában",
+    "rights": "Minden jog fenntartva."
+  },
+  "cookie_consent": {
+    "title": "Cookie-kat Használunk",
+    "text": "Ez az oldal alapvető cookie-kat használ a megfelelő működéshez. Nem gyűjtünk személyes adatokat az Ön kifejezett hozzájárulása nélkül.",
+    "accept": "Elfogadom",
+    "decline": "Elutasítom",
+    "learn_more": "Tudjon Meg Többet"
+  },
+  "portfolio": {
+    "badge": "Munkáink",
+    "title": "Portfólió",
+    "description": "Fedezze fel befejezett projektjeinket és lássa az ügyfeleinknek nyújtott munka minőségét.",
+    "categories": {
+      "all": "Összes",
+      "roofing": "Új Tetők",
+      "renovation": "Felújítások",
+      "repairs": "Javítások",
+      "waterproofing": "Vízszigetelés",
+      "carpentry": "Faszerkezetek",
+      "attic": "Tetőtér Beépítés"
+    },
+    "project_1": {
+      "title": "Modern Villa",
+      "description": "Új kerámia cserép tető 300 nm-es villához."
+    },
+    "project_2": {
+      "title": "Régi Ház Felújítás",
+      "description": "Teljes tetőfelújítás hagyományos házhoz."
+    },
+    "project_3": {
+      "title": "Vihar Utáni Javítás",
+      "description": "Gyors beavatkozás vihar okozta károk javítására."
+    },
+    "project_4": {
+      "title": "Lakóház Vízszigetelés",
+      "description": "Teljes vízszigetelési rendszer lakóépület tetejéhez."
+    },
+    "project_5": {
+      "title": "Családi Ház",
+      "description": "Új tető családi házhoz tetőtérrel."
+    },
+    "project_6": {
+      "title": "Tetőtér Beépítés",
+      "description": "Padlás átalakítása lakótérré Velux ablakokkal."
+    },
+    "project_7": {
+      "title": "Összetett Szarufa Szerkezet",
+      "description": "Fa szarufa szerkezet építése különleges architektúrájú házhoz."
+    },
+    "project_8": {
+      "title": "Szálloda Felújítás",
+      "description": "Teljes tetőfelújítás tengerparti szállodához."
+    },
+    "project_9": {
+      "title": "Ipari Tető",
+      "description": "Fém tető nagy ipari csarnokhoz."
+    },
+    "no_results": "Nincs projekt ebben a kategóriában.",
+    "cta_title": "Hasonló Tetőt Szeretne?",
+    "cta_description": "Lépjen kapcsolatba velünk ingyenes konzultációért és személyre szabott árajánlatért projektjéhez.",
+    "cta_estimate": "Árajánlat Kérése",
+    "cta_contact": "Kapcsolat"
+  },
+  "estimate": {
+    "badge": "Ingyenes Árajánlat",
+    "title": "Kérjen Árajánlatot",
+    "description": "Töltse ki az alábbi űrlapot, és a lehető leghamarabb személyre szabott árajánlatot küldünk.",
+    "section_contact": "Kapcsolattartási Adatok",
+    "section_project": "Projekt Részletei",
+    "section_preferences": "Kapcsolat Preferenciák",
+    "name": "Teljes Név",
+    "name_placeholder": "Kovács János",
+    "email": "Email Cím",
+    "email_placeholder": "kovacs.janos@email.com",
+    "phone": "Telefon",
+    "phone_placeholder": "+40 700 000 000",
+    "location": "Projekt Helyszíne",
+    "location_placeholder": "Város, Megye",
+    "service_type": "Szolgáltatás Típusa",
+    "select_service": "Válasszon szolgáltatást",
+    "roof_type": "Tető Típusa",
+    "select_roof_type": "Válasszon tető típust",
+    "roof_area": "Becsült Terület (nm)",
+    "roof_area_placeholder": "pl. 150",
+    "urgency_label": "Sürgősség",
+    "select_urgency": "Válasszon sürgősségi szintet",
+    "description_label": "Projekt Leírása",
+    "description_placeholder": "Írja le részletesen projektjét...",
+    "contact_phone": "Telefon",
+    "contact_email": "Email",
+    "contact_whatsapp": "WhatsApp",
+    "submit": "Kérés Elküldése",
+    "submitting": "Küldés...",
+    "success_title": "Kérés Sikeresen Elküldve!",
+    "success_text": "Köszönjük kérését! Csapatunk 24 órán belül felveszi Önnel a kapcsolatot személyre szabott árajánlattal.",
+    "new_request": "Újabb Kérés Küldése",
+    "need_help": "Segítségre Van Szüksége?",
+    "help_text": "Csapatunk készen áll kérdéseire.",
+    "response_time": "Válaszidő",
+    "response_text": "Munkanapokon 24 órán belül válaszolunk.",
+    "free_estimate": "100% Ingyenes",
+    "free_text": "Az árajánlat ingyenes és kötelezettségmentes.",
+    "service_types": {
+      "roofing": "Új Tető Telepítés",
+      "repairs": "Tetőjavítás",
+      "renovation": "Tetőfelújítás",
+      "waterproofing": "Vízszigetelés",
+      "carpentry": "Faszerkezetek",
+      "attic": "Tetőtér Beépítés",
+      "other": "Egyéb"
+    },
+    "roof_types": {
+      "tiles": "Kerámia Cserép",
+      "metal": "Fém/Lemez",
+      "shingles": "Bitumenes Zsindely",
+      "bitumen": "Bitumenes Membrán",
+      "slate": "Pala",
+      "unknown": "Nem tudom"
+    },
+    "urgency": {
+      "low": "Alacsony - A következő hónapokban",
+      "medium": "Közepes - A következő hetekben",
+      "high": "Magas - Minél hamarabb",
+      "emergency": "Sürgős - Aktuális probléma"
+    }
+  },
+  "about": {
+    "badge": "Rólunk",
+    "subtitle": "Rólunk",
+    "title": "Kik Vagyunk",
+    "description": "Fedezd fel történetünket és a szakemberek csapatát, akik álmokat valósítanak meg.",
+    "preview_text_1": "Több mint 15 éves tapasztalattal a tetőépítő iparban, megbízható partnerré váltunk száz család számára Romániában.",
+    "preview_text_2": "Szakképzett szakembereink csapata a legmodernebb technológiákat és prémium anyagokat használja, hogy biztosítsa tetőd tartósságát és szépségét.",
+    "feature_1": "Több mint 15 év szakértelem",
+    "feature_2": "Tanúsított prémium anyagok",
+    "feature_3": "Szakképzett szakemberek csapata",
+    "feature_4": "Hosszabbított garancia és dedikált támogatás",
+    "years_badge": "Év Tapasztalat",
+    "cta_button": "Tudj Meg Többet",
+    "image_alt": "Professzionális Tetőfedés",
+    "story_badge": "Történetünk",
+    "story_title": "15+ Év Tetőfedési Kiválóság",
+    "story_text_1": "Cégünket 2010-ben alapítottuk egyértelmű vízióval: a legmagasabb minőségű tetőfedési szolgáltatásokat nyújtani a romániai családoknak.",
+    "story_text_2": "Az évek során egy kis, elkötelezett mesterekből álló csapatból egy több mint 25 minősített szakemberrel rendelkező céggé nőttünk, országszerte kiszolgálva ügyfeleket.",
+    "story_text_3": "Ma büszkék vagyunk arra, hogy Románia egyik vezető tetőfedő cége vagyunk, több mint 1000 sikeresen befejezett projekttel.",
+    "years_experience": "Év Tapasztalat",
+    "completed_projects": "Befejezett Projekt",
+    "team_members": "Csapattag",
+    "years_text": "Év Tapasztalat",
+    "values_subtitle": "Értékeink",
+    "values_title": "Az Elvek, Amelyek Vezetnek Minket",
+    "values_description": "Minden projektünket szilárd elvek és a kiválóság iránti elkötelezettségünk vezérli.",
+    "values": {
+      "quality": {
+        "title": "Minőség",
+        "description": "Csak prémium anyagokat és modern technikákat használunk tartós eredményekért."
+      },
+      "trust": {
+        "title": "Bizalom",
+        "description": "Hosszú távú kapcsolatokat építünk őszinteségre és átláthatóságra alapozva."
+      },
+      "efficiency": {
+        "title": "Hatékonyság",
+        "description": "Betartjuk a határidőket és optimalizáljuk a folyamatokat a gyors eredmények érdekében."
+      },
+      "sustainability": {
+        "title": "Fenntarthatóság",
+        "description": "Törődünk a környezettel és lehetőség szerint környezetbarát anyagokat használunk."
+      }
+    },
+    "timeline_subtitle": "Történelmünk",
+    "timeline_title": "Kulcsfontosságú Mérföldkövek",
+    "milestones": {
+      "founding": {
+        "title": "Alapítás",
+        "description": "5 szenvedélyes mester kis csapataként indultunk."
+      },
+      "growth": {
+        "title": "Bővülés",
+        "description": "Elértük az 500 befejezett projektet és 15 alkalmazottat."
+      },
+      "expansion": {
+        "title": "Elismerés",
+        "description": "Nemzetközi márkák minősített partnerévé váltunk."
+      },
+      "present": {
+        "title": "Jelen",
+        "description": "Több mint 1000 projekt és 25+ szakember a csapatban."
+      }
+    },
+    "team_subtitle": "Csapatunk",
+    "team_title": "A Siker Mögötti Emberek",
+    "team_description": "Elkötelezett szakemberek csapata, akik bármilyen kihívást sikerré változtatnak.",
+    "team": {
+      "ceo": "Ügyvezető Igazgató",
+      "ceo_name": "Alexandru Popescu",
+      "manager": "Projektmenedzser",
+      "manager_name": "Maria Ionescu",
+      "lead": "Csapatvezető",
+      "lead_name": "Andrei Dumitrescu",
+      "specialist": "Műszaki Szakértő",
+      "specialist_name": "Elena Vasile"
+    },
+    "cta_title": "Készen Áll az Együttműködésre?",
+    "cta_description": "Lépjen kapcsolatba velünk még ma, és beszéljük meg, hogyan segíthetünk projektjével.",
+    "cta_contact": "Kapcsolat",
+    "cta_portfolio": "Portfólió Megtekintése"
+  },
+  "contact": {
+    "badge": "Kapcsolat",
+    "title": "Lépjen Kapcsolatba Velünk",
+    "description": "Itt vagyunk, hogy megválaszoljunk minden kérdését. Küldjön üzenetet vagy hívjon minket közvetlenül.",
+    "info_title": "Elérhetőségek",
+    "info_description": "Az alábbi módok bármelyikén kapcsolatba léphet velünk, vagy kitöltheti az űrlapot.",
+    "address_label": "Cím",
+    "address_value": "Példa utca 123, 1. kerület, Bukarest",
+    "phone_label": "Telefon",
+    "email_label": "Email",
+    "hours_label": "Nyitvatartás",
+    "hours_value": "Hétfő - Péntek: 08:00 - 18:00",
+    "social_title": "Közösségi Média",
+    "form_title": "Üzenet Küldése",
+    "name": "Teljes Név",
+    "name_placeholder": "Kovács János",
+    "email": "Email Cím",
+    "email_placeholder": "kovacs.janos@email.com",
+    "phone": "Telefon",
+    "phone_placeholder": "+40 700 000 000",
+    "subject": "Tárgy",
+    "subject_placeholder": "Miről szól az üzenete?",
+    "message": "Üzenet",
+    "message_placeholder": "Írja ide üzenetét...",
+    "send": "Üzenet Küldése",
+    "sending": "Küldés...",
+    "success_title": "Üzenet Elküldve!",
+    "success_text": "Köszönjük! A lehető leghamarabb felvesszük Önnel a kapcsolatot.",
+    "send_another": "Másik Üzenet Küldése",
+    "map_placeholder": "Itt fog megjelenni a helyszínünket mutató térkép"
+  },
+  "cookies": {
+    "title": "Cookie Szabályzat",
+    "last_updated": "Utolsó frissítés",
+    "section_1_title": "Mik azok a cookie-k?",
+    "section_1_text": "A cookie-k kis szöveges fájlok, amelyek az eszközén tárolódnak, amikor meglátogat egy weboldalt. Lehetővé teszik az oldal számára, hogy emlékezzen műveleteiére és beállításaira.",
+    "section_2_title": "Milyen cookie-kat használunk?",
+    "section_2_text": "Kizárólag az oldal megfelelő működéséhez szükséges alapvető cookie-kat használunk:",
+    "essential_title": "Alapvető Cookie-k",
+    "essential_text": "Ezek a cookie-k az oldal alapvető működéséhez szükségesek és nem kapcsolhatók ki.",
+    "essential_cookie_1": "Megjegyzi cookie preferenciáját",
+    "essential_cookie_2": "Megjegyzi a kiválasztott nyelvet",
+    "section_3_title": "Harmadik féltől származó cookie-k",
+    "section_3_text": "Nem használunk követő vagy harmadik féltől származó cookie-kat. Nem gyűjtünk adatokat reklám vagy elemzés céljából az Ön kifejezett hozzájárulása nélkül.",
+    "section_4_title": "GDPR Megfelelőség",
+    "section_4_text": "Betartjuk az Általános Adatvédelmi Rendeletet (GDPR). Nem dolgozunk fel személyes adatokat az Ön kifejezett hozzájárulása nélkül, és tiszteletben tartjuk digitális magánélethez való jogát.",
+    "section_5_title": "Hogyan kezelheti a cookie-kat?",
+    "section_5_text_1": "A böngésző beállításain keresztül vezérelheti és törölheti a cookie-kat:",
+    "browser_chrome": "Beállítások > Adatvédelem és biztonság > Cookie-k",
+    "browser_firefox": "Beállítások > Adatvédelem és biztonság",
+    "browser_safari": "Beállítások > Adatvédelem",
+    "browser_edge": "Beállítások > Cookie-k és webhelyjogosultságok",
+    "section_5_text_2": "A cookie-k törlése befolyásolhatja az oldal működését.",
+    "section_6_title": "Szabályzat módosítások",
+    "section_6_text": "Fenntartjuk a jogot ezen szabályzat frissítésére. Minden változás megjelenik ezen az oldalon a frissítés dátumával.",
+    "section_7_title": "Kapcsolat",
+    "section_7_text": "A cookie szabályzatunkkal kapcsolatos kérdésekkel fordulhat hozzánk:",
+    "phone": "Telefon",
+    "back_home": "Vissza a Főoldalra"
+  },
+  "terms": {
+    "title": "Felhasználási Feltételek",
+    "last_updated": "Utolsó frissítés",
+    "section_1_title": "Feltételek elfogadása",
+    "section_1_text": "A weboldal elérésével és használatával elfogadja, hogy kötelezi magát ezen felhasználási feltételekre. Ha nem ért egyet bármely feltétellel, kérjük, ne használja az oldalt.",
+    "section_2_title": "Az oldal használata",
+    "section_2_text": "Vállalja, hogy ezt az oldalt csak törvényes célokra használja, és olyan módon, amely nem sérti mások jogait:",
+    "section_2_item_1": "Nem használja az oldalt illegális vagy csalárd tevékenységekre",
+    "section_2_item_2": "Nem próbál hozzáférni az oldal korlátozott területeihez",
+    "section_2_item_3": "Nem továbbít káros vagy rosszindulatú tartalmat",
+    "section_3_title": "Szellemi tulajdon",
+    "section_3_text": "Az oldal összes tartalma, beleértve a szövegeket, grafikákat, logókat és képeket, a mi tulajdonunk vagy licencadóink tulajdona, és szerzői jogi törvények védik.",
+    "section_4_title": "Felelősség korlátozása",
+    "section_4_text": "Az oldalon található információk 'adott állapotban' kerülnek közlésre, mindenféle garancia nélkül. Nem vállalunk felelősséget az oldal tartalmában található esetleges hibákért vagy hiányosságokért.",
+    "section_5_title": "Szolgáltatások és árak",
+    "section_5_text": "Az oldalon bemutatott szolgáltatások árai és elérhetősége tájékoztató jellegűek, és előzetes értesítés nélkül módosulhatnak. Pontos árakért kérjük, kérjen személyre szabott árajánlatot.",
+    "section_6_title": "Adatvédelem",
+    "section_6_text": "A személyes adatok gyűjtése és feldolgozása adatvédelmi szabályzatunknak és a hatályos GDPR jogszabályoknak megfelelően történik.",
+    "section_7_title": "Feltételek módosítása",
+    "section_7_text": "Fenntartjuk a jogot ezen feltételek bármikori módosítására. Az oldal folyamatos használata a módosítások közzététele után az új feltételek elfogadását jelenti.",
+    "section_8_title": "Kapcsolat",
+    "section_8_text": "A feltételekkel kapcsolatos kérdésekkel fordulhat hozzánk:",
+    "phone": "Telefon",
+    "address": "Cím",
+    "address_value": "Példa utca 123, Bukarest",
+    "back_home": "Vissza a Főoldalra"
+  }
+}

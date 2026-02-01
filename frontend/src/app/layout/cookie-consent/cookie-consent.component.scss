@@ -1,0 +1,100 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-toast;
+  background-color: $white;
+  box-shadow: 0 -4px 20px rgba($black, 0.15);
+  border-top: 3px solid $primary-500;
+  animation: slideUp $transition-slow $transition-timing;
+}
+
+.cookie-consent-container {
+  @include container;
+  @include flex-between;
+  flex-wrap: wrap;
+  gap: $spacing-4;
+  padding-top: $spacing-4;
+  padding-bottom: $spacing-4;
+
+  @include max-md {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.cookie-content {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-4;
+  flex: 1;
+
+  @include max-md {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cookie-icon {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cookie-text {
+  flex: 1;
+}
+
+.cookie-title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  color: $text-primary;
+  margin-bottom: $spacing-1;
+}
+
+.cookie-description {
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  margin: 0;
+  line-height: $line-height-relaxed;
+}
+
+.cookie-link {
+  color: $primary-600;
+  font-weight: $font-weight-medium;
+  text-decoration: underline;
+
+  &:hover {
+    color: $primary-700;
+  }
+}
+
+.cookie-actions {
+  display: flex;
+  gap: $spacing-3;
+  flex-shrink: 0;
+
+  @include max-sm {
+    width: 100%;
+    flex-direction: column-reverse;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

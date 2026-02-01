@@ -1,0 +1,141 @@
+@if (service()) {
+  <main class="service-detail-page">
+    <!-- Hero Section -->
+    <section class="page-hero">
+      <div class="hero-background"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-icon">
+            <span>{{ service()!.icon }}</span>
+          </div>
+          <h1 class="hero-title">{{ service()!.titleKey | translate }}</h1>
+          <p class="hero-description">{{ service()!.shortDescKey | translate }}</p>
+          <div class="hero-actions">
+            <a routerLink="/estimare-pret" class="btn btn-accent btn-lg">
+              {{ 'services.get_estimate' | translate }}
+            </a>
+            <a routerLink="/contact" class="btn btn-outline btn-lg hero-btn-outline">
+              {{ 'services.contact_us' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="service-content-section section">
+      <div class="container">
+        <div class="content-grid">
+          <!-- Main Content -->
+          <div class="main-content">
+            <!-- Description -->
+            <div class="content-block">
+              <h2 class="block-title">{{ 'services.about_service' | translate }}</h2>
+              <p class="block-text">{{ service()!.fullDescKey | translate }}</p>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="content-block">
+              <h2 class="block-title">{{ 'services.gallery' | translate }}</h2>
+              <div class="gallery-grid">
+                @for (i of [1, 2, 3, 4]; track i) {
+                  <div class="gallery-item">
+                    <app-image-placeholder 
+                      aspectRatio="4:3" 
+                      type="portfolio"
+                      [alt]="'Gallery image ' + i"
+                      [src]="service()?.image" 
+                    />
+                  </div>
+                }
+              </div>
+            </div>
+
+            <!-- Benefits -->
+            <div class="content-block">
+              <h2 class="block-title">{{ 'services.benefits_title' | translate }}</h2>
+              <ul class="benefits-list">
+                @for (benefit of service()!.benefits; track benefit) {
+                  <li class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>{{ benefit | translate }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+
+            <!-- Features -->
+            <div class="content-block">
+              <h2 class="block-title">{{ 'services.features_title' | translate }}</h2>
+              <div class="features-grid">
+                @for (feature of service()!.features; track feature) {
+                  <div class="feature-card">
+                    <span class="feature-icon">📋</span>
+                    <span class="feature-text">{{ feature | translate }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <!-- CTA Card -->
+            <div class="sidebar-card cta-card">
+              <h3 class="card-title">{{ 'services.need_help' | translate }}</h3>
+              <p class="card-text">{{ 'services.help_text' | translate }}</p>
+              <a routerLink="/estimare-pret" class="btn btn-primary btn-full">
+                {{ 'services.get_free_estimate' | translate }}
+              </a>
+              <div class="contact-info">
+                <a href="tel:+40700000000" class="contact-link">
+                  <span>📞</span> +40 700 000 000
+                </a>
+              </div>
+            </div>
+
+            <!-- Other Services -->
+            <div class="sidebar-card">
+              <h3 class="card-title">{{ 'services.other_services' | translate }}</h3>
+              <ul class="services-list">
+                @for (otherService of otherServices(); track otherService.id) {
+                  <li>
+                    <a [routerLink]="['/servicii', otherService.slug]" class="service-link">
+                      <span class="service-icon">{{ otherService.icon }}</span>
+                      <span>{{ otherService.titleKey | translate }}</span>
+                    </a>
+                  </li>
+                }
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section section section-dark">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">{{ 'services.cta_title' | translate }}</h2>
+          <p class="cta-description">{{ 'services.cta_description' | translate }}</p>
+          <a routerLink="/contact" class="btn btn-accent btn-lg">
+            {{ 'services.contact_now' | translate }}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+} @else {
+  <main class="not-found-page section">
+    <div class="container">
+      <div class="not-found-content">
+        <h1>404</h1>
+        <p>{{ 'services.not_found' | translate }}</p>
+        <a routerLink="/servicii" class="btn btn-primary">
+          {{ 'services.back_to_services' | translate }}
+        </a>
+      </div>
+    </div>
+  </main>
+}

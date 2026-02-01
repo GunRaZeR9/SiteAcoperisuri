@@ -1,0 +1,143 @@
+@use '../../../../styles/variables' as *;
+@use '../../../../styles/mixins' as *;
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 320px;
+  background-color: $white;
+  z-index: $z-index-modal;
+  transform: translateX(100%);
+  transition: transform $transition-slow $transition-timing;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-2xl;
+
+  @include lg {
+    display: none;
+  }
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav-header {
+  @include flex-between;
+  padding: $spacing-4 $spacing-6;
+  border-bottom: 1px solid $border-color;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.logo-name {
+  font-family: $font-family-heading;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $primary-700;
+}
+
+.close-btn {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: $border-radius-lg;
+  transition: background-color $transition-fast $transition-timing;
+
+  &:hover {
+    background-color: $gray-100;
+  }
+
+  .close-icon {
+    font-size: $font-size-xl;
+    color: $text-secondary;
+  }
+}
+
+.mobile-nav-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: $spacing-4 0;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav-item {
+  margin: 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: $spacing-4 $spacing-6;
+  font-family: $font-family-primary;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: $text-primary;
+  text-decoration: none;
+  transition: all $transition-fast $transition-timing;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    background-color: $primary-50;
+    color: $primary-600;
+    text-decoration: none;
+  }
+
+  &.active {
+    background-color: $primary-50;
+    color: $primary-700;
+    border-left-color: $primary-600;
+    font-weight: $font-weight-semibold;
+  }
+}
+
+.mobile-nav-footer {
+  padding: $spacing-6;
+  border-top: 1px solid $border-color;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-4;
+  background-color: $bg-light;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-2;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-2;
+  font-size: $font-size-sm;
+  color: $text-secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-600;
+    text-decoration: none;
+  }
+
+  .contact-icon {
+    font-size: 1rem;
+  }
+}

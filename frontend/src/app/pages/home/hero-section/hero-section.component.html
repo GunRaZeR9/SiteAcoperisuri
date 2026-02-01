@@ -1,0 +1,50 @@
+<section class="hero">
+  <div class="hero-background">
+    <div class="hero-overlay"></div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="hero-badge">{{ 'hero.badge' | translate }}</span>
+        
+        <h1 class="hero-title">
+          {{ 'hero.title' | translate }}
+        </h1>
+        
+        <p class="hero-subtitle">
+          {{ 'hero.subtitle' | translate }}
+        </p>
+        
+        <div class="hero-actions">
+          <a routerLink="/estimare-pret" class="btn btn-accent btn-lg">
+            {{ 'hero.cta_estimate' | translate }}
+          </a>
+          <a routerLink="/servicii" class="btn btn-secondary btn-lg">
+            {{ 'hero.cta_services' | translate }}
+          </a>
+        </div>
+
+        <div class="hero-features">
+          <div class="hero-feature">
+            <span class="feature-icon">✓</span>
+            <span class="feature-text">{{ 'hero.feature_1' | translate }}</span>
+          </div>
+          <div class="hero-feature">
+            <span class="feature-icon">✓</span>
+            <span class="feature-text">{{ 'hero.feature_2' | translate }}</span>
+          </div>
+          <div class="hero-feature">
+            <span class="feature-icon">✓</span>
+            <span class="feature-text">{{ 'hero.feature_3' | translate }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <span class="scroll-text">{{ 'hero.scroll' | translate }}</span>
+    <div class="scroll-arrow">↓</div>
+  </div>
+</section>
