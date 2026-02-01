@@ -179,23 +179,34 @@
 }
 
 .social-link {
-  width: 44px;
-  height: 44px;
-  background-color: $bg-light;
+  width: 48px;
+  height: 48px;
+  background-color: rgba($white, 0.1);
   border-radius: $border-radius-lg;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  transition: all $transition-fast $transition-timing;
+  transition: all $transition-base;
 
-  &:hover {
-    background-color: $primary-100;
-    transform: translateY(-2px);
+  .social-icon-svg {
+    width: 24px;
+    height: 24px;
+    transition: transform $transition-base;
   }
 
-  .social-icon {
-    font-size: 1.25rem;
+  &:hover {
+    background-color: rgba($white, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba($black, 0.15);
+    
+    .social-icon-svg {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
   }
 }
 

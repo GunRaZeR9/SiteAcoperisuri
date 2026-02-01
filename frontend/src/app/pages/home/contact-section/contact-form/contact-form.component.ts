@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface ContactFormData {
@@ -18,6 +19,8 @@ interface ContactFormData {
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
+  private http = inject(HttpClient);
+  
   formData = signal<ContactFormData>({
     name: '',
     email: '',
@@ -40,36 +43,30 @@ export class ContactFormComponent {
     this.isSubmitting.set(true);
     this.hasError.set(false);
 
-    try {
-      const data = this.formData();
-      
-      // Format message for WhatsApp
-      const message = `
-🏠 *Contact Form - Site Web*
+    const data = this.formData();
+    
+    // Prepare data for backend
+    const contactData = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      message: data.message
+    };
 
-*Nume:* ${data.name}
-*Email:* ${data.email}
-*Telefon:* ${data.phone}
-
-*Mesaj:*
-${data.message}
-      `.trim();
-
-      const whatsappUrl = `https://wa.me/40758644107?text=${encodeURIComponent(message)}`;
-      
-      // Open WhatsApp
-      window.open(whatsappUrl, '_blank');
-      
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      this.isSubmitted.set(true);
-      this.resetForm();
-    } catch (error) {
-      console.error('Form submission error:', error);
-      this.hasError.set(true);
-    } finally {
-      this.isSubmitting.set(false);
-    }
+    // Send to backend
+    this.http.post('http://localhost:3000/forms/quick-contact', contactData)
+      .subscribe({
+        next: () => {
+          this.isSubmitting.set(false);
+          this.isSubmitted.set(true);
+          this.resetForm();
+        },
+        error: (err) => {
+          console.error('Error submitting form:', err);
+          this.isSubmitting.set(false);
+          this.hasError.set(true);
+        }
+      });
   }
 
   private resetForm(): void {

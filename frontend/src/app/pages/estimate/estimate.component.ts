@@ -1,7 +1,8 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 interface EstimateForm {
   name: string;
@@ -24,6 +25,9 @@ interface EstimateForm {
   styleUrl: './estimate.component.scss'
 })
 export class EstimateComponent {
+  private translate = inject(TranslateService);
+  private http = inject(HttpClient);
+  
   formData: EstimateForm = {
     name: '',
     email: '',
@@ -71,35 +75,43 @@ export class EstimateComponent {
 
     this.isSubmitting.set(true);
 
-    // Format message for WhatsApp
-    const message = `
-🏠 *Estimare Preț - Cerere Nouă*
-
-*Date Contact:*
-• Nume: ${this.formData.name}
-• Email: ${this.formData.email}
-• Telefon: ${this.formData.phone}
-• Locație: ${this.formData.location}
-
-*Detalii Proiect:*
-• Tip serviciu: ${this.formData.serviceType}
-• Tip acoperiș: ${this.formData.roofType}
-• Suprafață: ${this.formData.roofArea} mp
-• Urgență: ${this.formData.urgency}
-• Contact preferat: ${this.formData.preferredContact}
-
-*Descriere:*
-${this.formData.description || 'N/A'}
-    `.trim();
-
-    const whatsappUrl = `https://wa.me/40758644107?text=${encodeURIComponent(message)}`;
+    // Get translated labels for the values
+    const serviceTypeLabel = this.serviceTypes.find(s => s.value === this.formData.serviceType)?.labelKey;
+    const roofTypeLabel = this.roofTypes.find(r => r.value === this.formData.roofType)?.labelKey;
+    const urgencyLabel = this.urgencyLevels.find(u => u.value === this.formData.urgency)?.labelKey;
     
-    window.open(whatsappUrl, '_blank');
-    
-    setTimeout(() => {
-      this.isSubmitting.set(false);
-      this.isSubmitted.set(true);
-    }, 500);
+    const serviceTypeText = serviceTypeLabel ? this.translate.instant(serviceTypeLabel) : this.formData.serviceType;
+    const roofTypeText = roofTypeLabel ? this.translate.instant(roofTypeLabel) : this.formData.roofType;
+    const urgencyText = urgencyLabel ? this.translate.instant(urgencyLabel) : this.formData.urgency;
+    const contactPrefText = this.translate.instant(`estimate.contact_${this.formData.preferredContact}`);
+
+    // Prepare data for backend
+    const estimateData = {
+      name: this.formData.name,
+      email: this.formData.email,
+      phone: this.formData.phone,
+      location: this.formData.location,
+      serviceType: serviceTypeText,
+      roofType: roofTypeText,
+      roofArea: parseFloat(this.formData.roofArea),
+      urgency: urgencyText,
+      preferredContact: contactPrefText,
+      description: this.formData.description || ''
+    };
+
+    // Send to backend
+    this.http.post('http://localhost:3000/forms/estimate', estimateData)
+      .subscribe({
+        next: () => {
+          this.isSubmitting.set(false);
+          this.isSubmitted.set(true);
+        },
+        error: (err) => {
+          console.error('Error submitting form:', err);
+          this.isSubmitting.set(false);
+          alert('Eroare la trimiterea formularului. Vă rugăm încercați din nou.');
+        }
+      });
   }
 
   resetForm(): void {

@@ -25,15 +25,18 @@
   <div class="social-links">
     <span class="social-label">{{ 'contact.social_label' | translate }}</span>
     <div class="social-icons">
-      <a href="#" class="social-icon" aria-label="Facebook">
-        <span>📘</span>
-      </a>
-      <a href="#" class="social-icon" aria-label="Instagram">
-        <span>📷</span>
-      </a>
-      <a href="#" class="social-icon" aria-label="WhatsApp">
-        <span>💬</span>
-      </a>
+      @for (social of socialLinks; track social.name) {
+        <a 
+          [href]="social.url" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-icon"
+          [attr.aria-label]="social.name">
+          <svg viewBox="0 0 24 24" [attr.fill]="social.color">
+            <path [attr.d]="social.icon"></path>
+          </svg>
+        </a>
+      }
     </div>
   </div>
 </div>
