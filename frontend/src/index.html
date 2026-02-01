@@ -101,22 +101,6 @@
       }
     })();
   </script>
-  
-  <!-- Suppress third-party extension errors -->
-  <script>
-    window.addEventListener('error', function(e) {
-      // Suppress errors from browser extensions and third-party injected scripts
-      if (e.filename && (
-        e.filename.includes('webpage_content_reporter') ||
-        e.filename.includes('extension://') ||
-        e.filename.includes('chrome-extension://') ||
-        e.filename.includes('moz-extension://')
-      )) {
-        e.preventDefault();
-        return true;
-      }
-    }, true);
-  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) Placeholder -->
