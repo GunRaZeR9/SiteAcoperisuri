@@ -37,7 +37,7 @@ jobs:
       - name: Build Angular App
         run: |
           cd frontend
-          npm run build -- --base-href /SiteAcoperisuri/ --deploy-url /SiteAcoperisuri/
+          npx ng build --configuration=production --base-href=/SiteAcoperisuri/ --deploy-url=/SiteAcoperisuri/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
