@@ -31,9 +31,8 @@ export class ContactComponent {
   isSubmitted = signal(false);
 
   contactInfo = [
-    { icon: '📍', labelKey: 'contact.address_label', valueKey: 'contact.address_value' },
-    { icon: '📞', labelKey: 'contact.phone_label', value: '+40 700 000 000', link: 'tel:+40700000000' },
-    { icon: '✉️', labelKey: 'contact.email_label', value: 'contact@acoperisuri.ro', link: 'mailto:contact@acoperisuri.ro' },
+    { icon: '📞', labelKey: 'contact.phone_label', value: '+40 758 644 107', link: 'tel:+40758644107' },
+    { icon: '✉️', labelKey: 'contact.email_label', value: 'caseacoperisuri68@gmail.com', link: 'mailto:caseacoperisuri68@gmail.com' },
     { icon: '⏰', labelKey: 'contact.hours_label', valueKey: 'contact.hours_value' }
   ];
 
