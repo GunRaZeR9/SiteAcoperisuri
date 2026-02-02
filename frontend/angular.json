@@ -83,7 +83,10 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/AcoperisuriCasaRo/"
+              "baseHref": "/AcoperisuriCasaRo/",
+              "server": false,
+              "ssr": false,
+              "prerender": false
             },
             "development": {
               "optimization": false,
