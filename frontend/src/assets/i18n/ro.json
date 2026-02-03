@@ -250,6 +250,13 @@
     "success_title": "Mesaj Trimis!",
     "success_text": "Mulțumim pentru mesaj! Te vom contacta în cel mai scurt timp posibil."
   },
+  "cookies": {
+    "title": "Utilizăm Cookie-uri",
+    "description": "Acest site folosește cookie-uri esențiale pentru funcționarea corectă. Nu colectăm date personale fără consimțământul tău explicit.",
+    "accept": "Accept",
+    "decline": "Refuz",
+    "learn_more": "Află Mai Multe"
+  },
   "footer": {
     "description": "Experți în acoperișuri cu peste 15 ani de experiență. Oferim servicii complete de montaj, reparații și întreținere acoperișuri.",
     "company_description": "Experți în acoperișuri cu peste 15 ani de experiență. Oferim servicii complete de montaj, reparații și întreținere acoperișuri.",
@@ -497,6 +504,7 @@
     "message": "Mesaj",
     "message_placeholder": "Scrie mesajul tău aici...",
     "send": "Trimite Mesajul",
+    "send_button": "Trimite",
     "sending": "Se trimite...",
     "success_title": "Mesaj Trimis!",
     "success_text": "Mulțumim! Te vom contacta în cel mai scurt timp posibil.",

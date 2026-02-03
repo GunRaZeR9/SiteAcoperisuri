@@ -1,8 +1,8 @@
 import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { EmailService } from '../../shared/email.service';
 
 interface EstimateForm {
   name: string;
@@ -26,7 +26,7 @@ interface EstimateForm {
 })
 export class EstimateComponent {
   private translate = inject(TranslateService);
-  private http = inject(HttpClient);
+  private emailService = inject(EmailService);
   
   formData: EstimateForm = {
     name: '',
@@ -70,7 +70,7 @@ export class EstimateComponent {
     { value: 'emergency', labelKey: 'estimate.urgency.emergency' }
   ];
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.isSubmitting()) return;
 
     this.isSubmitting.set(true);
@@ -85,33 +85,27 @@ export class EstimateComponent {
     const urgencyText = urgencyLabel ? this.translate.instant(urgencyLabel) : this.formData.urgency;
     const contactPrefText = this.translate.instant(`estimate.contact_${this.formData.preferredContact}`);
 
-    // Prepare data for backend
-    const estimateData = {
-      name: this.formData.name,
-      email: this.formData.email,
-      phone: this.formData.phone,
-      location: this.formData.location,
-      serviceType: serviceTypeText,
-      roofType: roofTypeText,
-      roofArea: parseFloat(this.formData.roofArea),
-      urgency: urgencyText,
-      preferredContact: contactPrefText,
-      description: this.formData.description || ''
-    };
-
-    // Send to backend
-    this.http.post('http://localhost:3000/forms/estimate', estimateData)
-      .subscribe({
-        next: () => {
-          this.isSubmitting.set(false);
-          this.isSubmitted.set(true);
-        },
-        error: (err) => {
-          console.error('Error submitting form:', err);
-          this.isSubmitting.set(false);
-          alert('Eroare la trimiterea formularului. Vă rugăm încercați din nou.');
-        }
+    try {
+      await this.emailService.sendEstimateEmail({
+        name: this.formData.name,
+        email: this.formData.email,
+        phone: this.formData.phone,
+        location: this.formData.location,
+        serviceType: serviceTypeText,
+        roofType: roofTypeText,
+        roofArea: this.formData.roofArea,
+        urgency: urgencyText,
+        preferredContact: contactPrefText,
+        description: this.formData.description || ''
       });
+      
+      this.isSubmitting.set(false);
+      this.isSubmitted.set(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      this.isSubmitting.set(false);
+      alert('Eroare la trimiterea formularului. Vă rugăm încercați din nou sau contactați-ne direct la telefon.');
+    }
   }
 
   resetForm(): void {

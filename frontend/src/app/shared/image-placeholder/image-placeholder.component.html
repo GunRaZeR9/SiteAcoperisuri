@@ -4,7 +4,7 @@
   [attr.aria-label]="alt"
   role="img">
   @if (src) {
-    <img [src]="src" [alt]="alt" class="actual-image" />
+    <img [src]="src" [alt]="alt" loading="lazy" class="actual-image" />
   } @else {
     <span class="placeholder-icon">{{ icon }}</span>
   }

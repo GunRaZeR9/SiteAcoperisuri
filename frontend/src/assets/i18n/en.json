@@ -254,6 +254,13 @@
     "success_title": "Message Sent!",
     "success_text": "Thank you for your message! We will contact you as soon as possible."
   },
+  "cookies": {
+    "title": "We Use Cookies",
+    "description": "This site uses essential cookies for proper functioning. We do not collect personal data without your explicit consent.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learn_more": "Learn More"
+  },
   "footer": {
     "description": "Roofing experts with over 15 years of experience. We offer complete roof installation, repair and maintenance services.",
     "company_description": "Roofing experts with over 15 years of experience. We offer complete roof installation, repair and maintenance services.",
@@ -506,6 +513,7 @@
     "message_label": "Message",
     "message_placeholder": "Write your message here...",
     "send": "Send Message",
+    "send_button": "Send",
     "sending": "Sending...",
     "success_title": "Message Sent!",
     "success_text": "Thank you! We will contact you as soon as possible.",

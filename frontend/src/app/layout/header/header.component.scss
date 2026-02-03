@@ -37,9 +37,21 @@
   gap: $spacing-3;
   text-decoration: none;
   color: $text-primary;
+  height: 100%;
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.logo-image {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+
+  @include max-md {
+    height: 50px;
   }
 }
 

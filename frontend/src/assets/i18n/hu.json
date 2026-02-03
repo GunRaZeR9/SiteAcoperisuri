@@ -254,6 +254,13 @@
     "success_title": "Üzenet Elküldve!",
     "success_text": "Köszönjük üzenetét! A lehető leghamarabb felvesszük Önnel a kapcsolatot."
   },
+  "cookies": {
+    "title": "Cookie-kat Használunk",
+    "description": "Ez az oldal alapvető cookie-kat használ a megfelelő működéshez. Nem gyűjtünk személyes adatokat az Ön kifejezett hozzájárulása nélkül.",
+    "accept": "Elfogadom",
+    "decline": "Elutasítom",
+    "learn_more": "Tudjon Meg Többet"
+  },
   "footer": {
     "description": "Tetőfedő szakértők több mint 15 év tapasztalattal. Teljes körű tetőszerelési, javítási és karbantartási szolgáltatásokat kínálunk.",
     "company_description": "Tetőfedő szakértők több mint 15 év tapasztalattal. Teljes körű tetőszerelési, javítási és karbantartási szolgáltatásokat kínálunk.",
@@ -502,6 +509,7 @@
     "message": "Üzenet",
     "message_placeholder": "Írja ide üzenetét...",
     "send": "Üzenet Küldése",
+    "send_button": "Küldés",
     "sending": "Küldés...",
     "success_title": "Üzenet Elküldve!",
     "success_text": "Köszönjük! A lehető leghamarabb felvesszük Önnel a kapcsolatot.",

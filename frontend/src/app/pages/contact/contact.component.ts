@@ -1,8 +1,8 @@
 import { Component, signal, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { EmailService } from '../../shared/email.service';
 
 interface ContactForm {
   name: string;
@@ -20,7 +20,7 @@ interface ContactForm {
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  private http = inject(HttpClient);
+  private emailService = inject(EmailService);
   
   formData: ContactForm = {
     name: '',
@@ -66,32 +66,27 @@ export class ContactComponent {
     }
   ];
 
-  onSubmit(): void {
+  async onSubmit(): Promise<void> {
     if (this.isSubmitting()) return;
 
     this.isSubmitting.set(true);
 
-    // Prepare data for backend
-    const contactData = {
-      name: this.formData.name,
-      email: this.formData.email,
-      phone: this.formData.phone,
-      message: `${this.formData.subject}\n\n${this.formData.message}`
-    };
-
-    // Send to backend
-    this.http.post('http://localhost:3000/forms/contact', contactData)
-      .subscribe({
-        next: () => {
-          this.isSubmitting.set(false);
-          this.isSubmitted.set(true);
-        },
-        error: (err) => {
-          console.error('Error submitting form:', err);
-          this.isSubmitting.set(false);
-          alert('Eroare la trimiterea formularului. Vă rugăm încercați din nou.');
-        }
+    try {
+      await this.emailService.sendContactEmail({
+        name: this.formData.name,
+        email: this.formData.email,
+        phone: this.formData.phone,
+        subject: this.formData.subject,
+        message: this.formData.message
       });
+      
+      this.isSubmitting.set(false);
+      this.isSubmitted.set(true);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      this.isSubmitting.set(false);
+      alert('Eroare la trimiterea formularului. Vă rugăm încercați din nou sau contactați-ne direct la telefon.');
+    }
   }
 
   resetForm(): void {
