@@ -1,37 +1,15 @@
-import { Component, signal, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
-import { EmailService } from '../../shared/email.service';
-
-interface ContactForm {
-  name: string;
-  email: string;
-  phone: string;
-  subject: string;
-  message: string;
-}
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  private emailService = inject(EmailService);
-  
-  formData: ContactForm = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  };
-
-  isSubmitting = signal(false);
-  isSubmitted = signal(false);
 
   contactInfo = [
     { icon: '📞', labelKey: 'contact.phone_label', value: '+40 758 644 107', link: 'tel:+40758644107' },
@@ -65,38 +43,4 @@ export class ContactComponent {
       color: '#000000'
     }
   ];
-
-  async onSubmit(): Promise<void> {
-    if (this.isSubmitting()) return;
-
-    this.isSubmitting.set(true);
-
-    try {
-      await this.emailService.sendContactEmail({
-        name: this.formData.name,
-        email: this.formData.email,
-        phone: this.formData.phone,
-        subject: this.formData.subject,
-        message: this.formData.message
-      });
-      
-      this.isSubmitting.set(false);
-      this.isSubmitted.set(true);
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      this.isSubmitting.set(false);
-      alert('Eroare la trimiterea formularului. Vă rugăm încercați din nou sau contactați-ne direct la telefon.');
-    }
-  }
-
-  resetForm(): void {
-    this.formData = {
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
-    };
-    this.isSubmitted.set(false);
-  }
 }

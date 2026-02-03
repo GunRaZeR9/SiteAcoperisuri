@@ -236,7 +236,7 @@
     "email_label": "Email",
     "email": "caseacoperisuri68@gmail.com",
     "hours_label": "Nyitvatartás",
-    "hours": "Hétfő - Péntek: 08:00 - 18:00",
+    "hours": "Hétfő - Vasárnap: 08:00 - 22:00",
     "social_label": "Kövessen Minket",
     "name_label": "Név",
     "message_label": "Üzenet",
@@ -252,7 +252,12 @@
     "submit": "Üzenet Küldése",
     "sending": "Küldés...",
     "success_title": "Üzenet Elküldve!",
-    "success_text": "Köszönjük üzenetét! A lehető leghamarabb felvesszük Önnel a kapcsolatot."
+    "success_text": "Köszönjük üzenetét! A lehető leghamarabb felvesszük Önnel a kapcsolatot.",
+    "name_required": "A név kötelező (minimum 2 karakter)",
+    "email_invalid": "Az email cím nem érvényes",
+    "phone_invalid": "A telefonszám nem érvényes",
+    "subject_required": "A tárgy kötelező (minimum 3 karakter)",
+    "message_required": "Az üzenet kötelező (minimum 10 karakter)"
   },
   "cookies": {
     "title": "Cookie-kat Használunk",
@@ -495,7 +500,7 @@
     "phone_label": "Telefon",
     "email_label": "Email",
     "hours_label": "Nyitvatartás",
-    "hours_value": "Hétfő - Péntek: 08:00 - 18:00",
+    "hours_value": "Hétfő - Vasárnap: 08:00 - 22:00",
     "social_title": "Közösségi Média",
     "form_title": "Üzenet Küldése",
     "name": "Teljes Név",

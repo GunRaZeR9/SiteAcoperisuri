@@ -4,11 +4,11 @@
       <div class="cookie-content">
         <div class="cookie-icon">🍪</div>
         <div class="cookie-text">
-          <h4 class="cookie-title">{{ 'cookies.title' | translate }}</h4>
+          <h4 class="cookie-title">{{ 'cookie_consent.title' | translate }}</h4>
           <p class="cookie-description">
-            {{ 'cookies.description' | translate }}
+            {{ 'cookie_consent.text' | translate }}
             <a routerLink="/politica-cookies" class="cookie-link">
-              {{ 'cookies.learn_more' | translate }}
+              {{ 'cookie_consent.learn_more' | translate }}
             </a>
           </p>
         </div>
@@ -19,13 +19,13 @@
           type="button"
           class="btn btn-outline btn-sm"
           (click)="declineCookies()">
-          {{ 'cookies.decline' | translate }}
+          {{ 'cookie_consent.decline' | translate }}
         </button>
         <button 
           type="button"
           class="btn btn-primary btn-sm"
           (click)="acceptCookies()">
-          {{ 'cookies.accept' | translate }}
+          {{ 'cookie_consent.accept' | translate }}
         </button>
       </div>
     </div>

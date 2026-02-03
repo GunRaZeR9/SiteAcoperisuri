@@ -19,10 +19,9 @@ export class EmailService {
   
   // ⚠️ REPLACE THESE WITH YOUR EMAILJS CREDENTIALS
   // Get them from: https://dashboard.emailjs.com/
-  private readonly PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // From Account > API Keys
-  private readonly CONTACT_SERVICE_ID = 'YOUR_SERVICE_ID'; // From Email Services
-  private readonly CONTACT_TEMPLATE_ID = 'YOUR_CONTACT_TEMPLATE_ID'; // From Email Templates
-  private readonly ESTIMATE_TEMPLATE_ID = 'YOUR_ESTIMATE_TEMPLATE_ID'; // From Email Templates
+  private readonly PUBLIC_KEY = 'BJkQ-6ULufe4oJiFR'; // From Account > API Keys
+  private readonly SERVICE_ID = 'service_8vx8z7l'; // From Email Services
+  private readonly TEMPLATE_ID = 'template_z6sx5re'; // From Email Templates (just create ONE template)
 
   constructor() {
     // Initialize EmailJS with your public key
@@ -45,13 +44,12 @@ export class EmailService {
         from_email: data.email,
         from_phone: data.phone,
         subject: data.subject,
-        message: data.message,
-        to_email: 'caseacoperisuri68@gmail.com' // Your business email
+        message: data.message
       };
 
       await emailjs.send(
-        this.CONTACT_SERVICE_ID,
-        this.CONTACT_TEMPLATE_ID,
+        this.SERVICE_ID,
+        this.TEMPLATE_ID,
         templateParams
       );
     } catch (error) {
@@ -86,17 +84,18 @@ export class EmailService {
         roof_area: data.roofArea,
         urgency: data.urgency,
         preferred_contact: data.preferredContact,
-        description: data.description,
-        to_email: 'caseacoperisuri68@gmail.com' // Your business email
+        description: data.description
       };
 
-      await emailjs.send(
-        this.CONTACT_SERVICE_ID,
-        this.ESTIMATE_TEMPLATE_ID,
+      console.log('Sending estimate email with params:', templateParams);
+      const response = await emailjs.send(
+        this.SERVICE_ID,
+        this.TEMPLATE_ID,
         templateParams
       );
+      console.log('EmailJS Success:', response);
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('EmailJS Error Details:', error);
       throw new Error('Failed to send email');
     }
   }
@@ -105,8 +104,8 @@ export class EmailService {
    * Check if EmailJS is properly configured
    */
   isConfigured(): boolean {
-    return this.PUBLIC_KEY !== 'YOUR_PUBLIC_KEY' &&
-           this.CONTACT_SERVICE_ID !== 'YOUR_SERVICE_ID' &&
-           this.CONTACT_TEMPLATE_ID !== 'YOUR_CONTACT_TEMPLATE_ID';
+    return this.PUBLIC_KEY.length > 0 &&
+           this.SERVICE_ID.length > 0 &&
+           this.TEMPLATE_ID.length > 0;
   }
 }

@@ -1,6 +1,7 @@
 import { Component, inject, signal, PLATFORM_ID, OnInit } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { TranslateService } from '@ngx-translate/core';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -20,6 +21,7 @@ import { CookieConsentComponent } from './layout/cookie-consent/cookie-consent.c
 export class App implements OnInit {
   private translate = inject(TranslateService);
   private platformId = inject(PLATFORM_ID);
+  private router = inject(Router);
 
   protected readonly title = signal('Acoperișuri Profesionale');
 
@@ -29,6 +31,13 @@ export class App implements OnInit {
     // Only set default language in browser to avoid loading empty SSR translations
     if (isPlatformBrowser(this.platformId)) {
       this.translate.setDefaultLang('ro');
+      
+      // Scroll to top on route change
+      this.router.events.pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      });
     }
   }
 

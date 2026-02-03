@@ -236,7 +236,7 @@
     "email_label": "Email",
     "email": "caseacoperisuri68@gmail.com",
     "hours_label": "Hours",
-    "hours": "Monday - Friday: 08:00 - 18:00",
+    "hours": "Monday - Sunday: 08:00 - 22:00",
     "social_label": "Follow Us",
     "name_label": "Name",
     "message_label": "Message",
@@ -252,11 +252,19 @@
     "submit": "Send Message",
     "sending": "Sending...",
     "success_title": "Message Sent!",
-    "success_text": "Thank you for your message! We will contact you as soon as possible."
+    "success_text": "Thank you for your message! We will contact you as soon as possible.",
+    "name_required": "Name is required (minimum 2 characters)",
+    "email_invalid": "Email address is not valid",
+    "phone_invalid": "Phone number is not valid",
+    "subject_required": "Subject is required (minimum 3 characters)",
+    "message_required": "Message is required (minimum 10 characters)"
   },
   "cookies": {
     "title": "We Use Cookies",
     "description": "This site uses essential cookies for proper functioning. We do not collect personal data without your explicit consent.",
+    "learn_more": "Learn more",
+    "accept": "Accept",
+    "decline": "Decline",
     "accept": "Accept",
     "decline": "Decline",
     "learn_more": "Learn More"
@@ -496,7 +504,7 @@
     "phone_label": "Phone",
     "email_label": "Email",
     "hours_label": "Hours",
-    "hours_value": "Monday - Friday: 08:00 - 18:00",
+    "hours_value": "Monday - Sunday: 08:00 - 22:00",
     "social_title": "Social Media",
     "social_label": "Follow Us",
     "form_title": "Send a Message",

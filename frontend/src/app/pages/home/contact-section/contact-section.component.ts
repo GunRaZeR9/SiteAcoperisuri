@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { SectionTitleComponent } from '../../../shared/section-title/section-title.component';
 import { ContactInfoComponent } from './contact-info/contact-info.component';
-import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @Component({
   selector: 'app-contact-section',
@@ -12,8 +11,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     CommonModule,
     TranslateModule,
     SectionTitleComponent,
-    ContactInfoComponent,
-    ContactFormComponent
+    ContactInfoComponent
   ],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss'

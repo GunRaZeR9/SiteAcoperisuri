@@ -14,158 +14,45 @@
   <!-- Contact Section -->
   <section class="contact-section section">
     <div class="container">
-      <div class="contact-grid">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h2 class="info-title">{{ 'contact.info_title' | translate }}</h2>
-          <p class="info-description">{{ 'contact.info_description' | translate }}</p>
+      <div class="contact-info-centered">
+        <h2 class="info-title">{{ 'contact.info_title' | translate }}</h2>
+        <p class="info-description">{{ 'contact.info_description' | translate }}</p>
 
-          <div class="info-list">
-            @for (item of contactInfo; track item.icon) {
-              <div class="info-item">
-                <div class="info-icon">{{ item.icon }}</div>
-                <div class="info-content">
-                  <span class="info-label">{{ item.labelKey | translate }}</span>
-                  @if (item.link) {
-                    <a [href]="item.link" class="info-value info-link">{{ item.value }}</a>
-                  } @else if (item.valueKey) {
-                    <span class="info-value">{{ item.valueKey | translate }}</span>
-                  } @else {
-                    <span class="info-value">{{ item.value }}</span>
-                  }
-                </div>
+        <div class="info-list">
+          @for (item of contactInfo; track item.icon) {
+            <div class="info-item">
+              <div class="info-icon">{{ item.icon }}</div>
+              <div class="info-content">
+                <span class="info-label">{{ item.labelKey | translate }}</span>
+                @if (item.link) {
+                  <a [href]="item.link" class="info-value info-link">{{ item.value }}</a>
+                } @else if (item.valueKey) {
+                  <span class="info-value">{{ item.valueKey | translate }}</span>
+                } @else {
+                  <span class="info-value">{{ item.value }}</span>
+                }
               </div>
-            }
-          </div>
-
-          <!-- Social Links -->
-          <div class="social-section">
-            <h3 class="social-title">{{ 'contact.social_title' | translate }}</h3>
-            <div class="social-links">
-              @for (social of socialLinks; track social.name) {
-                <a 
-                  [href]="social.url" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  class="social-link"
-                  [attr.aria-label]="social.name">
-                  <svg viewBox="0 0 24 24" [attr.fill]="social.color" class="social-icon-svg">
-                    <path [attr.d]="social.icon"></path>
-                  </svg>
-                </a>
-              }
             </div>
-          </div>
+          }
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form-wrapper">
-          @if (isSubmitted()) {
-            <!-- Success Message -->
-            <div class="success-message">
-              <div class="success-icon">✓</div>
-              <h3 class="success-title">{{ 'contact.success_title' | translate }}</h3>
-              <p class="success-text">{{ 'contact.success_text' | translate }}</p>
-              <button type="button" class="btn btn-primary" (click)="resetForm()">
-                {{ 'contact.send_another' | translate }}
-              </button>
-            </div>
-          } @else {
-            <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
-              <h2 class="form-title">{{ 'contact.form_title' | translate }}</h2>
-
-              <div class="form-grid">
-                <div class="form-group">
-                  <label class="form-label" for="name">
-                    {{ 'contact.name' | translate }} <span class="required">*</span>
-                  </label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    class="form-input"
-                    [(ngModel)]="formData.name"
-                    name="name"
-                    required
-                    [placeholder]="'contact.name_placeholder' | translate"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="email">
-                    {{ 'contact.email' | translate }} <span class="required">*</span>
-                  </label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    class="form-input"
-                    [(ngModel)]="formData.email"
-                    name="email"
-                    required
-                    [placeholder]="'contact.email_placeholder' | translate"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="phone">
-                    {{ 'contact.phone' | translate }}
-                  </label>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    class="form-input"
-                    [(ngModel)]="formData.phone"
-                    name="phone"
-                    [placeholder]="'contact.phone_placeholder' | translate"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="subject">
-                    {{ 'contact.subject' | translate }} <span class="required">*</span>
-                  </label>
-                  <input 
-                    type="text" 
-                    id="subject" 
-                    class="form-input"
-                    [(ngModel)]="formData.subject"
-                    name="subject"
-                    required
-                    [placeholder]="'contact.subject_placeholder' | translate"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group full-width">
-                <label class="form-label" for="message">
-                  {{ 'contact.message' | translate }} <span class="required">*</span>
-                </label>
-                <textarea 
-                  id="message" 
-                  class="form-input form-textarea"
-                  [(ngModel)]="formData.message"
-                  name="message"
-                  required
-                  rows="5"
-                  [placeholder]="'contact.message_placeholder' | translate"
-                ></textarea>
-              </div>
-
-              <div class="form-actions">
-                <button 
-                  type="submit" 
-                  class="btn btn-primary btn-lg btn-submit"
-                  [disabled]="isSubmitting() || !contactForm.valid"
-                >
-                  @if (isSubmitting()) {
-                    <span class="spinner"></span>
-                    {{ 'contact.sending' | translate }}
-                  } @else {
-                    {{ 'contact.send' | translate }}
-                  }
-                </button>
-              </div>
-            </form>
-          }
+        <!-- Social Links -->
+        <div class="social-section">
+          <h3 class="social-title">{{ 'contact.social_title' | translate }}</h3>
+          <div class="social-links">
+            @for (social of socialLinks; track social.name) {
+              <a 
+                [href]="social.url" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="social-link"
+                [attr.aria-label]="social.name">
+                <svg viewBox="0 0 24 24" [attr.fill]="social.color" class="social-icon-svg">
+                  <path [attr.d]="social.icon"></path>
+                </svg>
+              </a>
+            }
+          </div>
         </div>
       </div>
     </div>
