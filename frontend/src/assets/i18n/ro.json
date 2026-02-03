@@ -256,7 +256,7 @@
     "subject_required": "Subiectul este obligatoriu (minim 3 caractere)",
     "message_required": "Mesajul este obligatoriu (minim 10 caractere)"
   },
-  "cookies": {
+  "cookie_banner": {
     "title": "Utilizăm Cookie-uri",
     "description": "Acest site folosește cookie-uri esențiale pentru funcționarea corectă. Nu colectăm date personale fără consimțământul tău explicit.",
     "accept": "Accept",
@@ -521,7 +521,7 @@
     "name_label": "Nume",
     "message_label": "Mesaj"
   },
-  "cookies": {
+  "cookie_policy": {
     "title": "Politica de Cookie-uri",
     "last_updated": "Ultima actualizare",
     "section_1_title": "Ce sunt cookie-urile?",

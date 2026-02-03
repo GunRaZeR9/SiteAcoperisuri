@@ -259,12 +259,9 @@
     "subject_required": "Subject is required (minimum 3 characters)",
     "message_required": "Message is required (minimum 10 characters)"
   },
-  "cookies": {
+  "cookie_banner": {
     "title": "We Use Cookies",
     "description": "This site uses essential cookies for proper functioning. We do not collect personal data without your explicit consent.",
-    "learn_more": "Learn more",
-    "accept": "Accept",
-    "decline": "Decline",
     "accept": "Accept",
     "decline": "Decline",
     "learn_more": "Learn More"
@@ -528,7 +525,7 @@
     "send_another": "Send Another Message",
     "map_placeholder": "Map with our location will be displayed here"
   },
-  "cookies": {
+  "cookie_policy": {
     "title": "Cookie Policy",
     "last_updated": "Last updated",
     "section_1_title": "What are cookies?",

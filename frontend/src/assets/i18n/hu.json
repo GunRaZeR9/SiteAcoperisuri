@@ -259,7 +259,7 @@
     "subject_required": "A tárgy kötelező (minimum 3 karakter)",
     "message_required": "Az üzenet kötelező (minimum 10 karakter)"
   },
-  "cookies": {
+  "cookie_banner": {
     "title": "Cookie-kat Használunk",
     "description": "Ez az oldal alapvető cookie-kat használ a megfelelő működéshez. Nem gyűjtünk személyes adatokat az Ön kifejezett hozzájárulása nélkül.",
     "accept": "Elfogadom",
@@ -525,7 +525,7 @@
     "name_label": "Név",
     "message_label": "Üzenet"
   },
-  "cookies": {
+  "cookie_policy": {
     "title": "Cookie Szabályzat",
     "last_updated": "Utolsó frissítés",
     "section_1_title": "Mik azok a cookie-k?",
