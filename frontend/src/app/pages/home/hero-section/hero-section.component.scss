@@ -24,7 +24,7 @@
   inset: 0;
   background: linear-gradient(135deg, $primary-900 0%, $secondary-900 100%);
   
-  // Background image
+  // Background image with optimized loading
   &::before {
     content: '';
     position: absolute;
@@ -33,6 +33,12 @@
     background-size: cover;
     background-position: center;
     opacity: 0.3;
+    will-change: opacity;
+    
+    @media (max-width: 768px) {
+      background-image: url('/images/hero-bg.png'); // Consider creating a mobile version
+      background-size: cover;
+    }
   }
 }
 

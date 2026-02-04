@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration=production",
+    "preview": "npx http-server dist/frontend/browser -p 8080 -c-1 --cors",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:frontend": "node dist/frontend/server/server.mjs"
@@ -31,6 +33,7 @@
     "@angular/platform-browser": "^21.1.0",
     "@angular/platform-server": "^21.1.0",
     "@angular/router": "^21.1.0",
+    "@angular/service-worker": "^21.1.0",
     "@angular/ssr": "^21.1.2",
     "@emailjs/browser": "^4.4.1",
     "@ngx-translate/core": "^17.0.0",

@@ -13,6 +13,9 @@ export class ImagePlaceholderComponent {
   @Input() type: 'default' | 'logo' | 'service' | 'portfolio' | 'team' | 'person' = 'default';
   @Input() alt = 'Image placeholder';
   @Input() src?: string; // Add src input for actual images
+  @Input() width?: number; // Explicit width for CLS prevention
+  @Input() height?: number; // Explicit height for CLS prevention
+  @Input() priority: boolean = false; // For LCP images
 
   get aspectClass(): string {
     return `aspect-${this.aspectRatio.replace(':', '-')}`;

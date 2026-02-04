@@ -6,6 +6,12 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
+  <!-- Resource Hints for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  
   <!-- SEO Meta Tags -->
   <meta name="description" content="Servicii profesionale de montaj, reparații și întreținere acoperișuri. Peste 15 ani de experiență, materiale premium și garanție 10 ani. Solicită estimare gratuită!">
   <meta name="keywords" content="acoperișuri, montaj acoperiș, reparații acoperiș, renovare acoperiș, hidroizolații, șarpante, mansardări, București, România">
@@ -30,9 +36,15 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://caseacoperisuriro.com/">
   
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="preload" as="image" href="/images/logo_acoperisuri_case.png">
+  <!-- Favicon - Multiple formats for better browser support -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_acoperisuri_case.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_acoperisuri_case.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_acoperisuri_case.png">
+  <link rel="shortcut icon" href="/images/logo_acoperisuri_case.png">
+  
+  <!-- Preload Critical Images -->
+  <link rel="preload" as="image" href="/images/logo_acoperisuri_case.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/hero-bg.png" fetchpriority="high" imagesrcset="/images/hero-bg.png" imagesizes="100vw">
   
   <!-- Theme Color -->
   <meta name="theme-color" content="#B84C33">
@@ -94,11 +106,13 @@
       }
     })();
   </script>
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
   <!-- Google Tag Manager (noscript) Placeholder -->
   <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
   
   <app-root></app-root>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

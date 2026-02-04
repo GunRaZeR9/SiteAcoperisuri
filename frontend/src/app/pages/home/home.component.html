@@ -1,7 +1,19 @@
 <main class="home-page">
   <app-hero-section />
   <app-services-overview />
-  <app-why-choose-us />
-  <app-about-preview />
-  <app-contact-section />
+  @defer (on viewport) {
+    <app-why-choose-us />
+  } @placeholder {
+    <div style="min-height: 400px;"></div>
+  }
+  @defer (on viewport) {
+    <app-about-preview />
+  } @placeholder {
+    <div style="min-height: 300px;"></div>
+  }
+  @defer (on viewport) {
+    <app-contact-section />
+  } @placeholder {
+    <div style="min-height: 400px;"></div>
+  }
 </main>
