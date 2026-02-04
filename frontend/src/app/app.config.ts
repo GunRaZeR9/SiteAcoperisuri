@@ -12,7 +12,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideTranslateService({
-      useDefaultLang: true,
       fallbackLang: 'ro'
     }),
     provideTranslateHttpLoader({

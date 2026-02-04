@@ -177,7 +177,7 @@ Detaliile tale:
 - Email: {{from_email}}
 - Telefon: {{from_phone}}
 
-Dacă ai o urgență, nu ezita să ne suni la: +40 758 644 107
+Dacă ai o urgență, nu ezita să ne suni la: +40 759 578 727
 
 Cu respect,
 Echipa Acoperișuri Profesionale
