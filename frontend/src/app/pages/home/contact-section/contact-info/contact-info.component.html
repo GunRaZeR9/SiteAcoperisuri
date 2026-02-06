@@ -10,7 +10,9 @@
         </div>
         <div class="info-content">
           <span class="info-label">{{ item.labelKey | translate }}</span>
-          @if (item.type === 'link' && item.href) {
+          @if (item.type === 'link' && item.href && item.href.startsWith('tel:')) {
+            <a [href]="item.href" onclick="return gtag_report_conversion('tel:+40759578727')" class="info-value info-link">{{ item.value }}</a>
+          } @else if (item.type === 'link' && item.href) {
             <a [href]="item.href" class="info-value info-link">{{ item.value }}</a>
           } @else if (item.valueKey) {
             <span class="info-value">{{ item.valueKey | translate }}</span>

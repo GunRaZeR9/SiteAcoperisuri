@@ -273,12 +273,13 @@
     "about": "Despre Noi",
     "portfolio": "Portofoliu",
     "contact": "Contact",
-    "terms": "Termeni și Condiții",
+    "terms": "Politica de Confidențialitate",
     "cookies": "Politica de Cookie-uri",
     "contact_title": "Contact",
     "cta_text": "Pregătit să începem proiectul tău?",
     "made_in": "Făcut cu ❤️ în România",
-    "rights": "Toate drepturile rezervate."
+    "rights": "Toate drepturile rezervate.",
+    "privacy": "Politica de Confidențialitate"
   },
   "cookie_consent": {
     "title": "Utilizăm Cookie-uri",
@@ -521,7 +522,7 @@
     "name_label": "Nume",
     "message_label": "Mesaj"
   },
-  "cookie_policy": {
+  "cookies": {
     "title": "Politica de Cookie-uri",
     "last_updated": "Ultima actualizare",
     "section_1_title": "Ce sunt cookie-urile?",
@@ -550,6 +551,7 @@
     "phone": "Telefon",
     "back_home": "Înapoi la Pagina Principală"
   },
+  "cookie_policy": {
   "terms": {
     "title": "Termeni și Condiții",
     "last_updated": "Ultima actualizare",
@@ -573,6 +575,36 @@
     "section_8_title": "Contact",
     "section_8_text": "Pentru întrebări referitoare la acești termeni, ne puteți contacta la:",
     "phone": "Telefon",
-    "back_home": "Înapoi la Pagina Principală"
+    "back_home": "Înapoi la Pagina Principală",
+    "privacy_policy_link": "Politica de Confidențialitate"
+  },
+  "privacy_policy": {
+    "title": "Politica de Confidențialitate",
+    "last_updated": "Ultima actualizare",
+    "section_1_title": "Informații Colectate",
+    "section_1_text": "Colectăm doar informații personale esențiale pe care ni le oferiți voluntar prin formularele pe site (nume, email, telefon, descrierea proiectului). Nu colectăm date de navigare, nu folosim analitică avansată și nu transmitem informații terților.",
+    "section_2_title": "Cum Folosim Datele",
+    "section_2_text": "Informațiile pe care le colectăm sunt folosite exclusiv pentru a vă contacta cu privire la serviciile noastre, a procesa cereri de estimare și a oferi suport clienti. Nu vă vom trimite materiale de marketing fără consimțământul explicit.",
+    "section_3_title": "Protecția Datelor",
+    "section_3_text": "Datele dvs. sunt stocate în mod sigur și nu sunt partajate cu terți fără acord prealabil. Respectăm pe deplin Regulamentul General privind Protecția Datelor (GDPR). Avem implementate măsuri de securitate pentru a proteja informațiile dvs. personale:",
+    "section_3_item_1": "Criptare a conexiunilor (HTTPS)",
+    "section_3_item_2": "Accès restricționat la datele personale",
+    "section_3_item_3": "Copii de siguranță regulate",
+    "section_3_item_4": "Audit de securitate periodic",
+    "section_4_title": "Drepturile Dvs.",
+    "section_4_text": "Aveți dreptul de a accesa, modifica, șterge sau exporta datele dvs. personale în orice moment. Pentru a exercita aceste drepturi, vă rugăm să ne contactați direct la emailul din secțiunea de contact.",
+    "section_5_title": "Cookie-uri și Tracking",
+    "section_5_text": "Folosim doar cookie-uri esențiale pentru funcționarea site-ului (preferințe limbă, consimțământ cookie). Nu folosim cookie-uri de tracking, analitică sau de marketing. Nu vă urmărim activitatea pe site.",
+    "section_6_title": "Termenii de Păstrare",
+    "section_6_text": "Păstrăm datele dvs. personale doar atât timp cât este necesar pentru a fulfilla scopul pentru care au fost colectate (minim 30 zile, maxim 12 luni). După aceea, sunt șterse permanent din sistemul nostru.",
+    "section_7_title": "Modificări Ale Politicii",
+    "section_7_text": "Ne rezervăm dreptul de a actualiza această politică. Orice modificare majoră va fi comunicată prin email.",
+    "section_8_title": "Contact și Reclamații",
+    "section_8_text": "Dacă aveți întrebări sau doresc să depuneți o reclamație privind modul în care vă sunt tratate datele, vă rugăm să ne contactați la:",
+    "cta_title": "Ai Întrebări Privind Confidențialitatea?",
+    "cta_text": "Contactează-ne pentru clarificări cu privire la modul în care gestionăm datele personale.",
+    "cta_contact": "Contactează-ne",
+    "back_home": "Înapoi la Pagina Principală",
+    "terms_link": "Termeni și Condiții"
   }
 }

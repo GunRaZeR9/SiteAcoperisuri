@@ -62,7 +62,8 @@ export class FooterComponent {
   ];
 
   legalLinks = [
+    { path: '/politica-confidentialitate', label: 'footer.privacy' },
     { path: '/politica-cookies', label: 'footer.cookies' },
-    { path: '/termeni-conditii', label: 'footer.terms' }
+    { path: '/termeni-si-conditii', label: 'footer.terms' }
   ];
 }

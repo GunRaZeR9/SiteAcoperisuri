@@ -26,7 +26,7 @@
                 <span class="info-label">{{ item.labelKey | translate }}</span>
                 @if (item.link) {
                   @if (item.link.startsWith('tel:')) {
-                    <a [href]="item.link" (click)="trackPhoneCall()" class="info-value info-link">{{ item.value }}</a>
+                    <a [href]="item.link" onclick="return gtag_report_conversion('tel:+40759578727')" (click)="trackPhoneCall()" class="info-value info-link">{{ item.value }}</a>
                   } @else {
                     <a [href]="item.link" class="info-value info-link">{{ item.value }}</a>
                   }

@@ -101,19 +101,31 @@
   <!-- Google Tag Manager Placeholder -->
   <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
   
-  <!-- Google Ads Conversion Tracking -->
-  <!-- Replace AW-XXXXXXXXX with your Google Ads Customer ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17923956079"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'AW-XXXXXXXXX', {
-      // Phone call conversion tracking
-      'phone_conversion_number': '+40759578727',
-      // Enable call reporting
-      'call_conversion_action': 'AW-XXXXXXXXX/XXXXXXXXX'
+    gtag('config', 'AW-17923956079');
+  </script>
+
+  <!-- Event snippet for Click to call (1) conversion page -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-17923956079/DcxiCMrEg_QbEO-65-JC',
+        'value': 1.0,
+        'currency': 'RON',
+        'event_callback': callback
     });
+    return false;
+  }
   </script>
   
   <!-- GitHub Pages SPA redirect handler -->

@@ -47,6 +47,11 @@ export const routes: Routes = [
     title: 'Termeni și Condiții | Acoperișuri Profesionale'
   },
   {
+    path: 'politica-confidentialitate',
+    loadComponent: () => import('./pages/privacy-policy/privacy-policy.component').then(m => m.PrivacyPolicyComponent),
+    title: 'Politica de Confidențialitate | Acoperișuri Profesionale'
+  },
+  {
     path: '**',
     redirectTo: ''
   }

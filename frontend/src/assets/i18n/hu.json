@@ -276,13 +276,14 @@
     "about": "Rólunk",
     "portfolio": "Portfólió",
     "contact": "Kapcsolat",
-    "terms": "Felhasználási Feltételek",
+    "terms": "Adatvédelmi Szabályzat",
     "cookies": "Cookie Szabályzat",
     "contact_title": "Kapcsolat",
     "address": "Példa utca 123, Bukarest",
     "cta_text": "Készen áll projektje elindítására?",
     "made_in": "Készült ❤️-tel Romániában",
-    "rights": "Minden jog fenntartva."
+    "rights": "Minden jog fenntartva.",
+    "privacy": "Adatvédelmi Szabályzat"
   },
   "cookie_consent": {
     "title": "Cookie-kat Használunk",
@@ -525,7 +526,7 @@
     "name_label": "Név",
     "message_label": "Üzenet"
   },
-  "cookie_policy": {
+  "cookies": {
     "title": "Cookie Szabályzat",
     "last_updated": "Utolsó frissítés",
     "section_1_title": "Mik azok a cookie-k?",
@@ -539,7 +540,7 @@
     "section_3_title": "Harmadik féltől származó cookie-k",
     "section_3_text": "Nem használunk követő vagy harmadik féltől származó cookie-kat. Nem gyűjtünk adatokat reklám vagy elemzés céljából az Ön kifejezett hozzájárulása nélkül.",
     "section_4_title": "GDPR Megfelelőség",
-    "section_4_text": "Betartjuk az Általános Adatvédelmi Rendeletet (GDPR). Nem dolgozunk fel személyes adatokat az Ön kifejezett hozzájárulása nélkül, és tiszteletben tartjuk digitális magánélethez való jogát.",
+    "section_4_text": "Betartjuk az Általános Adatvédelmi Rendelet (GDPR). Nem dolgozunk fel személyes adatokat az Ön kifejezett hozzájárulása nélkül, és tiszteletben tartjuk digitális magánélethez való jogát.",
     "section_5_title": "Hogyan kezelheti a cookie-kat?",
     "section_5_text_1": "A böngésző beállításain keresztül vezérelheti és törölheti a cookie-kat:",
     "browser_chrome": "Beállítások > Adatvédelem és biztonság > Cookie-k",
@@ -554,6 +555,7 @@
     "phone": "Telefon",
     "back_home": "Vissza a Főoldalra"
   },
+  "cookie_policy": {
   "terms": {
     "title": "Felhasználási Feltételek",
     "last_updated": "Utolsó frissítés",
@@ -577,6 +579,36 @@
     "section_8_title": "Kapcsolat",
     "section_8_text": "A feltételekkel kapcsolatos kérdésekkel fordulhat hozzánk:",
     "phone": "Telefon",
-    "back_home": "Vissza a Főoldalra"
+    "back_home": "Vissza a Főoldalra",
+    "privacy_policy_link": "Adatvédelmi Szabályzat"
+  },
+  "privacy_policy": {
+    "title": "Adatvédelmi Szabályzat",
+    "last_updated": "Utolsó frissítés",
+    "section_1_title": "Gyűjtött Információk",
+    "section_1_text": "Csak olyan lényeges személyes információkat gyűjtünk, amelyeket önként biztosít az oldal űrlapjain (név, e-mail, telefonszám, projekt leírása). Nem gyűjtünk navigációs adatokat, nem használunk fejlett analitikát, és nem adunk át információkat harmadik feleknek.",
+    "section_2_title": "Az Adatok Felhasználása",
+    "section_2_text": "Az összegyűjtött információkat kizárólag a szolgáltatásainkkal kapcsolatban történő kapcsolatfelvételre, árajánlat-kérések feldolgozására és ügyfélszolgálat nyújtására használjuk. Nem küldünk marketing anyagokat az explicit hozzájárulás nélkül.",
+    "section_3_title": "Adatbiztonság",
+    "section_3_text": "Adatait biztonságos módon tároljuk, és nem osztjuk meg harmadik felekkel előzetes beleegyezés nélkül. Teljes körűen betartjuk az Általános Adatvédelmi Rendelet (GDPR) követelményeit. Bevezetett biztonsági intézkedéseket alkalmazunk személyes adatai védelme érdekében:",
+    "section_3_item_1": "Kapcsolatok titkosítása (HTTPS)",
+    "section_3_item_2": "Korlátozott hozzáférés a személyes adatokhoz",
+    "section_3_item_3": "Rendszeres biztonsági mentések",
+    "section_3_item_4": "Időszakos biztonsági felülvizsgálat",
+    "section_4_title": "Az Ön Jogai",
+    "section_4_text": "Jogosult személyes adatait bármikor hozzáférni, módosítani, törölni vagy exportálni. E jogok gyakorlásához kérjük, forduljon közvetlenül hozzánk a kapcsolat szakaszban található e-mail címen.",
+    "section_5_title": "Sütik és Nyomon Követés",
+    "section_5_text": "Csak a webhook működéséhez szükséges alapvető cookie-kat használunk (nyelvbeállítások, cookie-beleegyezés). Nem használunk nyomkövetési, analitikai vagy marketing cookie-kat. Nem követjük nyomon az aktivitásukat az oldalon.",
+    "section_6_title": "Adatmegőrzési Időszak",
+    "section_6_text": "Személyes adatait csak olyan hosszú ideig tartjuk meg, amíg szükséges a gyűjtésük céljának teljesítéséhez (minimum 30 nap, maximum 12 hónap). Ezt követően véglegesen törlésre kerülnek rendszerünkből.",
+    "section_7_title": "Szabályzat Módosításai",
+    "section_7_text": "Fenntartjuk a jogot ezen szabályzat frissítésére. Bármely nagyobb módosítás e-mailben kerül közlésre.",
+    "section_8_title": "Kapcsolat és Panaszok",
+    "section_8_text": "Ha kérdése van, vagy panaszt szeretne benyújtani a személyes adatok kezelésével kapcsolatban, kérjük, forduljon hozzánk:",
+    "cta_title": "Kérdése Van az Adatvédelemmel Kapcsolatban?",
+    "cta_text": "Forduljon hozzánk az adatok kezeléséről szóló tisztázások megtételéhez.",
+    "cta_contact": "Kapcsolat",
+    "back_home": "Vissza a Főoldalra",
+    "terms_link": "Felhasználási Feltételek"
   }
 }
