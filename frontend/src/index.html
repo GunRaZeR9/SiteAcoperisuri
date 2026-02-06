@@ -42,9 +42,14 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_acoperisuri_case.png">
   <link rel="shortcut icon" href="/images/logo_acoperisuri_case.png">
   
+  <!-- Preload Fonts for Performance -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"></noscript>
+  
   <!-- Preload Critical Images -->
   <link rel="preload" as="image" href="/images/logo_acoperisuri_case.png" fetchpriority="high">
-  <link rel="preload" as="image" href="/images/hero-bg.png" fetchpriority="high" imagesrcset="/images/hero-bg.png" imagesizes="100vw">
+  <link rel="preload" as="image" href="/images/hero-bg.webp" fetchpriority="high" type="image/webp">
   
   <!-- Theme Color -->
   <meta name="theme-color" content="#B84C33">
@@ -95,6 +100,21 @@
   
   <!-- Google Tag Manager Placeholder -->
   <!-- <script>(function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');</script> -->
+  
+  <!-- Google Ads Conversion Tracking -->
+  <!-- Replace AW-XXXXXXXXX with your Google Ads Customer ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXXXX', {
+      // Phone call conversion tracking
+      'phone_conversion_number': '+40759578727',
+      // Enable call reporting
+      'call_conversion_action': 'AW-XXXXXXXXX/XXXXXXXXX'
+    });
+  </script>
   
   <!-- GitHub Pages SPA redirect handler -->
   <script>

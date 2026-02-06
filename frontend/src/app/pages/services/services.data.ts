@@ -30,7 +30,7 @@ export const SERVICES_DATA: ServiceData[] = [
       'services.roofing.feature_3',
       'services.roofing.feature_4'
     ],
-    image: 'images/services/roofing-installation.jpg'
+    image: 'images/services/roofing-installation.webp'
   },
   {
     id: 'repairs',
@@ -51,7 +51,7 @@ export const SERVICES_DATA: ServiceData[] = [
       'services.repairs.feature_3',
       'services.repairs.feature_4'
     ],
-    image: 'images/services/roof-repair.jpg'
+    image: 'images/services/roof-repair.webp'
   },
   {
     id: 'renovation',
@@ -72,7 +72,7 @@ export const SERVICES_DATA: ServiceData[] = [
       'services.renovation.feature_3',
       'services.renovation.feature_4'
     ],
-    image: 'images/services/roof-renovation.jpg'
+    image: 'images/services/roof-renovation.webp'
   },
   {
     id: 'waterproofing',
@@ -93,7 +93,7 @@ export const SERVICES_DATA: ServiceData[] = [
       'services.waterproofing.feature_3',
       'services.waterproofing.feature_4'
     ],
-    image: 'images/services/waterproofing.jpg'
+    image: 'images/services/waterproofing.webp'
   },
   {
     id: 'carpentry',
@@ -114,7 +114,7 @@ export const SERVICES_DATA: ServiceData[] = [
       'services.carpentry.feature_3',
       'services.carpentry.feature_4'
     ],
-    image: 'images/services/carpentry.jpg'
+    image: 'images/services/carpentry.webp'
   },
   {
     id: 'attic',
@@ -135,7 +135,7 @@ export const SERVICES_DATA: ServiceData[] = [
       'services.attic.feature_3',
       'services.attic.feature_4'
     ],
-    image: 'images/services/attic-conversion.jpg'
+    image: 'images/services/attic-conversion.webp'
   }
 ];
 

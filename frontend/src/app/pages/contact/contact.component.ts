@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { GoogleAdsService } from '../../shared/google-ads.service';
 
 @Component({
   selector: 'app-contact',
@@ -10,6 +11,14 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  private googleAds = inject(GoogleAdsService);
+  
+  // Replace with your actual Google Ads conversion ID for phone calls
+  private phoneCallConversionId = 'AW-XXXXXXXXX/XXXXXXXXX'; // TODO: Update with your conversion ID
+  
+  trackPhoneCall(): void {
+    this.googleAds.trackPhoneCall(this.phoneCallConversionId);
+  }
 
   contactInfo = [
     { icon: '📞', labelKey: 'contact.phone_label', value: '+40 759 578 727', link: 'tel:+40759578727' },

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { EmailService } from '../../shared/email.service';
+import { GoogleAdsService } from '../../shared/google-ads.service';
 
 interface EstimateForm {
   name: string;
@@ -27,6 +28,10 @@ interface EstimateForm {
 export class EstimateComponent {
   private translate = inject(TranslateService);
   private emailService = inject(EmailService);
+  private googleAds = inject(GoogleAdsService);
+  
+  // Replace with your actual Google Ads conversion ID for estimate form submissions
+  private estimateConversionId = 'AW-XXXXXXXXX/XXXXXXXXX'; // TODO: Update with your conversion ID
   
   formData: EstimateForm = {
     name: '',
@@ -97,6 +102,13 @@ export class EstimateComponent {
         urgency: urgencyText,
         preferredContact: contactPrefText,
         description: this.formData.description || ''
+      });
+      
+      // Track conversion in Google Ads
+      this.googleAds.trackFormSubmission('estimate', this.estimateConversionId, {
+        serviceType: this.formData.serviceType,
+        location: this.formData.location,
+        roofArea: this.formData.roofArea
       });
       
       this.isSubmitting.set(false);

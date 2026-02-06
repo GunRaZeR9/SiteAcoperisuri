@@ -1,5 +1,5 @@
 import { Component, inject, signal, HostListener, PLATFORM_ID } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { NavComponent } from './nav/nav.component';
@@ -15,7 +15,8 @@ import { LanguageSwitcherComponent } from './language-switcher/language-switcher
     TranslateModule,
     NavComponent,
     MobileNavComponent,
-    LanguageSwitcherComponent
+    LanguageSwitcherComponent,
+    NgOptimizedImage
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'

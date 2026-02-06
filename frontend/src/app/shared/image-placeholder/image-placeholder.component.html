@@ -5,12 +5,10 @@
   role="img">
   @if (src) {
     <img 
-      [src]="src" 
+      [ngSrc]="src" 
       [alt]="alt" 
-      [attr.width]="width" 
-      [attr.height]="height"
-      [attr.loading]="priority ? 'eager' : 'lazy'"
-      [attr.fetchpriority]="priority ? 'high' : 'auto'"
+      fill
+      [priority]="priority"
       class="actual-image" />
   } @else {
     <span class="placeholder-icon">{{ icon }}</span>

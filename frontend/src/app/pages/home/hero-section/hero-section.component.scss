@@ -24,19 +24,18 @@
   inset: 0;
   background: linear-gradient(135deg, $primary-900 0%, $secondary-900 100%);
   
-  // Background image with optimized loading
+  // Background image with optimized loading - WebP format for performance
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('/images/hero-bg.png');
+    background-image: url('/images/hero-bg.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.3;
-    will-change: opacity;
     
     @media (max-width: 768px) {
-      background-image: url('/images/hero-bg.png'); // Consider creating a mobile version
+      background-image: url('/images/hero-bg-mobile.webp');
       background-size: cover;
     }
   }
@@ -72,17 +71,23 @@
   border-radius: $border-radius-full;
   margin-bottom: $spacing-6;
   backdrop-filter: blur(10px);
-  animation: fadeInDown $transition-slow ease-out;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeInDown $transition-slow ease-out;
+  }
 }
 
 .hero-title {
   font-size: $font-size-4xl;
-  font-weight: $font-weight-extrabold;
+  font-weight: $font-weight-bold;
   color: $white;
   line-height: 1.1;
   margin-bottom: $spacing-6;
   text-shadow: 0 4px 20px rgba($black, 0.3);
-  animation: fadeInUp $transition-slow ease-out 0.1s both;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeInUp $transition-slow ease-out 0.1s both;
+  }
 
   @include md {
     font-size: $font-size-5xl;
@@ -101,7 +106,10 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeInUp $transition-slow ease-out 0.2s both;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeInUp $transition-slow ease-out 0.2s both;
+  }
 
   @include md {
     font-size: $font-size-xl;
@@ -114,7 +122,10 @@
   justify-content: center;
   gap: $spacing-4;
   margin-bottom: $spacing-10;
-  animation: fadeInUp $transition-slow ease-out 0.3s both;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeInUp $transition-slow ease-out 0.3s both;
+  }
 
   @include max-sm {
     flex-direction: column;
@@ -130,7 +141,10 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: $spacing-6;
-  animation: fadeInUp $transition-slow ease-out 0.4s both;
+  
+  @media (prefers-reduced-motion: no-preference) {
+    animation: fadeInUp $transition-slow ease-out 0.4s both;
+  }
 
   @include max-md {
     flex-direction: column;

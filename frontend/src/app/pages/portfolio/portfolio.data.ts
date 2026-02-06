@@ -18,7 +18,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_1.description',
     location: 'București',
     year: 2025,
-    image: 'images/portfolio/project-1.jpg'
+    image: 'images/portfolio/project-1.webp'
   },
   {
     id: 'project-2',
@@ -28,7 +28,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_2.description',
     location: 'Cluj-Napoca',
     year: 2025,
-    image: 'images/portfolio/project-2.jpg'
+    image: 'images/portfolio/project-2.webp'
   },
   {
     id: 'project-3',
@@ -38,7 +38,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_3.description',
     location: 'Timișoara',
     year: 2024,
-    image: 'images/portfolio/project-3.jpg'
+    image: 'images/portfolio/project-3.webp'
   },
   {
     id: 'project-4',
@@ -48,7 +48,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_4.description',
     location: 'Iași',
     year: 2024,
-    image: 'images/portfolio/project-4.jpg'
+    image: 'images/portfolio/project-4.webp'
   },
   {
     id: 'project-5',
@@ -58,7 +58,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_5.description',
     location: 'Brașov',
     year: 2024,
-    image: 'images/portfolio/project-5.jpg'
+    image: 'images/portfolio/project-5.webp'
   },
   {
     id: 'project-6',
@@ -68,7 +68,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_6.description',
     location: 'Sibiu',
     year: 2024,
-    image: 'images/portfolio/project-6.jpg'
+    image: 'images/portfolio/project-6.webp'
   },
   {
     id: 'project-7',
@@ -78,7 +78,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_7.description',
     location: 'Oradea',
     year: 2023,
-    image: 'images/portfolio/project-7.jpg'
+    image: 'images/portfolio/project-7.webp'
   },
   {
     id: 'project-8',
@@ -88,7 +88,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_8.description',
     location: 'Constanța',
     year: 2023,
-    image: 'images/portfolio/project-8.jpg'
+    image: 'images/portfolio/project-8.webp'
   },
   {
     id: 'project-9',
@@ -98,7 +98,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     descriptionKey: 'portfolio.project_9.description',
     location: 'Craiova',
     year: 2023,
-    image: 'images/portfolio/project-9.jpg'
+    image: 'images/portfolio/project-9.webp'
   }
 ];
 

@@ -25,7 +25,11 @@
               <div class="info-content">
                 <span class="info-label">{{ item.labelKey | translate }}</span>
                 @if (item.link) {
-                  <a [href]="item.link" class="info-value info-link">{{ item.value }}</a>
+                  @if (item.link.startsWith('tel:')) {
+                    <a [href]="item.link" (click)="trackPhoneCall()" class="info-value info-link">{{ item.value }}</a>
+                  } @else {
+                    <a [href]="item.link" class="info-value info-link">{{ item.value }}</a>
+                  }
                 } @else if (item.valueKey) {
                   <span class="info-value">{{ item.valueKey | translate }}</span>
                 } @else {

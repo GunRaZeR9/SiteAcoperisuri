@@ -1,125 +1,161 @@
 #!/usr/bin/env node
 
 /**
- * Image Optimization Helper
+ * Image Optimization Script
  * 
- * This script helps convert and optimize images for better web performance.
- * Run: node optimize-images.js
+ * Converts PNG/JPG images to WebP format for better web performance.
+ * Run: npm install sharp && node optimize-images.js
  */
 
 const fs = require('fs');
 const path = require('path');
 
-console.log('📸 Image Optimization Helper\n');
+// Check if sharp is installed
+let sharp;
+try {
+  sharp = require('sharp');
+} catch (e) {
+  console.log('❌ Sharp is not installed. Run: npm install sharp');
+  console.log('\nAfter installing, run this script again: node optimize-images.js\n');
+  process.exit(1);
+}
 
-const TODO_ITEMS = [
-  {
-    title: '1. Install Image Optimization Tool',
-    commands: [
-      'npm install -g @squoosh/cli',
-      '# Alternative: npm install -g sharp-cli'
-    ]
-  },
-  {
-    title: '2. Convert Hero Background to WebP',
-    description: 'This is the BIGGEST performance win (LCP improvement)',
-    commands: [
-      'squoosh-cli --webp auto frontend/public/images/hero-bg.png -d frontend/public/images/',
-      '',
-      '# Create mobile version (768px width)',
-      'squoosh-cli --resize \'{"enabled":true,"width":768}\' --webp auto frontend/public/images/hero-bg.png -s "-mobile" -d frontend/public/images/'
-    ],
-    files_to_update: [
-      'frontend/src/app/pages/home/hero-section/hero-section.component.scss'
-    ]
-  },
-  {
-    title: '3. Optimize All Service Images',
-    description: 'Compress images in services folder',
-    commands: [
-      'cd frontend/public/images/services',
-      'squoosh-cli --webp auto *.{png,jpg,jpeg}',
-      '',
-      '# Or use online tool: https://tinypng.com'
-    ]
-  },
-  {
-    title: '4. Optimize Portfolio Images',
-    description: 'Compress portfolio images',
-    commands: [
-      'cd frontend/public/images/portfolio',
-      'squoosh-cli --webp auto *.{png,jpg,jpeg}',
-      'squoosh-cli --resize \'{"enabled":true,"width":800}\' --webp auto *.{png,jpg,jpeg}'
-    ]
-  },
-  {
-    title: '5. Update Image References',
-    description: 'Change .png/.jpg to .webp in component files',
-    example: `
-Before: image: '/images/service.png'
-After:  image: '/images/service.webp'
-    `
-  }
-];
+const PUBLIC_DIR = path.join(__dirname, 'frontend', 'public');
+const IMAGES_DIR = path.join(PUBLIC_DIR, 'images');
 
-console.log('='.repeat(70));
-console.log('IMAGE OPTIMIZATION GUIDE');
-console.log('='.repeat(70));
-console.log('\n📊 Current Performance Impact:\n');
-console.log('  • Hero background: ~2-3s LCP improvement');
-console.log('  • Service images:  ~0.5-1s LCP improvement');
-console.log('  • Portfolio images: Reduced CLS, faster loading');
-console.log('\n' + '='.repeat(70) + '\n');
-
-TODO_ITEMS.forEach((item, index) => {
-  console.log(`\n${item.title}`);
-  console.log('-'.repeat(70));
-  
-  if (item.description) {
-    console.log(`ℹ️  ${item.description}\n`);
-  }
-  
-  if (item.commands) {
-    console.log('Run these commands:\n');
-    item.commands.forEach(cmd => {
-      if (cmd.trim().startsWith('#')) {
-        console.log(`  ${cmd}`);
-      } else if (cmd === '') {
-        console.log('');
-      } else {
-        console.log(`  $ ${cmd}`);
-      }
-    });
-  }
-  
-  if (item.files_to_update) {
-    console.log('\n📝 Files to update:');
-    item.files_to_update.forEach(file => {
-      console.log(`  • ${file}`);
-    });
-  }
-  
-  if (item.example) {
-    console.log(`\n📋 Example:${item.example}`);
-  }
-});
-
-console.log('\n' + '='.repeat(70));
-console.log('\n✅ After optimization:');
-console.log('  1. Run: npm run build');
-console.log('  2. Test: npx http-server dist/frontend/browser -p 8080');
-console.log('  3. Check: lighthouse http://localhost:8080 --view\n');
-console.log('='.repeat(70));
-console.log('\n🎯 Target: Mobile Score 90+, LCP < 2.5s\n');
-
-// Check if hero-bg exists
-const heroPath = path.join(__dirname, 'frontend', 'public', 'images', 'hero-bg.png');
-if (fs.existsSync(heroPath)) {
-  const stats = fs.statSync(heroPath);
-  const sizeMB = (stats.size / (1024 * 1024)).toFixed(2);
-  console.log(`\n⚠️  Current hero-bg.png size: ${sizeMB} MB`);
-  if (stats.size > 500000) {
-    console.log('   This is your BIGGEST performance bottleneck!');
-    console.log('   Converting to WebP will reduce size by 60-80%\n');
+async function convertToWebP(inputPath, outputPath, options = {}) {
+  try {
+    await sharp(inputPath)
+      .webp({ quality: options.quality || 80 })
+      .toFile(outputPath);
+    
+    const inputStats = fs.statSync(inputPath);
+    const outputStats = fs.statSync(outputPath);
+    const savings = ((1 - outputStats.size / inputStats.size) * 100).toFixed(1);
+    
+    console.log(`  ✅ ${path.basename(outputPath)} (${savings}% smaller)`);
+    return true;
+  } catch (error) {
+    console.log(`  ❌ Failed: ${path.basename(inputPath)} - ${error.message}`);
+    return false;
   }
 }
+
+async function createResizedWebP(inputPath, outputPath, width, options = {}) {
+  try {
+    await sharp(inputPath)
+      .resize(width, null, { withoutEnlargement: true })
+      .webp({ quality: options.quality || 80 })
+      .toFile(outputPath);
+    
+    const outputStats = fs.statSync(outputPath);
+    const sizeKB = (outputStats.size / 1024).toFixed(1);
+    
+    console.log(`  ✅ ${path.basename(outputPath)} (${width}px, ${sizeKB}KB)`);
+    return true;
+  } catch (error) {
+    console.log(`  ❌ Failed: ${path.basename(outputPath)} - ${error.message}`);
+    return false;
+  }
+}
+
+async function processHeroImage() {
+  console.log('\n🖼️  Processing Hero Background Image...\n');
+  
+  const heroPath = path.join(IMAGES_DIR, 'hero-bg.png');
+  
+  if (!fs.existsSync(heroPath)) {
+    console.log('  ⚠️  hero-bg.png not found, skipping...');
+    return;
+  }
+  
+  const stats = fs.statSync(heroPath);
+  console.log(`  📁 Original: hero-bg.png (${(stats.size / 1024 / 1024).toFixed(2)} MB)`);
+  
+  // Convert to WebP (full size)
+  await convertToWebP(
+    heroPath, 
+    path.join(IMAGES_DIR, 'hero-bg.webp'),
+    { quality: 85 }
+  );
+  
+  // Create mobile version (800px width)
+  await createResizedWebP(
+    heroPath,
+    path.join(IMAGES_DIR, 'hero-bg-mobile.webp'),
+    800,
+    { quality: 80 }
+  );
+}
+
+async function processServiceImages() {
+  console.log('\n🔧 Processing Service Images...\n');
+  
+  const servicesDir = path.join(IMAGES_DIR, 'services');
+  
+  if (!fs.existsSync(servicesDir)) {
+    console.log('  ⚠️  services/ folder not found, skipping...');
+    return;
+  }
+  
+  const files = fs.readdirSync(servicesDir).filter(f => 
+    f.endsWith('.jpg') || f.endsWith('.jpeg') || f.endsWith('.png')
+  );
+  
+  for (const file of files) {
+    const inputPath = path.join(servicesDir, file);
+    const outputName = file.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    const outputPath = path.join(servicesDir, outputName);
+    
+    await convertToWebP(inputPath, outputPath, { quality: 80 });
+  }
+  
+  console.log(`\n  📊 Processed ${files.length} service images`);
+}
+
+async function processPortfolioImages() {
+  console.log('\n🏗️  Processing Portfolio Images...\n');
+  
+  const portfolioDir = path.join(IMAGES_DIR, 'portfolio');
+  
+  if (!fs.existsSync(portfolioDir)) {
+    console.log('  ⚠️  portfolio/ folder not found, skipping...');
+    return;
+  }
+  
+  const files = fs.readdirSync(portfolioDir).filter(f => 
+    f.endsWith('.jpg') || f.endsWith('.jpeg') || f.endsWith('.png')
+  );
+  
+  for (const file of files) {
+    const inputPath = path.join(portfolioDir, file);
+    const outputName = file.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    const outputPath = path.join(portfolioDir, outputName);
+    
+    await convertToWebP(inputPath, outputPath, { quality: 80 });
+  }
+  
+  console.log(`\n  📊 Processed ${files.length} portfolio images`);
+}
+
+async function main() {
+  console.log('='.repeat(70));
+  console.log('🚀 IMAGE OPTIMIZATION SCRIPT');
+  console.log('='.repeat(70));
+  console.log('\nConverting images to WebP format for better web performance...');
+  
+  await processHeroImage();
+  await processServiceImages();
+  await processPortfolioImages();
+  
+  console.log('\n' + '='.repeat(70));
+  console.log('\n✅ Image optimization complete!\n');
+  console.log('📝 Next steps:');
+  console.log('   1. Verify the WebP images look correct');
+  console.log('   2. Run: npm run build');
+  console.log('   3. Test the site performance');
+  console.log('\n💡 Original images are preserved - you can delete them manually if needed.\n');
+  console.log('='.repeat(70) + '\n');
+}
+
+main().catch(console.error);

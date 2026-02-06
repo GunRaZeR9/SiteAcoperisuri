@@ -84,9 +84,8 @@
               ],
               "outputHashing": "all",
               "baseHref": "/",
-              "server": false,
-              "ssr": false,
               "prerender": false,
+              "ssr": false,
               "serviceWorker": "ngsw-config.json"
             },
             "development": {
