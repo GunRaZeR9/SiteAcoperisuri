@@ -29,6 +29,17 @@
   ],
   "dataGroups": [
     {
+      "name": "i18n",
+      "urls": [
+        "/assets/i18n/*.json"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "1d",
+        "strategy": "freshness"
+      }
+    },
+    {
       "name": "api-cache",
       "urls": [
         "https://fonts.googleapis.com/**",

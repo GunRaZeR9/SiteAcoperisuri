@@ -60,6 +60,11 @@ export class ContactFormComponent {
           this.isSubmitting.set(false);
           this.isSubmitted.set(true);
           this.resetForm();
+          // Google Ads conversion (replace with your ID)
+          try {
+            (window as any).gtag?.('event', 'conversion', { 'send_to': 'AW-17923956079/DcxiCMrEg_QbEO-65-JC' });
+            (window as any).dataLayer?.push({ event: 'contact_form_submitted' });
+          } catch (e) { /* ignore if gtag unavailable */ }
         },
         error: (err) => {
           console.error('Error submitting form:', err);
