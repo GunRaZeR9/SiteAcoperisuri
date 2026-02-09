@@ -14,7 +14,7 @@ export class ContactComponent {
   private googleAds = inject(GoogleAdsService);
   
   // Replace with your actual Google Ads conversion ID for phone calls
-  private phoneCallConversionId = 'AW-XXXXXXXXX/XXXXXXXXX'; // TODO: Update with your conversion ID
+  private phoneCallConversionId = 'AW-17923956079/DcxiCMrEg_QbEO-65-JC'; // TODO: Update with your conversion ID
   
   trackPhoneCall(): void {
     this.googleAds.trackPhoneCall(this.phoneCallConversionId);

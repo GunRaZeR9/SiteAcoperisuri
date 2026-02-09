@@ -1,3 +1,40 @@
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="topbar-container">
+    <!-- Contact Info -->
+    <div class="topbar-contact">
+      @for (item of contactInfo; track item.value) {
+        @if (item.link.startsWith('tel:')) {
+          <a [href]="item.link" (click)="trackPhoneCall()" class="topbar-link phone-link">
+            {{ item.icon }} {{ item.value }}
+          </a>
+        } @else {
+          <a [href]="item.link" class="topbar-link">
+            {{ item.icon }} {{ item.value }}
+          </a>
+        }
+      }
+    </div>
+
+    <!-- Social Links -->
+    <div class="topbar-social">
+      @for (social of socialLinks; track social.name) {
+        <a 
+          [href]="social.url" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="social-link"
+          [attr.aria-label]="social.name"
+          [title]="social.name">
+          <svg viewBox="0 0 24 24" [attr.fill]="social.color" class="social-icon">
+            <path [attr.d]="social.icon"></path>
+          </svg>
+        </a>
+      }
+    </div>
+  </div>
+</div>
+
 <header class="header" [class.scrolled]="isScrolled()">
   <div class="header-container">
     <!-- Logo -->

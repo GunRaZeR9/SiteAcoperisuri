@@ -8,14 +8,14 @@
   align-items: center;
   justify-content: center;
   padding: $spacing-20 0;
-  margin-top: -80px; // Account for fixed header
-  padding-top: calc(80px + #{$spacing-20});
+  margin-top: -125px; // Account for fixed header and topbar
+  padding-top: calc(125px + #{$spacing-20});
 
   @include max-md {
     min-height: auto;
     padding: $spacing-16 0;
-    margin-top: -70px;
-    padding-top: calc(70px + #{$spacing-16});
+    margin-top: -120px;
+    padding-top: calc(120px + #{$spacing-16});
   }
 }
 

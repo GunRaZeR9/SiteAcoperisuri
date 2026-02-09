@@ -9,12 +9,12 @@
 .page-hero {
   padding: $spacing-16 0 $spacing-12;
   background: linear-gradient(135deg, $secondary-800 0%, $secondary-900 100%);
-  margin-top: -80px;
-  padding-top: calc(80px + #{$spacing-12});
+  margin-top: -125px;
+  padding-top: calc(125px + #{$spacing-12});
 
   @include max-md {
-    margin-top: -70px;
-    padding-top: calc(70px + #{$spacing-10});
+    margin-top: -120px;
+    padding-top: calc(120px + #{$spacing-10});
   }
 }
 
