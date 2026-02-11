@@ -26,8 +26,8 @@ export class SeoService {
     title: 'Acoperișuri Profesionale | Servicii Complete de Acoperiș în România',
     description: 'Servicii profesionale de montaj, reparații și întreținere acoperișuri. Peste 15 ani de experiență, materiale premium și garanție 10 ani. Solicită estimare gratuită!',
     keywords: 'acoperișuri, montaj acoperiș, reparații acoperiș, renovare acoperiș, hidroizolații, șarpante, mansardări, București, România',
-    image: 'https://caseacoperisuriro.com/images/logo_acoperisuri_case.png',
-    url: 'https://caseacoperisuriro.com/',
+    image: 'https://acoperisurisrl.ro/images/logo_acoperisuri_case.png',
+    url: 'https://acoperisurisrl.ro/',
     type: 'website',
     author: 'Acoperișuri Profesionale',
     locale: 'ro_RO'
@@ -88,7 +88,7 @@ export class SeoService {
   }
 
   private updateCanonicalUrl(): void {
-    const url = `https://caseacoperisuriro.com${this.router.url}`;
+    const url = `https://acoperisurisrl.ro${this.router.url}`;
     let link: HTMLLinkElement | null = document.querySelector("link[rel='canonical']");
     
     if (link) {
