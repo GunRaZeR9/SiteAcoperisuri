@@ -4,6 +4,7 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { ServicesOverviewComponent } from './services-overview/services-overview.component';
 import { WhyChooseUsComponent } from './why-choose-us/why-choose-us.component';
 import { AboutPreviewComponent } from './about-preview/about-preview.component';
+import { BlogPreviewComponent } from './blog-preview/blog-preview.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 
 @Component({
@@ -15,6 +16,7 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
     ServicesOverviewComponent,
     WhyChooseUsComponent,
     AboutPreviewComponent,
+    BlogPreviewComponent,
     ContactSectionComponent
   ],
   templateUrl: './home.component.html',

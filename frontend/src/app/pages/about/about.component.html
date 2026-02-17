@@ -86,6 +86,59 @@
     </div>
   </section>
 
+  <!-- Blog Preview Section -->
+  <section class="blog-preview-section section section-alt">
+    <div class="container">
+      <app-section-title
+        [subtitle]="'about.blog_subtitle' | translate"
+        [title]="'about.blog_title' | translate"
+        [description]="'about.blog_description' | translate"
+        alignment="center"
+      />
+
+      <div class="blog-preview-content">
+        <button 
+          class="blog-toggle-btn" 
+          (click)="toggleBlogSection()"
+          [attr.aria-expanded]="blogExpanded()"
+        >
+          <span class="toggle-text">
+            {{ blogExpanded() ? ('about.blog_collapse' | translate) : ('about.blog_expand' | translate) }}
+          </span>
+          <span class="toggle-icon" [class.expanded]="blogExpanded()">▼</span>
+        </button>
+
+        @if (blogExpanded()) {
+          <div class="blog-articles-preview">
+            @for (article of latestArticles(); track article.id) {
+              <article class="blog-preview-card">
+                <div class="blog-card-meta">
+                  <span class="blog-date">{{ formatDate(article.datePublished) }}</span>
+                  <span class="blog-read-time">{{ article.readTimeMinutes }} {{ 'blog.minRead' | translate }}</span>
+                </div>
+                <h3 class="blog-card-title">
+                  <a [routerLink]="['/despre-noi/blog', article.slug]">
+                    {{ article.titleKey | translate }}
+                  </a>
+                </h3>
+                <p class="blog-card-excerpt">{{ article.excerptKey | translate }}</p>
+                <a [routerLink]="['/despre-noi/blog', article.slug]" class="blog-card-link">
+                  {{ 'blog.readMore' | translate }} →
+                </a>
+              </article>
+            }
+          </div>
+
+          <div class="blog-view-all">
+            <a routerLink="/despre-noi/blog" class="btn btn-primary btn-lg">
+              {{ 'about.blog_view_all' | translate }}
+            </a>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
   <!-- CTA Section -->
   <section class="cta-section section section-dark">
     <div class="container">

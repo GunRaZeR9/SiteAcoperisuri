@@ -1,0 +1,47 @@
+<section class="blog-preview">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge">{{ 'blog.title' | translate }}</span>
+      <h2 class="section-title">{{ 'home.blog.title' | translate }}</h2>
+      <p class="section-description">{{ 'home.blog.description' | translate }}</p>
+    </div>
+
+    <div class="articles-grid">
+      @for (article of articles; track article.id) {
+        <article class="article-card">
+          <div class="article-meta">
+            <span class="date">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              {{ formatDate(article.datePublished) }}
+            </span>
+            <span class="read-time">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              {{ article.readTimeMinutes }} {{ 'blog.minRead' | translate }}
+            </span>
+          </div>
+
+          <h3 class="article-title">{{ article.titleKey | translate }}</h3>
+          <p class="article-excerpt">{{ article.excerptKey | translate }}</p>
+
+          <a [routerLink]="['/despre-noi/blog', article.slug]" class="read-more">
+            {{ 'blog.readMore' | translate }} →
+          </a>
+        </article>
+      }
+    </div>
+
+    <div class="view-all">
+      <a routerLink="/despre-noi/blog" class="btn btn-primary">
+        {{ 'home.blog.viewAll' | translate }}
+      </a>
+    </div>
+  </div>
+</section>

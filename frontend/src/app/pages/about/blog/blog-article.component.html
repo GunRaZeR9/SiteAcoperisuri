@@ -1,0 +1,108 @@
+@if (article(); as currentArticle) {
+  <div class="blog-article">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-section">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a routerLink="/" class="breadcrumb-link">{{ 'nav.home' | translate }}</a>
+          <span class="breadcrumb-separator">/</span>
+          <a routerLink="/despre-noi" class="breadcrumb-link">{{ 'nav.about' | translate }}</a>
+          <span class="breadcrumb-separator">/</span>
+          <a routerLink="/despre-noi/blog" class="breadcrumb-link">{{ 'blog.title' | translate }}</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">{{ currentArticle.titleKey | translate }}</span>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <div class="container">
+        <h1 class="article-title">{{ currentArticle.titleKey | translate }}</h1>
+        
+        <div class="article-meta">
+          <span class="meta-item">
+            <i class="icon">📅</i>
+            {{ formatDate(currentArticle.datePublished) }}
+          </span>
+          <span class="meta-item">
+            <i class="icon">⏱️</i>
+            {{ currentArticle.readTimeMinutes }} {{ 'blog.minRead' | translate }}
+          </span>
+          <span class="meta-item">
+            <i class="icon">✍️</i>
+            {{ currentArticle.author }}
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <article class="article-body">
+      <div class="container">
+        <div class="article-content" [innerHTML]="currentArticle.contentKey | translate"></div>
+      </div>
+    </article>
+
+    <!-- Related Services -->
+    @if (relatedServices().length > 0) {
+      <section class="related-services">
+        <div class="container">
+          <h2 class="section-title">{{ 'blog.relatedServices' | translate }}</h2>
+          
+          <div class="services-grid">
+            @for (service of relatedServices(); track service.slug) {
+              <a [routerLink]="['/servicii', service.slug]" class="service-card">
+                <div class="service-icon">{{ service.icon }}</div>
+                <h3 class="service-title">{{ service.titleKey | translate }}</h3>
+                <p class="service-description">{{ service.shortDescKey | translate }}</p>
+                <span class="service-link">
+                  {{ 'blog.learnMore' | translate }}
+                  <span class="arrow">→</span>
+                </span>
+              </a>
+            }
+          </div>
+        </div>
+      </section>
+    }
+
+    <!-- Call to Action -->
+    <section class="article-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>{{ 'blog.cta.title' | translate }}</h2>
+          <p>{{ 'blog.cta.description' | translate }}</p>
+          <div class="cta-buttons">
+            <a routerLink="/estimare-pret" class="btn btn-primary">
+              {{ 'blog.cta.estimateButton' | translate }}
+            </a>
+            <a routerLink="/contact" class="btn btn-secondary">
+              {{ 'blog.cta.contactButton' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Blog -->
+    <div class="back-to-blog">
+      <div class="container">
+        <a routerLink="/despre-noi/blog" class="back-link">
+          <span class="arrow">←</span>
+          {{ 'blog.backToList' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+} @else {
+  <div class="article-not-found">
+    <div class="container">
+      <h1>{{ 'blog.notFound' | translate }}</h1>
+      <p>{{ 'blog.notFoundDescription' | translate }}</p>
+      <a routerLink="/despre-noi/blog" class="btn btn-primary">
+        {{ 'blog.backToList' | translate }}
+      </a>
+    </div>
+  </div>
+}

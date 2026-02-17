@@ -27,6 +27,16 @@ export const routes: Routes = [
     title: 'Despre Noi | Acoperișuri Profesionale'
   },
   {
+    path: 'despre-noi/blog',
+    loadComponent: () => import('./pages/about/blog/blog-list.component').then(m => m.BlogListComponent),
+    title: 'Blog - Ghid Complet Acoperișuri | Acoperișuri Profesionale'
+  },
+  {
+    path: 'despre-noi/blog/:slug',
+    loadComponent: () => import('./pages/about/blog/blog-article.component').then(m => m.BlogArticleComponent),
+    title: 'Blog | Acoperișuri Profesionale'
+  },
+  {
     path: 'contact',
     loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent),
     title: 'Contact | Acoperișuri Profesionale'

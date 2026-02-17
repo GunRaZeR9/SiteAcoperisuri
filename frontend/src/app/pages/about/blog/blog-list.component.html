@@ -1,0 +1,57 @@
+<div class="blog-list">
+  <div class="hero-section">
+    <div class="container">
+      <app-section-title
+        [subtitle]="'blog.hero.subtitle' | translate"
+        [title]="'blog.hero.title' | translate"
+        [description]="'blog.hero.description' | translate"
+        alignment="center"
+      />
+    </div>
+  </div>
+
+  <div class="articles-section">
+    <div class="container">
+      <div class="articles-grid">
+        @for (article of articles(); track article.id) {
+          <article class="article-card">
+            <div class="article-header">
+              <div class="article-meta">
+                <span class="article-date">
+                  <i class="icon">📅</i>
+                  {{ formatDate(article.datePublished) }}
+                </span>
+                <span class="article-reading-time">
+                  <i class="icon">⏱️</i>
+                  {{ article.readTimeMinutes }} {{ 'blog.minRead' | translate }}
+                </span>
+              </div>
+            </div>
+
+            <div class="article-content">
+              <h2 class="article-title">
+                <a [routerLink]="['/despre-noi/blog', article.slug]">
+                  {{ article.titleKey | translate }}
+                </a>
+              </h2>
+              
+              <p class="article-excerpt">
+                {{ article.excerptKey | translate }}
+              </p>
+
+              <div class="article-footer">
+                <a 
+                  [routerLink]="['/despre-noi/blog', article.slug]" 
+                  class="read-more-btn"
+                >
+                  {{ 'blog.readMore' | translate }}
+                  <span class="arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </div>
+</div>

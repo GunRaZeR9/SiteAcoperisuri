@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { SectionTitleComponent } from '../../shared/section-title/section-title.component';
+import { getLatestBlogArticles, BlogArticle } from './blog/blog.data';
 
 @Component({
   selector: 'app-about',
@@ -12,6 +13,8 @@ import { SectionTitleComponent } from '../../shared/section-title/section-title.
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
+  blogExpanded = signal(false);
+  latestArticles = signal<BlogArticle[]>(getLatestBlogArticles(3));
   values = [
     { icon: '🏆', titleKey: 'about.values.quality.title', descriptionKey: 'about.values.quality.description' },
     { icon: '🤝', titleKey: 'about.values.trust.title', descriptionKey: 'about.values.trust.description' },
@@ -32,4 +35,17 @@ export class AboutComponent {
     { year: '2020', titleKey: 'about.milestones.expansion.title', descriptionKey: 'about.milestones.expansion.description' },
     { year: '2024', titleKey: 'about.milestones.present.title', descriptionKey: 'about.milestones.present.description' }
   ];
+
+  toggleBlogSection(): void {
+    this.blogExpanded.set(!this.blogExpanded());
+  }
+
+  formatDate(dateString: string): string {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('ro-RO', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  }
 }
